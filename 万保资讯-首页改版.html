@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <!-- IE Setter -->
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+  <meta http-equiv="X-UA-Compatible" content="IE=7;IE=8;IE=9;" />
+  <!-- Response setter -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>万保资讯</title>
+  <!--icon img-->
+  <link rel="shortcut icon" href="">
+  <!-- js -->
+  <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+
+
+</head>
+
+<body>
+  <div class="content">
+    <!-- navigation bar -->
+    <div class="navbar">
+    	<div class="nav-left clearfix">
+        <img src="u4.png" title="icon" width="36" height="36" alt="图标">
+    	  <h1>万保资讯</h1>
+    	  <hr>
+    	  <p>保险专家的产品库</p>
+    	</div>
+    	<div class="nav-right">
+    	  <a href="#" class="popup_loginbox">登录</a>
+    	</div>
+    </div>  
+    
+    <!-- 第一个banner -->
+    <div class="masthead">
+      <div class="bannerhead">
+        <div class="masthead-text">
+          <h1>全国产品，一站汇总</h1>
+          <p>研究竞品，简单高效</p>
+          <div class="invite">
+        	  <a href="javascript:void(0)" class="popup_registerbox">请您体验 &nbsp;&gt;</a>
+          </div>
+        </div>
+      </div>
+    </div>  
+
+    <!-- 产品介绍列表 -->
+    <div class="main">
+    	<h1>适用工作场景</h1>  
+
+    	<div class="row">  
+
+    	  <div class="col">
+    	  	<div class="thumbnail">
+    	  	  <!-- <a href="" title="产品搜索" target="_blank"> -->
+              <img src="u15.jpeg" width="312" height="176" alt="产品搜索">
+            <!-- </a> -->
+    	  	  <div class="caption">
+              <h2>产品搜索</h2>
+              <p>多达 10 多个筛选条件，助您从超过 1,600 个产品中轻松找到所需。</p>
+            </div>
+    	  	</div>
+    	  </div>  
+
+    	  <div class="col">
+    	  	<div class="thumbnail-second">
+    	  	  <!-- <a href="" title="产品透视" target="_blank"> -->
+              <img src="u17.jpeg" width="312" height="176" alt="产品透视">
+            <!-- </a> -->
+    	  	  <div class="caption">
+              <h2>产品透视</h2>
+              <p>多达 50 个关键指标，产品特性瞬间掌握，不再害怕客户突然问起。</p>
+            </div>
+    	  	</div>
+    	  </div>  
+
+    	  <div class="col">
+    	  	<div class="thumbnail-third">
+    	  	  <!-- <a href="" title="投资业绩追踪" target="_blank"> -->
+              <img src="u19.jpeg" width="312" height="176" alt="投资业绩追踪">
+            <!-- </a> -->
+    	  	  <div class="caption">
+              <h2>投资业绩追踪</h2>
+              <p>长达 15 年投资业绩追踪，万能投连收益风险无所遁形。</p>
+            </div>
+    	  	</div>
+    	  </div>  
+
+    	  <div class="col">
+    	  	<div class="thumbnail">
+    	  	  <!-- <a href="" title="产品对比" target="_blank"> -->
+              <img src="u21.jpeg" width="312" height="176" alt="产品对比">
+            <!-- </a> -->
+    	  	  <div class="caption">
+              <h2>产品对比</h2>
+              <p>不同产品，同 1 套展现方式。信息标准化，复杂产品从此可比。</p>
+            </div>
+    	  	</div>
+    	  </div>  
+
+    	</div>  
+
+    </div>  
+
+    <div class="subnav">
+    	<div class="invite">
+    		<a href="javascript:void(0)" class="popup_registerbox">请您体验 &nbsp;&gt;</a>
+    	</div>
+    </div>  
+
+    <!-- 第二个banner -->
+    <div class="mastmiddle">
+      <div class="bannermiddle">
+        <div class="mastmiddle-text">
+          <h1>亲民价格，免费体验</h1>
+          <p>低至 38元 /季度，订阅前免费体验 1 个月</p>
+          <div class="invite">
+            <a href="javascript:void(0)" class="popup_registerbox">请您体验 &nbsp;&gt;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- footer -->
+  <div class="footer">
+    <div class="footer-text">
+    	©2018 广州市问么信息科技有限责任公司 | 联系方式：service@wenme.cc
+      <br><br>
+    	粤ICP备16116416号-2
+    </div>
+  </div>
+
+  <!-- the background of register and login -->
+  <!-- <div class="mask"></div> -->
+
+  <!-- login box 登录盒子 -->
+  <form class="loginbox" id="login_box">
+    <div class="loginbox-nav clearfix">
+      <div class="loginbox-navleft">
+        <img src="u4.png" title="icon" width="36" height="36" alt="图标">
+        <p>万保资讯</p>
+      </div> <!-- loginbox-navleft 结束 -->
+
+      <div class="loginbox-navright close_loginbox_btn">
+        <img src="u75.png" title="关闭" width="16" height="16" alt="关闭">
+      </div> <!-- loginbox-navright 结束 -->
+    </div> <!-- loginbox-nav 结束 -->
+
+    <hr> <!-- 分隔线 -->
+
+    <div class="logintext">
+      <h1>登录</h1>
+
+      <div class="username">
+        <input type="text" name="username" id="login_tel" placeholder="请输入手机号码">
+      </div> <!-- username 结束 -->
+
+      <div class="identify clearfix">
+        <input type="text" name="identify" placeholder="请输入短信验证码">
+        <!-- input 结束 -->
+        <div class="identify-code" id="login_sms_verifiy_box">
+          <a href="#" id="login_sms_verifiy">获取验证码</a>
+          <span style="display:block;color:grey;" onselectstart="return false;" id="login_sms_verifiy_span"></span>
+        </div> <!-- identify-code 结束 -->
+      </div> <!-- identify 结束 -->
+
+      <a href="" class="loginbtn" onmouseout="this.className='loginbtn'" onmousedown="this.className='loginbtn-mousedown'">
+        登录
+      </a>  <!-- loginbtn结束 -->
+
+      <div class="warning">
+        <span id="login_warning_msg">
+        </span>
+      </div> <!-- warning结束 -->
+    </div> <!-- logintext结束 -->
+
+  </form>
+
+  <!-- register box 注册盒子-->
+  <form class="registerbox" id="register_box">
+    <div class="registerbox-nav clearfix">
+      <div class="registerbox-navleft">
+        <img src="u4.png" title="icon" width="36" height="36" alt="图标" onclick="javascript:void(0)">
+        <p>万保资讯</p>
+      </div>
+
+      <div class="registerbox-navright close_registerbox_btn">
+        <img src="u75.png" title="关闭" width="16" height="16" alt="关闭">
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="registertext">
+      <h1>免费体验</h1>
+
+      <div class="username">
+        <input type="text" name="username" id="register_tel" placeholder="请输入手机号码">
+      </div>
+
+      <div class="identify clearfix">
+        <input type="text" name="identify" placeholder="请输入短信验证码">
+        <div class="identify-code">
+          <a href="#" id="register_sms_verifiy">获取验证码</a>
+          <span style="display:block;color:grey;" onselectstart="return false;" id="register_sms_verifiy_span"></span>
+        </div>
+      </div>
+
+      <a href="" class="registerbtn" onmouseout="this.className='registerbtn'" onmousedown="this.className'registerbtn-mousedown'">
+        立即体验
+      </a>    
+
+      <div class="warning">
+        <span id="register_warning_msg">
+        </span>
+      </div> <!-- warning结束 -->
+    </div> <!-- registertext结束 -->
+  </form>
+
+  <script type="text/javascript">
+    $(function($) {
+
+      //弹出登录
+      $(".popup_loginbox").hover(function () {
+        $(this).stop().animate({
+          opacity: '1'
+        }, 300);
+      }, function () {
+        $(this).stop().animate({
+          opacity: '0.8'
+        }, 300);
+      }).on('click', function () {
+        $("body").append("<div id='mask'></div>");
+        $("#mask").addClass("mask").fadeIn("slow");
+        $("#login_box").fadeIn("slow");
+      });
+
+      //弹出register
+      $(".popup_registerbox").on('click', function () {
+        $("body").append("<div id='mask'></div>");
+        $("#mask").addClass("mask").fadeIn("slow");
+        $("#register_box").fadeIn("slow");
+      });
+
+      //关闭 loginBox
+      $(".close_loginbox_btn").hover(function () { $(this).css({ color: 'black' }) }, function () { $(this).css({ color: '#999' }) }).on('click', function () {
+        $("#login_box").fadeOut("fast");
+        $(".mask").css({ display: 'none' });
+        $("#login_tel").val("");
+        $("#login_warning_msg").text("");
+      });
+
+      //关闭 registerBox
+      $(".close_registerbox_btn").hover(function () { $(this).css({ color: 'black' }) }, function () { $(this).css({ color: '#999' }) }).on('click', function () {
+        $("#register_box").fadeOut("fast");
+        $(".mask").css({ display: 'none' });
+        $("#register_tel").val("");
+        $("#register_warning_msg").text("");
+      });
+
+      //tel effect
+      $("#login_sms_verifiy").click(function(){
+        var tel_format = /^1\d{10}$/;
+        var tel_num = $("#login_tel").val();
+        if ( tel_format.test(tel_num) && tel_num.length == 11)
+        {
+          $("#login_warning_msg").text("手机号码不正确，请您重新输入");
+          // $("#login_warning_msg").css({ color: 'red' });
+        }
+        else if (tel_num == "1")
+        {
+          $("#login_warning_msg").text("短信验证码不正确，请您重新输入");
+          // $("#login_warning_msg").css({ color: 'red' });
+        }
+        else if (tel_num == "2")
+        {
+          $("#login_warning_msg").html("<div>您还未订阅我们的服务。</div>\
+          <div>订阅前，请您先免费体验 1 个月。点击此处&nbsp;&nbsp;<a href='javascript:void(0)' id='switch_to_register'>免费体验&nbsp;&gt;</a></div>");  
+          // switch to register
+          $("#switch_to_register").click(function (){
+            $("#login_box").fadeOut("fast");
+            $("#register_box").fadeIn("fast"); 
+            $("#register_warning_msg").text("");
+            $("#register_tel").val("");
+          });
+        }
+        else if (tel_num == "3")
+        {
+          $("#login_warning_msg").text("登录成功！正在进入系统，请稍侯片刻...");
+          // $("#login_warning_msg").css({ color: 'blue' });
+        }
+        else
+        {
+          var count_down = 10;
+          $("#login_warning_msg").text("");
+          $("#login_sms_verifiy").css({display:"none"});
+          $("#login_sms_verifiy_span").css({display:"block"});
+          //login_sms_verifiy effect
+          $("#login_sms_verifiy_span").text(count_down.toString() + "秒后再次发送");
+          count_down--;
+          var time = setInterval(function(){
+            if (count_down > 0)
+            {
+              $("#login_sms_verifiy_span").text(count_down.toString() + "秒后再次发送");
+              count_down--;
+            }
+            else
+            {
+              $("#login_sms_verifiy_span").css({display:"none"});
+              $("#login_sms_verifiy").css({display:"block"});
+              clearInterval(time);
+            }
+          }, 1000);
+        }
+      });
+
+      $("#register_sms_verifiy").click(function(){
+        var tel_format = /^1\d{10}$/;
+        var tel_num = $("#register_tel").val();
+        if ( tel_format.test(tel_num) && tel_num.length == 11)
+        {
+          $("#register_warning_msg").text("手机号码不正确，请您重新输入");
+          // $("#register_warning_msg").css({ color: 'red' });
+        }
+        else if (tel_num == "1")
+        {
+          $("#register_warning_msg").text("短信验证码不正确，请您重新输入");
+          // $("#register_warning_msg").css({ color: 'red' });
+        }
+        else if (tel_num == "2")
+        {
+          $("#register_warning_msg").html("您已订阅了我们的服务，请直接登录。点击此处&nbsp;<a href='javascript:void(0)' id='switch_to_login'>登录&nbsp;</a>");  
+          // switch to register
+          $("#switch_to_login").click(function (){
+            $("#register_box").fadeOut("fast");
+            $("#login_box").fadeIn("fast");
+            $("#login_warning_msg").text("");
+            $("#login_tel").val("");
+          });
+        }
+        else if (tel_num == "3")
+        {
+          $("#register_warning_msg").text("申请成功！马上开始体验，请稍侯片刻...");
+          // $("#register_warning_msg").css({ color: 'blue' });
+        }
+        else
+        {
+          var count_down = 10;
+          $("#register_warning_msg").text("");
+          $("#register_sms_verifiy").css({display:"none"});
+          $("#register_sms_verifiy_span").css({display:"block"});
+          //login_sms_verifiy effect
+          $("#register_sms_verifiy_span").text(count_down.toString() + "秒后再次发送");
+          count_down--;
+          var time = setInterval(function(){
+            if (count_down > 0)
+            {
+              $("#register_sms_verifiy_span").text(count_down.toString() + "秒后再次发送");
+              count_down--;
+            }
+            else
+            {
+              $("#register_sms_verifiy_span").css({display:"none"});
+              $("#register_sms_verifiy").css({display:"block"});
+              clearInterval(time);
+            }
+          }, 1000);
+        }
+      });
+
+    });
+  </script>
+</body>
+
+</html>

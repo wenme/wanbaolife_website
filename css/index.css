@@ -1,0 +1,491 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+   }
+
+body {
+	margin: 0 auto;
+	width: 1366px;
+}
+
+.content {
+	margin: 0 auto;
+	width: 1318px;
+}
+
+/*导航栏*/
+.navbar {
+	position: relative;
+	top: 0;
+	width: 100%;
+	height: 60px;
+	display: inline-block;
+}
+
+.clearfix::before, .clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.nav-left img {
+	float: left;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.nav-left h1 {
+	float: left;
+	margin: 17px 10px;
+	font: bold 20px "微软雅黑";
+	color: #666;
+}
+
+.nav-left hr {
+	float: left;
+	margin: 17px 6px;
+	border: 0px;
+	width: 1px;
+	height: 24px;
+	background-color: black;
+}
+
+.nav-left p {
+	float: left;
+	margin: 23px 8px 17px;
+	font: 15px "微软雅黑";
+	color: #000;
+}
+
+.nav-right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	width: 72px;
+	height: 36px;
+	line-height: 36px;
+	background-color: #0063b1;
+	text-align: center;
+}
+
+.nav-right a {
+	text-decoration: none;
+	color: white;
+	font: 15px "微软雅黑";
+}
+
+.nav-right a:hover {
+	text-decoration: underline;
+}
+
+/*第一个banner*/
+.masthead {
+	width: 100%;
+	height: 494px;
+}
+
+.bannerhead {
+	width: 100%;
+	height: 100%;
+	background-image: url(../u23.jpeg);
+	background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-ms-background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.masthead-text {
+	position: relative;
+	top: 170px;
+	left: 878px;
+	width: 440px;
+	height: 154px;
+	/*clear: left;*/
+}
+
+.masthead-text h1 {
+	margin-top: 0;
+	margin-bottom: 20px;
+	font: bold 34px "微软雅黑";
+	color: #333;
+}
+
+.masthead-text p {
+	margin-bottom: 20px;
+	font: 15px "微软雅黑";
+	color: #000;
+}
+
+.invite {
+	text-align: center;
+	width: 200px;
+	height: 48px;
+	line-height: 48px;
+	background-color: #0c0;
+}
+
+.invite a {
+	text-decoration: none;
+	font: 18px "微软雅黑";
+	color: #fff;
+}
+
+.invite a:hover {
+	text-decoration: underline;
+}
+
+/*产品介绍列表*/
+.main {
+	width: 100%;
+	height: 378px;
+}
+
+.main h1 {
+	margin-top: 24px;
+	margin-bottom: 24px;
+	font: bold 24px "微软雅黑";
+	color: #333;
+}
+
+.row::before, .row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.col {
+	display: table-cell;
+}
+
+.thumbnail-second {
+	margin-left: 23.33px;
+}
+
+.thumbnail-third {
+	margin-left: 23.33px;
+	margin-right: 23.33px;
+}
+
+.caption {
+	margin-top: 36px;
+	width: 312px;
+}
+
+.caption h2 {
+	margin-bottom: 12px;
+	font: bold 20px "微软雅黑";
+	color: #333;
+}
+
+.caption p {
+	margin: 0;
+	font: 15px "微软雅黑";
+	color: #000;
+}
+
+/*第二个请您体验*/
+.subnav {
+	margin: 0 auto;
+	width: 200px;
+}
+
+/*第二个banner*/
+.mastmiddle {
+	width: 100%;
+	height: 494px;
+	margin-top: 44px;
+}
+
+.bannermiddle {
+	width: 100%;
+	height: 100%;
+	background-image: url(../u25.jpeg);
+	background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-ms-background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.mastmiddle-text {
+	position: relative;
+	top: 170px;
+	left: 137px;
+	width: 440px;
+	height: 154px;
+}
+
+.mastmiddle-text h1 {
+	margin-top: 0;
+	margin-bottom: 21px;
+	font: bold 34px "微软雅黑";
+	color: #333;
+}
+
+.mastmiddle-text p {
+	margin-bottom: 20px;
+	font: 15px "微软雅黑";
+	color: #000;
+}
+
+/*footer*/
+.footer {
+	text-align: center;
+	width: 1366px;
+	height: 200px;
+	line-height: 200px;
+	margin-top: -22px;
+}
+
+.footer-text {
+	/*position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);*/
+	display: inline-block;
+	line-height: 1px;
+	text-align: center;
+	font: 13px "微软雅黑";
+	color: #333;
+}
+
+/*register and login background*/
+.mask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.8;
+}
+
+/*register and login box*/
+.loginbox,
+.registerbox {
+	display: none;
+	position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+	z-index: 10000;
+	width: 480px;
+	height: 480px;
+	background-color: #fff;
+}
+
+.loginbox-nav,
+.registerbox-nav {
+	position: relative;
+	top: 48px;
+	left: 48px;
+	width: 384px;
+	height: 36px;
+	display: inline-block;
+}
+
+.loginbox-navleft img,
+.loginbox-navleft p,
+.registerbox-navleft img,
+.registerbox-navleft p {
+    float: left;
+}
+
+.loginbox-navleft p,
+.registerbox-navleft p {
+	margin: 5px 10px;
+	font: bold 20px "微软雅黑";
+	color: #666;
+}
+
+.loginbox-navright,
+.registerbox-navright {
+	float: right;
+	width: 36px;
+	height: 36px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.loginbox-navright:hover,
+.registerbox-navright:hover {
+	background-color: #f2f2f2;
+}
+
+.loginbox hr,
+.registerbox hr {
+	position: absolute;
+	top: 98px;
+	width: 478px;
+	height: 1px;
+	margin: 0;
+    background-color: #999;
+}
+
+.logintext,
+.registertext {
+	position: absolute;
+	top: 132px;
+	left: 48px;
+	width: 384px;
+}
+
+.logintext h1,
+.registertext h1 {
+	font: 34px "微软雅黑";
+	margin: 0;
+}
+
+::-moz-input-placeholder {
+	font-size: 15px;
+	font-family: "微软雅黑";
+	color: #a1a1a1;
+}
+::-ms-input-placeholder {
+	font-size: 15px;
+	font-family: "微软雅黑";
+	color: #a1a1a1;
+}
+::-webkit-input-placeholder {
+	font-size: 15px;
+	font-family: "微软雅黑";
+	color: #a1a1a1;
+}
+
+.username input {
+    width: 384px;
+    height: 48px;
+    line-height: 48px;
+    margin-top: 14px;
+    padding-left: 12px;
+    background-color: #FAFFBD; 
+    font-size: 15px;
+    font-family: "微软雅黑";
+    color: #000;
+}
+
+.identify {
+	display: inline-block;
+}
+
+.identify input {
+	float: left;
+	width: 180px;
+    height: 48px;
+    line-height: 48px;
+    margin-top: 10px;
+    padding-left: 12px;
+    background-color: #FAFFBD; 
+    font-size: 15px;
+    font-family: "微软雅黑";
+    color: #000;
+}
+
+.identify-code {
+    position: absolute;
+    right: 0;
+    width: 180px;
+    height: 48px;
+    margin-top: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #fff;
+    border: 2px solid #000;
+    text-align: center;
+    font-size: 18px;
+    font-family: "微软雅黑";
+    
+}
+
+.identify-code a:link,
+.identify-code a:visited {
+	color: #1E1E1E;
+	text-decoration: none;
+}
+.identify-code a:hover {
+	color: #1E1E1E;
+	text-decoration: underline;
+}
+
+.loginbtn,
+.registerbtn {
+	display: block;
+	clear: both;
+	width: 384px;
+	height: 48px;
+	line-height: 48px;
+    margin-top: 22px;
+    background-color: #F2F2F2;
+    text-align: center;
+    font-size: 18px;
+    font-family: "微软雅黑";
+    color: #ccc;
+    text-decoration: none;
+}
+
+.loginbtn:hover,
+.registerbtn:hover {
+	text-decoration: underline;
+}
+
+.loginbtn-mousedown,
+.registerbtn-mousedown {
+	display: block;
+	clear: both;
+	width: 376px;
+	height: 44px;
+	line-height: 44px;
+    margin-top: 24px;
+    margin-left: 4px;
+    margin-right: 4px;
+    background-color: #F2F2F2;
+    text-align: center;
+    font-size: 18px;
+    font-family: "微软雅黑";
+    color: #ccc;
+    text-decoration: none;
+}
+
+/*
+*点击获取验证码后的登录按钮样式中的字体颜色和背景颜色改变，如下
+*.loginbtn {
+	background-color: #0063B1;
+	color: #fff;
+}
+
+*点击获取验证码后的登录按钮样式中的字体颜色和背景颜色改变，如下
+*.registerbtn {
+	background-color: #0c0;
+	color: #fff;
+}
+*/
+
+.warning {
+	width: 384px;
+	height: 48px;
+	margin-top: 17px;
+	font-size: 15px;
+    font-family: "微软雅黑";
+    color: #000;
+}
+
+.warning span {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
