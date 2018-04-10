@@ -91,7 +91,7 @@ body {
 .bannerhead {
 	width: 100%;
 	height: 100%;
-	background-image: url(../u23.jpeg);
+	background-image: url(../images/banner1.jpeg);
 	background-size: 100% 100%;
 	-webkit-background-size: 100% 100%;
 	-moz-background-size: 100% 100%;
@@ -204,7 +204,7 @@ body {
 .bannermiddle {
 	width: 100%;
 	height: 100%;
-	background-image: url(../u25.jpeg);
+	background-image: url(../images/banner2.jpeg);
 	background-size: 100% 100%;
 	-webkit-background-size: 100% 100%;
 	-moz-background-size: 100% 100%;
@@ -324,7 +324,7 @@ body {
 
 .loginbox-navright:hover,
 .registerbox-navright:hover {
-	background-color: #f2f2f2;
+	background-color: #F2F2F2;
 }
 
 .loginbox hr,
@@ -430,15 +430,21 @@ body {
 	height: 48px;
 	line-height: 48px;
     margin-top: 22px;
-    background-color: #F2F2F2;
     text-align: center;
     font-size: 18px;
     font-family: "微软雅黑";
-    color: #ccc;
+    color: #fff;
     text-decoration: none;
 }
 
-.loginbtn:hover,
+.loginbtn {
+    background-color: #0063B1;
+}
+.registerbtn {
+	background-color: #0c0;
+}
+
+/*.loginbtn:hover,
 .registerbtn:hover {
 	text-decoration: underline;
 }
@@ -459,21 +465,7 @@ body {
     font-family: "微软雅黑";
     color: #ccc;
     text-decoration: none;
-}
-
-/*
-*点击获取验证码后的登录按钮样式中的字体颜色和背景颜色改变，如下
-*.loginbtn {
-	background-color: #0063B1;
-	color: #fff;
-}
-
-*点击获取验证码后的登录按钮样式中的字体颜色和背景颜色改变，如下
-*.registerbtn {
-	background-color: #0c0;
-	color: #fff;
-}
-*/
+}*/
 
 .warning {
 	width: 384px;
