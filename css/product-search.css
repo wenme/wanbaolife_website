@@ -1,0 +1,103 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Microsoft YaHei"；
+   }
+
+body {
+	margin: 0 auto;
+	width: 1366px;
+}
+
+.clearfix::before,
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+} /*清除浮动*/
+
+/* 导航栏开始 */
+.nav {
+	position: fixed;
+	top: 0;
+	margin: 0 auto;
+	width: 1366px;
+	height: 48px;
+	background-color: #0063B1;
+}
+
+.nav-left,
+.nav-center,
+.nav-center-text,
+.nav-right,
+.nav-list {
+	float: left;
+    line-height: 48px;
+}
+
+.nav-left {
+	margin-left: 24px;
+	margin-right: 516px;
+    color: #fff;
+	font-size: 20px;
+}
+
+.nav-center {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-right: 8px;
+}
+
+.nav-center-text {
+	margin-right: 364px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.nav-right {
+    height: 48px;
+
+}
+
+.nav-list {
+	width: 48px;
+	height: 48px;
+	margin: 0 6px;
+}
+
+.nav-list img {
+	margin: 12px;
+}
+
+.nav-list:hover,
+.nav-list:link,
+.nav-list:visited {
+	background-color: #0099BC;
+}
+/* 导航栏结束 */
+
+/*搜索工具开始*/
+.main {
+	width: 1366px;
+	height: 100%;
+	margin-top: 100px;
+	padding: 0 24px;
+	border: 1px solid grey;
+}
+
+/*sidebar 开始*/
+.sidebar {
+	width: 264px;
+}
+
+.sidebar h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 34px;
+	font-weight: normal;
+	font-family: "微软雅黑"
+	color: #333;
+}
