@@ -11,18 +11,19 @@
   <!--icon img-->
   <link rel="shortcut icon" type="images/x-icon" href="images/favicon.png">
   <!-- js -->
-  <script type="text/javascript" src=""></script>
+  <script type="text/javascript" src="js/product-search.js"></script>
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/product-search.css">
 </head>
 
 <body>
-  <!-- navigation bar开始 -->
+  <!-- navigation bar -->
   <div class="nav clearfix">
     <div class="nav-left">产品搜索</div> <!-- nav-left结束 -->
     <div class="nav-center"><img src="images/nav-icon.png" width="36" height="36"></div> <!-- nav-center结束 -->
     <div class="nav-center-text">万保资讯</div> <!-- nav-center-text结束 -->
+
     <div class="nav-right">
       <div class="nav-list"><a href="" target="" title="搜索"><img src="images/nav-search.png" width="24" height="24" alt="搜索"></a></div>
       <div class="nav-list"><a href="" target="" title="帮助"><img src="images/nav-help.png" width="24" height="24" alt="帮助"></a></div>
@@ -31,9 +32,10 @@
     </div> <!-- nav-right结束 -->
   </div> <!-- nav结束 -->
 
-  <!-- main content 开始-->
+  <!-- main content -->
   <div class="main">
-    <!-- sidebar 开始-->
+
+    <!-- sidebar -->
     <div class="sidebar">
       <h1>搜索工具</h1>
       <h2>按产品名称搜索</h2>
@@ -41,44 +43,164 @@
         <input type="text" name="search">
       </div> <!-- search结束 -->
       <div class="resetbtn"><a href="" title="reset">重置所有条件&nbsp;&nbsp;&gt;</a></div> <!-- resetbtn结束 -->
-      <!-- select-box 筛选开始 -->
-      <div class="select-box">
-        <div class="select-base">
-          <span>按基础信息筛选</span>
-          <img src="images/right-arrow.png" width="10" height="16">
-          <img src="images/down-arrow.png" width="18" height="11">
-          <table>
-            <tbody>
-              <tr>
-                <th>保险公司</th>
-                <td>
-                  <select>
-                    <option></option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <th>产品类型</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>产品架构</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>备案年份</th>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-        </div> <!-- select-base结束 -->
-        <div class="select-purchase">按购买信息筛选</div> <!-- select-purchase结束 -->
-        <div class="select-insure">按保障信息筛选</div> <!-- select-insure结束 -->
-      </div> <!-- select-box结束 -->
+
+      <!-- select-box 筛选 -->
+      <div class="select">
+
+        <!-- 第一个筛选盒 -->
+        <div class="select-box">
+          <div class="select-title">
+            <span>按基础信息筛选</span>
+            <a id="arrow_a" href="javascript:showdiv()"><img id="arrow_img" src="images/right-arrow.png"></a>
+          </div> <!-- select-title结束 -->
+
+          <!-- 弹出筛选内容 -->
+          <div class="table" id="table">
+            <div class="tr">
+              <label for="insurer">保险公司</label>
+              <select>
+                <option>全部</option>
+                <option>安邦人寿</option>
+                <option>幸福人寿</option>
+              </select>
+            </div>
+
+            <div class="tr">
+              <label for="product-type">产品类型</label>
+              <select>
+                <option>全部</option>
+                <option>养老年金保险</option>
+                <option>护理保险</option>
+              </select>
+            </div>
+
+            <div class="tr">
+              <label for="structure">产品架构</label>
+              <select>
+                <option>全部</option>
+                <option>传统型</option>
+                <option>分红型</option>
+              </select>
+            </div>
+          </div> <!-- 弹出筛选结束 -->
+        </div> <!-- 第一个筛选盒结束 -->
+
+        <!-- 第二个筛选盒 -->
+        <div class="select-box">
+            <div class="select-title">
+            <span>按购买信息筛选</span>
+            <a id="arrow_a" href="javascript:showdiv()"><img id="arrow_img" src="images/right-arrow.png"></a>
+          </div> <!-- select-title结束 -->
+
+          <!-- 弹出筛选内容 -->
+          <div class="table" id="table">
+            <div class="tr">
+              <label for="age">投保年龄</label>
+              <select>
+                <option>全部</option>
+                <option>18岁以前</option>
+                <option>18 至 59岁</option>
+              </select>
+            </div>
+
+            <div class="tr">
+              <label for="period">保险期间</label>
+              <select>
+                <option>全部</option>
+                <option>终身</option>
+                <option>1 年</option>
+              </select>
+            </div>
+
+            <div class="tr">
+              <label for="guest">销售对象</label>
+              <select>
+                <option>全部</option>
+                <option>个人</option>
+                <option>团体</option>
+              </select>
+            </div>
+          </div> <!-- 弹出筛选结束 -->  
+        </div> <!-- 第二个筛选盒结束 -->
+
+        <!-- 第三个筛选盒 -->
+        <div class="select-box">
+            <div class="select-title">
+            <span>按保障信息筛选</span>
+            <a id="arrow_a" href="javascript:showdiv()"><img id="arrow_img" src="images/right-arrow.png"></a>
+          </div> <!-- select-title结束 -->
+
+          <!-- 弹出筛选内容 -->
+          <div class="table" id="table">
+            <div class="tr">
+              <label for="insure-type">保障类别</label>
+              <select>
+                <option>全部</option>
+                <option>医疗费用</option>
+                <option>疾病手术</option>
+              </select>
+            </div>
+
+            <div class="tr">
+              <label for="status">人身状态</label>
+              <select>
+                <option>全部</option>
+                <option>身故</option>
+                <option>全残</option>
+              </select>
+            </div>
+          </div> <!-- 弹出筛选结束 --> 
+        </div> <!-- 第三个筛选盒结束 -->
+
+      </div> <!-- select结束 -->
+
     </div> <!-- sidebar结束 -->
 
-    <!-- content 开始 -->
-    <div class="content"></div>
-  </div>
+    <!-- result -->
+    <div class="result">
+
+      <div class="result-nav clearfix">
+        <h1>搜索结果</h1>
+        <p>我们总共为您找到&nbsp;&nbsp;<span>1,242</span>&nbsp;&nbsp;个相关产品</p>
+      </div>
+
+      <!-- 产品列表 -->
+      <div class="result-list">
+        <!-- 单个产品展示 -->
+        <div class="product clearfix">
+          <div class="product-box">
+            <div class="insurer-img"><img src="images/insurer.png" width="72" height="72"></div>
+            <div class="product-text">
+              <h2>泰康附加e顺投保人豁免重大疾病保险</h2>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>泰康人寿</td>
+                    <td>疾病保险</td>
+                    <td>传统型</td>
+                    <td class="tdyear">2016年</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="favorite"><img src="images/star.png" width="25" height="24"></div>
+          </div> <!-- product 结束 -->
+        </div> <!-- product-box 结束 -->
+
+      </div>
+
+      <div class="page-num">
+        <ul>
+          <li><img src=""></li>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </div> <!-- main content结束 -->
 
 </body>

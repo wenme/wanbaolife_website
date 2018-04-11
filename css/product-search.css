@@ -85,11 +85,11 @@ body {
 	height: 100%;
 	margin-top: 100px;
 	padding: 0 24px;
-	border: 1px solid grey;
 }
 
 /*sidebar 开始*/
 .sidebar {
+	float: left;
 	width: 264px;
 }
 
@@ -133,31 +133,135 @@ body {
 	color: #fff;
 }
 
-/*select-box 筛选盒子开始*/
-.select-box div,
-.select-box tr {
-	width: 264px;
-	height: 36px;
+/*select-box 筛选盒子*/
+.select {
+	margin-top: 24px;
 }
 
-.select-box div {
-	margin-top: 28px;
+.select-box {
+	height: auto;
+	margin-top: 38px;
 }
 
-.select-box span {
+.select-title span {
 	font-size: 20px;
 	color: #333;
 }
-.select-box img {
+.select-title img {
 	margin-left: 19px;
 }
 
-.select-box th {
+.table {
+	display: none;
+	width: 264px;
+	margin-top: 17px;
+}
+
+.tr {
+	height: 36px;
+	line-height: 36px;
+    margin-bottom: 12px;
+}
+
+.tr label {
+	display: inline-block;
+	width: 61px;
+	text-align: left;
 	font-size: 15px;
 	font-weight: bold;
 }
 
-.select-box select {
+.tr select {
+	display: inline-block;
+    margin-left: 14px;
+}
+
+.tr select,
+.tr option {
 	width: 184px;
 	height: 36px;
+	font-size: 15px;
+}
+
+/*搜索结果*/
+.result {
+	float: left;
+	width: 768px;
+	height: auto;
+	padding-left: 72px;
+}
+
+.result-nav {
+	width: 696px;
+	height: 39px;
+}
+
+.result-nav h1 {
+	float: left;
+	margin: 0;
+	padding: 0;
+	font-size: 34px;
+	font-weight: normal;
+	font-family: "微软雅黑"
+	color: #333;
+}
+
+.result-nav p {
+	float: right;
+	margin-top: 18px;
+	margin-bottom: 0;
+}
+
+.result-nav span {
+	font-weight: bold;
+	color: #0c0;
+}
+
+.product {
+	width: 100%;
+	height: 162px;
+	border-bottom: 1px solid #ccc;
+}
+
+.product-box {
+	margin-top: 54px;
+	width: 100%;
+	height: 88px;
+}
+
+.insurer-img,
+.product-text {
+	float: left;
+}
+
+.insurer-img {
+	height: 88px;
+	border: 8px solid #0099BC;
+}
+
+.product-text {
+	width: 450px;
+	margin-left: 40px;
+}
+
+.product-text h2 {
+	margin: 10px 0;
+	padding: 0;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+.product-text table {
+	border-collapse: collapse;
+	margin-top: 22px;
+	width: 450px;
+}
+
+.tdyear {
+	text-align: right;
+}
+
+.favorite {
+	float: right;
+	margin-top: 54px;
 }
