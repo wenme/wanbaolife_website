@@ -2,15 +2,7 @@
 $(function($) {
 
   //弹出登录
-  $(".popup_loginbox").hover(function () {
-    $(this).stop().animate({
-      opacity: '1'
-    }, 300);
-  }, function () {
-    $(this).stop().animate({
-      opacity: '0.8'
-    }, 300);
-  }).on('click', function () {
+  $(".popup_loginbox").on('click', function () {
     $("body").append("<div id='mask'></div>");
     $("#mask").addClass("mask").fadeIn("slow");
     $("#login_box").fadeIn("slow");
