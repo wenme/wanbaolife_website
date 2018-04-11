@@ -444,12 +444,12 @@ body {
 	background-color: #0c0;
 }
 
-/*.loginbtn:hover,
+.loginbtn:hover,
 .registerbtn:hover {
 	text-decoration: underline;
 }
 
-.loginbtn-mousedown,
+/*.loginbtn-mousedown,
 .registerbtn-mousedown {
 	display: block;
 	clear: both;

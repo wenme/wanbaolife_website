@@ -24,10 +24,10 @@
     <div class="nav-center"><img src="images/nav-icon.png" width="36" height="36"></div> <!-- nav-center结束 -->
     <div class="nav-center-text">万保资讯</div> <!-- nav-center-text结束 -->
     <div class="nav-right">
-      <div class="nav-list"><a href="" target="" title="搜索" alt="搜索"><img src="images/nav-search.png" width="24" height="24"></a></div>
-      <div class="nav-list"><a href="" target="" title="帮助" alt="帮助"><img src="images/nav-help.png" width="24" height="24"></a></div>
-      <div class="nav-list"><a href="" target="" title="我的账户" alt="我的账户"><img src="images/nav-account.png" width="24" height="24"></a></div>
-      <div class="nav-list"><a href="" target="" title="退出" alt="退出"><img src="images/nav-exit.png" width="24" height="24"></a></div>
+      <div class="nav-list"><a href="" target="" title="搜索"><img src="images/nav-search.png" width="24" height="24" alt="搜索"></a></div>
+      <div class="nav-list"><a href="" target="" title="帮助"><img src="images/nav-help.png" width="24" height="24" alt="帮助"></a></div>
+      <div class="nav-list"><a href="" target="" title="我的账户"><img src="images/nav-account.png" width="24" height="24" alt="我的账户"></a></div>
+      <div class="nav-list"><a href="" target="" title="退出"><img src="images/nav-exit.png" width="24" height="24" alt="退出"></a></div>
     </div> <!-- nav-right结束 -->
   </div> <!-- nav结束 -->
 
@@ -40,20 +40,41 @@
       <div class="search">
         <input type="text" name="search">
       </div> <!-- search结束 -->
-      <div class="reset">
-        <caption>重置所有条件&nbsp;&nbsp;&gt;</caption>
-        <table>
-          <tbody>
-            <tr>
-              <th></th>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-      </div> <!-- reset结束 -->
-      <div class="select-base">按基础信息筛选</div> <!-- select-base结束 -->
-      <div class="select-purchase">按购买信息筛选</div> <!-- select-purchase结束 -->
-      <div class="select-insure">按保障信息筛选</div> <!-- select-insure结束 -->
+      <div class="resetbtn"><a href="" title="reset">重置所有条件&nbsp;&nbsp;&gt;</a></div> <!-- resetbtn结束 -->
+      <!-- select-box 筛选开始 -->
+      <div class="select-box">
+        <div class="select-base">
+          <span>按基础信息筛选</span>
+          <img src="images/right-arrow.png" width="10" height="16">
+          <img src="images/down-arrow.png" width="18" height="11">
+          <table>
+            <tbody>
+              <tr>
+                <th>保险公司</th>
+                <td>
+                  <select>
+                    <option></option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>产品类型</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>产品架构</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>备案年份</th>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- select-base结束 -->
+        <div class="select-purchase">按购买信息筛选</div> <!-- select-purchase结束 -->
+        <div class="select-insure">按保障信息筛选</div> <!-- select-insure结束 -->
+      </div> <!-- select-box结束 -->
     </div> <!-- sidebar结束 -->
 
     <!-- content 开始 -->

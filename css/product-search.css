@@ -101,3 +101,63 @@ body {
 	font-family: "微软雅黑"
 	color: #333;
 }
+
+.sidebar h2 {
+	margin-top: 48px;
+	margin-bottom: 0;
+	font-weight: normal;
+	font-size: 20px;
+	color: #333;	
+}
+
+.search input {
+	width: 264px;
+	height: 36px;
+	margin-top: 12px;
+	padding: 0 28px 0 0;
+	border: 1px solid #aeaeae;
+	background: url(../images/sidebar-search.png) no-repeat right center;
+}
+
+.resetbtn {
+	text-align: center;
+	width: 176px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #0c0;
+	margin-top: 74px;
+}
+
+.resetbtn a {
+	text-decoration: none;
+	color: #fff;
+}
+
+/*select-box 筛选盒子开始*/
+.select-box div,
+.select-box tr {
+	width: 264px;
+	height: 36px;
+}
+
+.select-box div {
+	margin-top: 28px;
+}
+
+.select-box span {
+	font-size: 20px;
+	color: #333;
+}
+.select-box img {
+	margin-left: 19px;
+}
+
+.select-box th {
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.select-box select {
+	width: 184px;
+	height: 36px;
+}
