@@ -1,11 +1,19 @@
-function showdiv() {
-	document.getElementById("table").style.display = "inline-block";
-	document.getElementById("arrow_img").src = "images/down-arrow.png";
-	document.getElementById("arrow_a").onclick = "hidediv(this)";
+function showdiv(div_id) {
+	document.getElementById(div_id).style.display = "inline-block";
+	var href_id = div_id.replace("table", "arrow");
+	var img_id = href_id + "_img";
+	document.getElementById(img_id).src = "images/down-arrow.png";
+	document.getElementById(href_id).onclick = function(){
+		hidediv(div_id);
+	};
 }
 
-function hidediv() {
-	document.getElementById("table").style.display = "none";
-	document.getElementById("arrow_img").src = "images/right-arrow.png";
-	document.getElementById("arrow_a").onclick = "showdiv(this)";
+function hidediv(div_id) {
+	document.getElementById(div_id).style.display = "none";
+	var href_id = div_id.replace("table", "arrow");
+	var img_id = href_id + "_img";
+	document.getElementById(img_id).src = "images/right-arrow.png";
+	document.getElementById(href_id).onclick = function(){
+		showdiv(div_id);
+	}
 }
