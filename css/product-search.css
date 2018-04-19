@@ -283,3 +283,11 @@ body {
 .page-num:hover {
 	background-color: grey;
 }
+
+.add-bookmark:hover {
+	cursor: pointer;
+}
+
+.rm-bookmark:hover {
+	cursor: pointer;
+}
