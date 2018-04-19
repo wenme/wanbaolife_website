@@ -110,13 +110,29 @@ body {
 	color: #333;	
 }
 
+.search {
+	position: relative;
+}
+
 .search input {
+	float: left;
 	width: 264px;
 	height: 36px;
 	margin-top: 12px;
 	padding: 0 28px 0 0;
 	border: 1px solid #aeaeae;
-	background: url(../images/sidebar-search.png) no-repeat right center;
+	/*background: url(../images/sidebar-search.png) no-repeat right center;*/
+}
+
+.search img {
+	position: absolute;
+	top: 18px;
+	right: 2px;
+	display: inline-block;
+}
+
+.search img:hover {
+	cursor: pointer;
 }
 
 .resetbtn {
