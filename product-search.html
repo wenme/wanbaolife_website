@@ -11,7 +11,8 @@
   <!--icon img-->
   <link rel="shortcut icon" type="images/x-icon" href="images/favicon.png">
   <!-- js -->
-  <script type="text/javascript" src="js/product-search.js"></script>
+  <script type="text/javascript" src="https://resource.wanbaolife.com/static/js/jquery-2.1.0.min.js"></script>
+  <script type="text/javascript" src="https://resource.wanbaolife.com/static/js/product-search.js"></script>
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/product-search.css">
@@ -40,7 +41,7 @@
       <h1>搜索工具</h1>
       <h2>按产品名称搜索</h2>
       <div class="search clearfix">
-        <input type="text" name="search">
+        <input type="text" name="search" id="keyword">
         <img src="images/sidebar-search.png" alt="">
       </div> <!-- search结束 -->
       <div class="resetbtn"><a href="" title="reset">重置所有条件&nbsp;&nbsp;&gt;</a></div> <!-- resetbtn结束 -->
@@ -52,37 +53,39 @@
         <div class="select-box">
           <div class="select-title">
             <span>按基础信息筛选</span>
-            <a id="arrow_a" href="#" onclick="showdiv('table_a')"><img id="arrow_a_img" src="images/right-arrow.png"></a>
+            <a id="arrow_a" href="#" onclick="show_and_hide('table_a')"><img id="arrow_a_img" src="images/right-arrow.png"></a>
           </div> <!-- select-title结束 -->
 
           <!-- 弹出筛选内容 -->
           <div class="table" id="table_a">
             <div class="tr">
-              <label for="insurer">保险公司</label>
-              <select>
+              <label for="insurer_abbreviation">保险公司</label>
+              <select id="insurer_abbreviation" class="search_filter">
                 <option>全部</option>
-                <option>安邦人寿</option>
-                <option>幸福人寿</option>
               </select>
             </div>
 
             <div class="tr">
-              <label for="product-type">产品类型</label>
-              <select>
+              <label for="product_class">产品类型</label>
+              <select id="product_class" class="search_filter">
                 <option>全部</option>
-                <option>养老年金保险</option>
-                <option>护理保险</option>
               </select>
             </div>
 
             <div class="tr">
-              <label for="structure">产品架构</label>
-              <select>
+              <label for="product_structure">产品架构</label>
+              <select id="product_structure" class="search_filter">
                 <option>全部</option>
-                <option>传统型</option>
-                <option>分红型</option>
               </select>
             </div>
+
+            <div class="tr">
+              <label for="filing_year">备案年份</label>
+              <select id="filing_year" class="search_filter">
+                <option>全部</option>
+              </select>
+            </div>
+
           </div> <!-- 弹出筛选结束 -->
         </div> <!-- 第一个筛选盒结束 -->
 
@@ -90,35 +93,29 @@
         <div class="select-box">
             <div class="select-title">
             <span>按购买信息筛选</span>
-            <a id="arrow_b" href="#" onclick="showdiv('table_b')"><img id="arrow_b_img" src="images/right-arrow.png"></a>
+            <a id="arrow_b" href="#" onclick="show_and_hide('table_b')"><img id="arrow_b_img" src="images/right-arrow.png"></a>
           </div> <!-- select-title结束 -->
 
           <!-- 弹出筛选内容 -->
           <div class="table" id="table_b">
             <div class="tr">
-              <label for="age">投保年龄</label>
-              <select>
+              <label for="insurance_age_coverage">投保年龄</label>
+              <select id="insurance_age_coverage" class="search_filter">
                 <option>全部</option>
-                <option>18岁以前</option>
-                <option>18 至 59岁</option>
               </select>
             </div>
 
             <div class="tr">
-              <label for="period">保险期间</label>
-              <select>
+              <label for="insurance_duration">保险期间</label>
+              <select id="insurance_duration" class="search_filter">
                 <option>全部</option>
-                <option>终身</option>
-                <option>1 年</option>
               </select>
             </div>
 
             <div class="tr">
-              <label for="guest">销售对象</label>
-              <select>
+              <label for="target_audience">销售对象</label>
+              <select id="target_audience" class="search_filter">
                 <option>全部</option>
-                <option>个人</option>
-                <option>团体</option>
               </select>
             </div>
           </div> <!-- 弹出筛选结束 -->  
@@ -128,26 +125,22 @@
         <div class="select-box">
             <div class="select-title">
             <span>按保障信息筛选</span>
-            <a id="arrow_c" href="#" onclick="showdiv('table_c')"><img id="arrow_c_img" src="images/right-arrow.png"></a>
+            <a id="arrow_c" href="#" onclick="show_and_hide('table_c')"><img id="arrow_c_img" src="images/right-arrow.png"></a>
           </div> <!-- select-title结束 -->
 
           <!-- 弹出筛选内容 -->
           <div class="table" id="table_c">
             <div class="tr">
-              <label for="insure-type">保障类别</label>
-              <select>
+              <label for="benefit_type">保障类别</label>
+              <select id="benefit_type" class="search_filter">
                 <option>全部</option>
-                <option>医疗费用</option>
-                <option>疾病手术</option>
               </select>
             </div>
 
             <div class="tr">
-              <label for="status">人身状态</label>
-              <select>
+              <label for="renshenzhuangtai">人身状态</label>
+              <select id="renshenzhuangtai" class="search_filter">
                 <option>全部</option>
-                <option>身故</option>
-                <option>全残</option>
               </select>
             </div>
           </div> <!-- 弹出筛选结束 --> 
@@ -162,11 +155,11 @@
 
       <div class="result-nav clearfix">
         <h1>搜索结果</h1>
-        <p>我们总共为您找到&nbsp;&nbsp;<span>1,242</span>&nbsp;&nbsp;个相关产品</p>
+        <p>我们总共为您找到&nbsp;&nbsp;<span id="total_product_count">1,242</span>&nbsp;&nbsp;个相关产品</p>
       </div>
 
       <!-- 产品列表 -->
-      <div class="result-list">
+      <div class="result-list" id="result_list">
         <!-- 单个产品展示 -->
         <div class="product clearfix">
           <div class="product-box">
@@ -184,9 +177,9 @@
                 </tbody>
               </table>
             </div>
-            <div class="favorite"><a href="#"><img src="images/star.png" width="25" height="24"></a></div>
-          </div> <!-- product 结束 -->
-        </div> <!-- product-box 结束 -->
+            <div class="favorite"><img src="images/star.png" width="25" height="24" class="rm-bookmark"></div>
+          </div> <!-- product-box 结束 -->
+        </div> <!-- product 结束 -->
 
         <div class="product clearfix">
           <div class="product-box">
@@ -204,9 +197,9 @@
                 </tbody>
               </table>
             </div>
-            <div class="favorite"><img src="images/star.png" width="25" height="24"></div>
-          </div> <!-- product 结束 -->
-        </div> <!-- product-box 结束 -->
+            <div class="favorite"><img src="images/star.png" width="25" height="24" class="rm-bookmark"></div>
+          </div> <!-- product-box 结束 -->
+        </div> <!-- product 结束 -->
 
         <div class="product clearfix">
           <div class="product-box">
@@ -224,9 +217,9 @@
                 </tbody>
               </table>
             </div>
-            <div class="favorite"><img src="images/star.png" width="25" height="24"></div>
-          </div> <!-- product 结束 -->
-        </div> <!-- product-box 结束 -->
+            <div class="favorite"><img src="images/star.png" width="25" height="24" class="rm-bookmark"></div>
+          </div> <!-- product-box 结束 -->
+        </div> <!-- product 结束 -->
 
         <div class="product clearfix">
           <div class="product-box">
@@ -244,9 +237,9 @@
                 </tbody>
               </table>
             </div>
-            <div class="favorite"><img src="images/star.png" width="25" height="24"></div>
-          </div> <!-- product 结束 -->
-        </div> <!-- product-box 结束 -->
+            <div class="favorite"><img src="images/star.png" width="25" height="24" class="rm-bookmark"></div>
+          </div> <!-- product-box 结束 -->
+        </div> <!-- product 结束 -->
 
         <div class="product clearfix">
           <div class="product-box">
@@ -264,9 +257,9 @@
                 </tbody>
               </table>
             </div>
-            <div class="favorite"><img src="images/star.png" width="25" height="24"></div>
-          </div> <!-- product 结束 -->
-        </div> <!-- product-box 结束 -->
+            <div class="favorite"><img src="images/star.png" width="25" height="24" class="rm-bookmark"></div>
+          </div> <!-- product-box 结束 -->
+        </div> <!-- product 结束 -->
 
         <div class="product clearfix">
           <div class="product-box">
@@ -284,9 +277,9 @@
                 </tbody>
               </table>
             </div>
-            <div class="favorite"><img src="images/star.png" width="25" height="24"></div>
-          </div> <!-- product 结束 -->
-        </div> <!-- product-box 结束 -->
+            <div class="favorite"><img src="images/star.png" width="25" height="24" class="rm-bookmark"></div>
+          </div> <!-- product-box 结束 -->
+        </div> <!-- product 结束 -->
 
         <div class="product clearfix">
           <div class="product-box">
@@ -304,9 +297,9 @@
                 </tbody>
               </table>
             </div>
-            <div class="favorite"><img src="images/star.png" width="25" height="24"></div>
-          </div> <!-- product 结束 -->
-        </div> <!-- product-box 结束 -->
+            <div class="favorite"><img src="images/star.png" width="25" height="24" class="rm-bookmark"></div>
+          </div> <!-- product-box 结束 -->
+        </div> <!-- product 结束 -->
 
         <div class="product clearfix">
           <div class="product-box">
@@ -324,9 +317,9 @@
                 </tbody>
               </table>
             </div>
-            <div class="favorite"><img src="images/star.png" width="25" height="24"></div>
-          </div> <!-- product 结束 -->
-        </div> <!-- product-box 结束 -->
+            <div class="favorite"><img src="images/star.png" width="25" height="24" class="rm-bookmark"></div>
+          </div> <!-- product-box 结束 -->
+        </div> <!-- product 结束 -->
 
         <div class="product clearfix">
           <div class="product-box">
@@ -344,9 +337,9 @@
                 </tbody>
               </table>
             </div>
-            <div class="favorite"><img src="images/star.png" width="25" height="24"></div>
-          </div> <!-- product 结束 -->
-        </div> <!-- product-box 结束 -->
+            <div class="favorite"><img src="images/star.png" width="25" height="24" class="rm-bookmark"></div>
+          </div> <!-- product-box 结束 -->
+        </div> <!-- product 结束 -->
 
         <div class="product clearfix">
           <div class="product-box">
@@ -364,9 +357,9 @@
                 </tbody>
               </table>
             </div>
-            <div class="favorite"><img src="images/star.png" width="25" height="24"></div>
-          </div> <!-- product 结束 -->
-        </div> <!-- product-box 结束 -->
+            <div class="favorite"><img src="images/star.png" width="25" height="24" class="rm-bookmark"></div>
+          </div> <!-- product-box 结束 -->
+        </div> <!-- product 结束 -->
 
       </div>
 
