@@ -282,6 +282,10 @@ body {
 	margin-right: 40px;
 }
 
+.selected-page-num {
+	border-bottom: 3px solid #333;
+}
+
 .page-num img {
 	vertical-align: middle;
 }
