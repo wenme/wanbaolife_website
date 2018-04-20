@@ -248,9 +248,11 @@ $(function () {
 
                 // build page-num-box
                 inner_html = "";
-                if (page_num == total_page_count)
+                if (page_num == 1)
                 {
                 	inner_html += '<div><img src="https://resource.wanbaolife.com/static/images/page-left.png"></div>';
+                	inner_html += '<div><img src="https://resource.wanbaolife.com/static/images/page-left.png"></div>';
+                	inner_html += '<div class="page-num page-num-clickable"> ' + page_num + ' of ' + total_page_count + '</div>';
                 } 
 
 			}
@@ -264,6 +266,11 @@ $(function () {
 	}
 
 	$(".search_filter").on("change", function()
+	{
+		update_search_result(1);
+	});
+
+	$("#search_img").click(function()
 	{
 		update_search_result(1);
 	});

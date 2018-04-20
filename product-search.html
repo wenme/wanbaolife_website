@@ -12,10 +12,10 @@
   <link rel="shortcut icon" type="images/x-icon" href="https://resource.wanbaolife.com/static/images/favicon.png">
   <!-- js -->
   <script type="text/javascript" src="https://resource.wanbaolife.com/static/js/jquery-2.1.0.min.js"></script>
-  <script type="text/javascript" src="js/product-search.js"></script>
+  <script type="text/javascript" src="https://resource.wanbaolife.com/static/js/product-search.js"></script>
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="https://resource.wanbaolife.com/static/css_beta/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/product-search.css">
+  <link rel="stylesheet" type="text/css" href="https://resource.wanbaolife.com/static/css_beta/product-search.css">
 </head>
 
 <body>
@@ -42,7 +42,7 @@
       <h2>按产品名称搜索</h2>
       <div class="search clearfix">
         <input type="text" name="search" id="keyword">
-        <img src="https://resource.wanbaolife.com/static/images/sidebar-search.png" alt="">
+        <img src="https://resource.wanbaolife.com/static/images/sidebar-search.png" id="search_img" alt="">
       </div> <!-- search结束 -->
       <div class="resetbtn"><a href="javascript:reset_all_filter()" title="reset" >重置所有条件&nbsp;&nbsp;&gt;</a></div> <!-- resetbtn结束 -->
 
@@ -164,12 +164,10 @@
       </div>
 
       <div class="page-num-box clearfix" id="page-num-box">
-          <div class="page-num"><img src="https://resource.wanbaolife.com/static/images/page-left.png"></div>
+          <div class="page-num page-num-clickable"><img src="https://resource.wanbaolife.com/static/images/page-left.png"></div>
+          <div class="page-num page-num-clickable"><img src="https://resource.wanbaolife.com/static/images/page-left.png"></div>
           <div class="page-num page-num-clickable">-</div>
-          <div class="page-num page-num-clickable">-</div>
-          <div class="page-num page-num-clickable">-</div>
-          <div class="page-num page-num-clickable">-</div>
-          <div class="page-num page-num-clickable">-</div>
+          <div class="page-num page-num-clickable"><img src="https://resource.wanbaolife.com/static/images/page-right.png"></div>
           <div class="page-num page-num-clickable"><img src="https://resource.wanbaolife.com/static/images/page-right.png"></div>
       </div>
     </div>
