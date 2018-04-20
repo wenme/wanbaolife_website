@@ -205,7 +205,7 @@ $(function () {
                		product_obj_html += '<div class="product-box">';
                		product_obj_html += '<div class="insurer-img"><img src="' + product_list[i].insurer_logo + '" width="72" height="72"></div>';
                		product_obj_html += '<div class="product-text">';
-               		product_obj_html += '<h2><a href="goodsDetail.html?pid="' + product_list[i].pid + '">' + product_list[i].product + '</a></h2>';
+               		product_obj_html += '<h2><a target="_blank" href="goodsDetail.html?pid="' + product_list[i].pid + '">' + product_list[i].product + '</a></h2>';
                		product_obj_html += '<table><tbody><tr>';
                		product_obj_html += '<td>' + product_list[i].insurer_abbreviation + '</td>';
                		product_obj_html += '<td>' + product_list[i].product_class + '</td>';

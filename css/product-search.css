@@ -7,10 +7,10 @@
     font-family: "Microsoft YaHei"；
    }
 
-body {
+/*body {
 	margin: 0 auto;
 	width: 1366px;
-}
+}*/
 
 .clearfix::before,
 .clearfix::after {
@@ -23,10 +23,18 @@ body {
 .nav {
 	position: fixed;
 	top: 0;
-	margin: 0 auto;
-	width: 1366px;
+	/*margin: 0 auto;*/
+	width: 100%;
 	height: 48px;
 	background-color: #0063B1;
+	z-index: 10000;
+}
+
+.nav-content {
+	width: 1366px;
+	height: 48px;
+	line-height: 48px;
+	margin: 0 auto;
 }
 
 .nav-left,
@@ -84,6 +92,8 @@ body {
 	width: 1366px;
 	height: 100%;
 	margin-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
 	padding: 0 24px;
 }
 
@@ -102,12 +112,17 @@ body {
 	color: #333;
 }
 
-.sidebar h2 {
+.sidebar h2 a {
+	text-decoration: none;
 	margin-top: 48px;
 	margin-bottom: 0;
 	font-weight: normal;
 	font-size: 20px;
 	color: #333;	
+}
+
+.sidebar h2 a:hover {
+	text-decoration: underline;
 }
 
 .search {
