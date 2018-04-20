@@ -1,23 +1,40 @@
 //product-search.js 
 
 $(function () {
-    var SESSION_KEY = sessionStorage.getItem("session_key");
-    var tel = sessionStorage.getItem("mobile");
+	// var SESSION_KEY = sessionStorage.getItem("session_key");
+	// var tel = sessionStorage.getItem("mobile");
+	var SESSION_KEY = "session_key";
+	var tel = "mobile";
 	var URL = "https://www.wanbaolife.com";
 
-	function show_and_hide(div_id) {
+	show_and_hide = function(div_id) 
+	{
 		var show_status = document.getElementById(div_id).style.display;
 		var href_id = div_id.replace("table", "arrow");
 		var img_id = href_id + "_img";	
 		if (show_status == "inline-block"){
-			document.getElementById(img_id).src = "images/right-arrow.png";
+			document.getElementById(img_id).src = "https://resource.wanbaolife.com/static/images/right-arrow.png";
 			document.getElementById(div_id).style.display = "none";
 		}
 		else
 		{
-			document.getElementById(img_id).src = "images/down-arrow.png";
+			document.getElementById(img_id).src = "https://resource.wanbaolife.com/static/images/down-arrow.png";
 			document.getElementById(div_id).style.display = "inline-block";
 		}
+	}
+
+	reset_all_filter = function()
+	{
+		$("#insurer_abbreviation option:first").prop("selected", "selected");
+		$("#product_class option:first").prop("selected", "selected");
+		$("#product_structure option:first").prop("selected", "selected");
+		$("#filing_year option:first").prop("selected", "selected");
+		$("#insurance_age_coverage option:first").prop("selected", "selected");
+		$("#insurance_duration option:first").prop("selected", "selected");
+		$("#target_audience option:first").prop("selected", "selected");
+		$("#benefit_type option:first").prop("selected", "selected");
+		$("#renshenzhuangtai option:first").prop("selected", "selected");
+		update_search_result(1);	
 	}
 
 	function get_search_filter() 
@@ -78,7 +95,7 @@ $(function () {
 	        {
 	        	if (i == 0)
 	        	{
-	            	filter_html += "<option selected value='" + data.filing_year[i] + "'>" + data.filing_year[i] + "</option>";
+	            	filter_html += "<option selected value='" + data.filing_year[i] + "'>全部</option>";
 	            }
 	            else
 	            {
@@ -148,7 +165,7 @@ $(function () {
 	        {
 	        	if (i == 0)
 	        	{
-	            	filter_html += "<option selected value='" + data.renshenzhuangtai[i] + "'>" + data.renshenzhuangtai[i] + "</option>";
+	            	filter_html += "<option selected value='" + data.renshenzhuangtai[i] + "'>全部</option>";
 	            }
 	            else
 	            {
@@ -172,8 +189,8 @@ $(function () {
 		var target_audience = $("#target_audience").val();
 		var benefit_type = $("#benefit_type").val();
 		var renshenzhuangtai = $("#renshenzhuangtai").val();
-
-		$.post(
+		
+		$.post(url,
 		{
 			keyword: keyword,
 			insurer_id: insurer_id,
@@ -189,15 +206,16 @@ $(function () {
 			page_num: page_num
 		}, function(data, status)
 		{
-			if (data.err_code == 0)
+			if (data.total_product_count >= 0)
 			{
-                $('#result_list').empty();
 	            var product_list = data.product_list;
 	            var total_page_count = data.total_page_count;
 	            var total_product_count = data.total_product_count;
 	            var page_num = data.page_num;
-	            $("#total_product_count").val(total_product_count);
+	            $("#total_product_count").text(total_product_count);
 
+	            // build product list
+	            var inner_html = "";
 	            for (var i = 0; i < product_list.length; i++)
             	{
                		var product_obj_html = '';
@@ -205,7 +223,7 @@ $(function () {
                		product_obj_html += '<div class="product-box">';
                		product_obj_html += '<div class="insurer-img"><img src="' + product_list[i].insurer_logo + '" width="72" height="72"></div>';
                		product_obj_html += '<div class="product-text">';
-               		product_obj_html += '<h2><a href="goodsDetail.html?pid="' + product_list[i].pid + '">' + product_list[i].product + '</a></h2>';
+               		product_obj_html += '<h2><a href="goodsDetail.html?pid=' + product_list[i].pid + '">' + product_list[i].product + '</a></h2>';
                		product_obj_html += '<table><tbody><tr>';
                		product_obj_html += '<td>' + product_list[i].insurer_abbreviation + '</td>';
                		product_obj_html += '<td>' + product_list[i].product_class + '</td>';
@@ -213,23 +231,34 @@ $(function () {
                		product_obj_html += '<td class="tdyear">' + product_list[i].filing_year + '</td>';
                		product_obj_html += '</tr></tbody></table>';
                		product_obj_html += '</div>';
-               		if (product_list[i].is_followed == 0)
-               		{
-               			product_obj_html += '<div class="favorite"><img class="add-bookmark" pid="' + product_list[i].pid + '" src="https://resource.wanbaolife.com/static/images/star.png" width="25" height="24"></div>';
-               		}
-               		else
+               		if (product_list[i].is_followed == 1)
                		{
                			product_obj_html += '<div class="favorite"><img class="rm-bookmark" pid="' + product_list[i].pid + '" src="https://resource.wanbaolife.com/static/images/star-solid.png" width="25" height="24"></div>';
                		}
+               		else
+               		{
+               			product_obj_html += '<div class="favorite"><img class="add-bookmark" pid="' + product_list[i].pid + '" src="https://resource.wanbaolife.com/static/images/star.png" width="25" height="24"></div>';
+              		}
                		product_obj_html += '</div>';
                		product_obj_html += '</div>';
-               		$("result_list").append(product_obj_html);
-
+               		inner_html += product_obj_html;
             	}
+                $('#result_list').empty();
+                $('#result_list').html(inner_html);
+
+                // build page-num-box
+                inner_html = "";
+                if (page_num == total_page_count)
+                {
+                	inner_html += '<div><img src="https://resource.wanbaolife.com/static/images/page-left.png"></div>';
+                } 
+
 			}
 			else
 			{
-				$('#result_list').html("<h2>查询出错，请稍后再试</h2>");
+				$("#total_product_count").text("0");
+				$("#result_list").html("<h2>查询出错，请稍后再试</h2>");
+				$("#page-num-box").empty();
 			}
 		});
 	}
@@ -239,7 +268,7 @@ $(function () {
 		update_search_result(1);
 	});
 
-	$(".add-bookmark").on("click", function()
+	$(document).on("click", ".add-bookmark", function()
 	{
 		var bookmark_obj = $(this);
 		var pid = bookmark_obj.attr("pid");
@@ -251,7 +280,7 @@ $(function () {
 		}, function(data, status){
 			if (data.err_code == 0) 
 			{
-				bookmark_obj.src = "https://resource.wanbaolife.com/static/images/star-solid.png";
+				bookmark_obj.attr("src", "https://resource.wanbaolife.com/static/images/star-solid.png");
 				bookmark_obj.addClass("rm-bookmark");
 				bookmark_obj.removeClass("add-bookmark");
 				alert("add bookmark OK!");
@@ -260,7 +289,7 @@ $(function () {
 
 	});
 
-	$(".rm-bookmark").on("click", function()
+	$(document).on("click", ".rm-bookmark", function()
 	{
 		var bookmark_obj = $(this);
 		var pid = bookmark_obj.attr("pid");
@@ -272,7 +301,7 @@ $(function () {
 		}, function(data, status){
 			if (data.err_code == 0) 
 			{
-				bookmark_obj.src = "https://resource.wanbaolife.com/static/images/star.png";
+				bookmark_obj.attr("src", "https://resource.wanbaolife.com/static/images/star.png");
 				bookmark_obj.addClass("add-bookmark");
 				bookmark_obj.removeClass("rm-bookmark");
 				alert("remove bookmark OK!");
@@ -280,4 +309,12 @@ $(function () {
 		});
 
 	});
+
+	$(document).on("click", ".page-num-box .page-num", function()
+	{
+		console.log($(this).text());
+	});
+
+	get_search_filter();
+	update_search_result(1);
 })

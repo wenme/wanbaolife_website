@@ -306,7 +306,7 @@ body {
 	vertical-align: middle;
 }
 
-.page-num a {
+.page-num {
 	text-decoration: none;
 	color: #333;
 	font-size: 15px;
@@ -314,6 +314,7 @@ body {
 
 .page-num:hover {
 	background-color: #f2f2f2;
+	cursor: pointer;
 }
 
 .add-bookmark:hover {
