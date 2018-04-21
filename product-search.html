@@ -13,9 +13,10 @@
   <!-- js -->
   <script type="text/javascript" src="https://resource.wanbaolife.com/static/js/jquery-2.1.0.min.js"></script>
   <script type="text/javascript" src="https://resource.wanbaolife.com/static/js/product-search.js"></script>
+  <script type="text/javascript" src="https://resource.wanbaolife.com/static/js/common.js"></script>
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="https://resource.wanbaolife.com/static/css_beta/normalize.css">
-  <link rel="stylesheet" type="text/css" href="https://resource.wanbaolife.com/static/css_beta/product-search.css">
+  <link rel="stylesheet" type="text/css" href="https://resource.wanbaolife.com/static/css_beta//product-search.css">
 </head>
 
 <body>
@@ -28,10 +29,10 @@
       <div class="nav-center-text">万保资讯</div> <!-- nav-center-text结束 -->  
 
       <div class="nav-right">
-        <div class="nav-list"><a href="" target="" title="搜索"><img src="https://resource.wanbaolife.com/static/images/nav-search.png" width="24" height="24" alt="搜索"></a></div>
-        <div class="nav-list"><a href="" target="" title="帮助"><img src="https://resource.wanbaolife.com/static/images/nav-help.png" width="24" height="24" alt="帮助"></a></div>
-        <div class="nav-list"><a href="" target="" title="我的账户"><img src="https://resource.wanbaolife.com/static/images/nav-account.png" width="24" height="24" alt="我的账户"></a></div>
-        <div class="nav-list"><a href="" target="" title="退出"><img src="https://resource.wanbaolife.com/static/images/nav-exit.png" width="24" height="24" alt="退出"></a></div>
+        <div class="nav-list"><a href="product-search.html" target="" title="搜索"><img src="https://resource.wanbaolife.com/static/images/nav-search.png" width="24" height="24" alt="搜索"></a></div>
+        <div class="nav-list"><a href="info.html" target="_blank" title="帮助"><img src="https://resource.wanbaolife.com/static/images/nav-help.png" width="24" height="24" alt="帮助"></a></div>
+        <div class="nav-list"><a href="subscribe.html" target="_blank" title="我的账户"><img src="https://resource.wanbaolife.com/static/images/nav-account.png" width="24" height="24" alt="我的账户"></a></div>
+        <div class="nav-list"><a href="javascript:wbzx_log_out();" target="" title="退出"><img src="https://resource.wanbaolife.com/static/images/nav-exit.png" width="24" height="24" alt="退出"></a></div>
       </div> <!-- nav-right结束 -->
     </div><!-- nav-content结束 -->
   </div> <!-- nav结束 -->
@@ -163,7 +164,8 @@
 
       <!-- 产品列表 -->
       <div class="result-list" id="result_list">
-<!--         <div class="product clearfix ">
+      <!--
+      <div class="product clearfix ">
           <div class="product-box">
             <div class="insurer-img"><img src="https://resource.wanbaolife.com/static/images/insurer.png" width="72" height="72"></div>
             <div class="product-text">
@@ -182,19 +184,19 @@
             <div class="favorite"><img src="https://resource.wanbaolife.com/static/images/star.png" width="25" height="24" class="rm-bookmark"></div>
           </div>
         </div>
- -->
+        -->
 
       </div>
       
       <!-- page-box 页码 -->
       <div class="page-box clearfix" id="page-box">
-        <div class="page-clickable"><img src="https://resource.wanbaolife.com/static/images/page-left.png"></div>
-        <div class="page-clickable"><img src="https://resource.wanbaolife.com/static/images/page-left.png"></div>
+        <div class="page-clickable" id="go-to-first-page"><img src="https://resource.wanbaolife.com/static/images/page-first-disabled.png"></div>
+        <div class="page-clickable" id="go-to-prev-page"><img src="https://resource.wanbaolife.com/static/images/page-left-disabled.png"></div>
 
-        <div class="page-num">第 <span>3</span> 页 / 共 <span>12</span> 页</div>
+        <div class="page-num">第 <span id="page-num">-</span> 页 / 共 <span id="total-page-count">-</span> 页</div>
 
-        <div class="page-clickable"><img src="https://resource.wanbaolife.com/static/images/page-right.png"></div>
-        <div class="page-clickable"><img src="https://resource.wanbaolife.com/static/images/page-right.png"></div>
+        <div class="page-clickable" id="go-to-next-page"><img src="https://resource.wanbaolife.com/static/images/page-right-disabled.png"></div>
+        <div class="page-clickable" id="go-to-last-page"><img src="https://resource.wanbaolife.com/static/images/page-last-disabled.png"></div>
       </div><!-- page-box结束 -->
     </div> <!-- result 搜索结果结束-->
   </div> <!-- main content结束 -->
