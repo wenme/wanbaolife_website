@@ -159,6 +159,10 @@
 	color: #fff;
 }
 
+.resetbtn a:hover {
+	text-decoration: underline;
+}
+
 /*select-box 筛选盒子*/
 .select {
 	margin-top: 24px;
@@ -191,7 +195,7 @@
 
 .tr label {
 	display: inline-block;
-	width: 61px;
+	width: 65px;
 	text-align: left;
 	font-size: 15px;
 	font-weight: bold;
@@ -204,7 +208,7 @@
 
 .tr select,
 .tr option {
-	width: 184px;
+	width: 175px;
 	height: 36px;
 	font-size: 15px;
 }
@@ -255,8 +259,8 @@
 	height: 88px;
 }
 
-.insurer-img,
-.product-text {
+.product-box-right,
+.product-box-left {
 	float: left;
 }
 
@@ -265,9 +269,13 @@
 	border: 8px solid #0099BC;
 }
 
-.product-text {
-	width: 450px;
+.product-box-right {
+	width: 568px;
 	margin-left: 40px;
+}
+
+.product-text {
+	height: 31px;
 }
 
 .product-text h2 a{
@@ -283,9 +291,10 @@
 	text-decoration: underline;
 }
 
-.product-text table {
+.product-detail table {
+	float: left;
 	border-collapse: collapse;
-	margin-top: 22px;
+	margin-top: 20px;
 	width: 450px;
 }
 
@@ -295,12 +304,12 @@
 
 .favorite {
 	float: right;
-	margin-top: 54px;
+	margin-top: 16px;
 }
 
 /*页码*/
 .page-box {
-	width: 364px;
+	width: 452px;
 	margin: 70px auto 128px;
 }
 
@@ -319,8 +328,10 @@
 
 .page-num {
 	float: left;
+	width: 200px;
 	height: 48px;
 	line-height: 48px;
+	text-align: center;
 	color: #333;
 	font-size: 15px;
 }

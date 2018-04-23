@@ -221,9 +221,14 @@ $(function () {
                		var product_obj_html = '';
                		product_obj_html += '<div class="product clearfix">';
                		product_obj_html += '<div class="product-box">';
+               		product_obj_html += '<div class="product-box-left">';
                		product_obj_html += '<div class="insurer-img"><img src="' + product_list[i].insurer_logo + '" width="72" height="72"></div>';
+               		product_obj_html += '</div>';
+               		product_obj_html += '<div class="product-box-right">';
                		product_obj_html += '<div class="product-text">';
                		product_obj_html += '<h2><a target="_blank" href="goodsDetail.html?id=' + product_list[i].pid + '">' + product_list[i].product + '</a></h2>';
+               		product_obj_html += '</div>';
+               		product_obj_html += '<div class="product-detail">';
                		product_obj_html += '<table><tbody><tr>';
                		product_obj_html += '<td>' + product_list[i].insurer_abbreviation + '</td>';
                		product_obj_html += '<td>' + product_list[i].product_class + '</td>';
@@ -239,6 +244,7 @@ $(function () {
                		{
                			product_obj_html += '<div class="favorite"><img class="add-bookmark" pid="' + product_list[i].pid + '" src="https://resource.wanbaolife.com/static/images/star.png" width="25" height="24"></div>';
               		}
+              		product_obj_html += '</div>';
                		product_obj_html += '</div>';
                		product_obj_html += '</div>';
                		inner_html += product_obj_html;
