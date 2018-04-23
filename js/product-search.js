@@ -1,10 +1,10 @@
 //product-search.js 
 
 $(function () {
-	// var SESSION_KEY = sessionStorage.getItem("session_key");
-	// var tel = sessionStorage.getItem("mobile");
-	var SESSION_KEY = "session_key";
-	var tel = "mobile";
+	var SESSION_KEY = sessionStorage.getItem("session_key");
+	var tel = sessionStorage.getItem("mobile");
+	// var SESSION_KEY = "session_key";
+	// var tel = "mobile";
 	var URL = "https://www.wanbaolife.com";
 
 	show_and_hide = function(div_id) 
@@ -223,7 +223,7 @@ $(function () {
                		product_obj_html += '<div class="product-box">';
                		product_obj_html += '<div class="insurer-img"><img src="' + product_list[i].insurer_logo + '" width="72" height="72"></div>';
                		product_obj_html += '<div class="product-text">';
-               		product_obj_html += '<h2><a target="_blank" href="goodsDetail.html?pid="' + product_list[i].pid + '">' + product_list[i].product + '</a></h2>';
+               		product_obj_html += '<h2><a target="_blank" href="goodsDetail.html?id=' + product_list[i].pid + '">' + product_list[i].product + '</a></h2>';
                		product_obj_html += '<table><tbody><tr>';
                		product_obj_html += '<td>' + product_list[i].insurer_abbreviation + '</td>';
                		product_obj_html += '<td>' + product_list[i].product_class + '</td>';
@@ -246,21 +246,61 @@ $(function () {
                 $('#result_list').empty();
                 $('#result_list').html(inner_html);
 
-                // build page-num-box
-                inner_html = "";
+                // reset page-num-box
                 if (page_num == 1)
                 {
-                	inner_html += '<div><img src="https://resource.wanbaolife.com/static/images/page-left.png"></div>';
-                	inner_html += '<div><img src="https://resource.wanbaolife.com/static/images/page-left.png"></div>';
-                	inner_html += '<div class="page-num page-num-clickable"> ' + page_num + ' of ' + total_page_count + '</div>';
-                } 
+                	$("#go-to-first-page img").attr("src", "https://resource.wanbaolife.com/static/images/page-first-disabled.png");
+                 	$("#go-to-first-page").removeClass("page-num-extra");
+	               	$("#go-to-prev-page img").attr("src", "https://resource.wanbaolife.com/static/images/page-left-disabled.png");
+	               	$("#go-to-prev-page").removeClass("page-num-extra");
+                }
+                else
+                {
+                	//activate first page button
+                	$("#go-to-first-page img").attr("src", "https://resource.wanbaolife.com/static/images/page-first-hover.png");
+                 	if ($("#go-to-first-page").hasClass("page-num-extra") == false)
+                 	{
+                 		$("#go-to-first-page").addClass("page-num-extra");
+                 	}
 
+                	//activate prev page button
+                	$("#go-to-prev-page img").attr("src", "https://resource.wanbaolife.com/static/images/page-left.png");
+                 	if ($("#go-to-prev-page").hasClass("page-num-extra") == false)
+                 	{
+                 		$("#go-to-prev-page").addClass("page-num-extra");
+                 	}
+                }
+
+                if (page_num == total_page_count)
+                {
+                 	$("#go-to-next-page img").attr("src", "https://resource.wanbaolife.com/static/images/page-right-disabled.png");
+                 	$("#go-to-next-page").removeClass("page-num-extra");
+                	$("#go-to-last-page img").attr("src", "https://resource.wanbaolife.com/static/images/page-last-disabled.png");
+                 	$("#go-to-last-page").removeClass("page-num-extra");
+                }
+                else
+                {
+                 	$("#go-to-next-page img").attr("src", "https://resource.wanbaolife.com/static/images/page-right.png");
+                 	if ($("#go-to-next-page").hasClass("page-num-extra") == false)
+                 	{
+                 		$("#go-to-next-page").addClass("page-num-extra");
+                 	}
+
+                	$("#go-to-last-page img").attr("src", "https://resource.wanbaolife.com/static/images/page-last-hover.png");
+                 	if ($("#go-to-last-page").hasClass("page-num-extra") == false)
+                 	{
+                 		$("#go-to-last-page").addClass("page-num-extra");
+                 	}
+				}
+
+                $("#page-num").text(page_num);
+                $("#total-page-count").text(total_page_count);
 			}
 			else
 			{
 				$("#total_product_count").text("0");
-				$("#result_list").html("<h2>查询出错，请稍后再试</h2>");
-				$("#page-num-box").empty();
+				$("#result_list").html("<p style='margin-top:50px;'>查询出错，请稍后再试</p>");
+				$("#page-box").css({"display": "none"});
 			}
 		});
 	}
@@ -317,9 +357,42 @@ $(function () {
 
 	});
 
-	$(document).on("click", ".page-num-box .page-num", function()
+	$("#go-to-first-page").click(function()
 	{
-		console.log($(this).text());
+		var current_page_num = parseInt($("#page-num").text());
+		if ( current_page_num > 1)
+		{
+			update_search_result(1);
+		}
+	});
+
+	$("#go-to-prev-page").click(function()
+	{
+		var current_page_num = parseInt($("#page-num").text());
+		if (current_page_num > 1)
+		{		
+			update_search_result(current_page_num-1);
+		}
+	});
+
+	$("#go-to-next-page").click(function()
+	{
+		var current_page_num = parseInt($("#page-num").text());
+		var total_page_num = parseInt($("#total-page-count").text());
+		if (current_page_num < total_page_num)
+		{	
+			update_search_result(current_page_num+1);
+		}
+	});
+
+	$("#go-to-last-page").click(function()
+	{
+		var current_page_num = parseInt($("#page-num").text());
+		var total_page_num = parseInt($("#total-page-count").text());
+		if (current_page_num < total_page_num)
+		{	
+			update_search_result(total_page_num);
+		}
 	});
 
 	get_search_filter();
