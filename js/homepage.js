@@ -1,4 +1,4 @@
-/*! index.js */
+/*! homepage.js */
 
 var URL = "https://www.wanbaolife.com";
 
