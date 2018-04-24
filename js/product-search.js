@@ -238,11 +238,11 @@ $(function () {
                		product_obj_html += '</div>';
                		if (product_list[i].is_followed == 1)
                		{
-               			product_obj_html += '<div class="favorite"><img class="rm-bookmark" pid="' + product_list[i].pid + '" src="https://resource.wanbaolife.com/static/images/star-solid.png" width="25" height="24"></div>';
+               			product_obj_html += '<div class="favorite"><img class="rm-bookmark" title="取消收藏" pid="' + product_list[i].pid + '" src="https://resource.wanbaolife.com/static/images/star-solid.png" width="25" height="24"></div>';
                		}
                		else
                		{
-               			product_obj_html += '<div class="favorite"><img class="add-bookmark" pid="' + product_list[i].pid + '" src="https://resource.wanbaolife.com/static/images/star.png" width="25" height="24"></div>';
+               			product_obj_html += '<div class="favorite"><img class="add-bookmark" title="添加收藏" pid="' + product_list[i].pid + '" src="https://resource.wanbaolife.com/static/images/star.png" width="25" height="24"></div>';
               		}
               		product_obj_html += '</div>';
                		product_obj_html += '</div>';
@@ -302,6 +302,14 @@ $(function () {
                 $("#page-num").text(page_num);
                 $("#total-page-count").text(total_page_count);
 			}
+			else if (data.err_code > 0)
+			{
+	            layer.confirm('请重新登录', {
+	                btn: ['确定', '取消'] //按钮
+	            }, function () {
+	                window.location = 'index.html';
+	            });
+			}
 			else
 			{
 				$("#total_product_count").text("0");
@@ -336,7 +344,7 @@ $(function () {
 				bookmark_obj.attr("src", "https://resource.wanbaolife.com/static/images/star-solid.png");
 				bookmark_obj.addClass("rm-bookmark");
 				bookmark_obj.removeClass("add-bookmark");
-				alert("add bookmark OK!");
+                layer.msg('收藏成功', {icon: 1});
 			}
 		});
 
@@ -357,7 +365,7 @@ $(function () {
 				bookmark_obj.attr("src", "https://resource.wanbaolife.com/static/images/star.png");
 				bookmark_obj.addClass("add-bookmark");
 				bookmark_obj.removeClass("rm-bookmark");
-				alert("remove bookmark OK!");
+                layer.msg('取消收藏成功', {icon: 1});
 			}
 		});
 
