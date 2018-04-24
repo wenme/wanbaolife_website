@@ -121,12 +121,12 @@ $(function($) {
         $("#login_warning_msg").text("登录成功！正在进入系统，请稍侯片刻...");
         sessionStorage.setItem("mobile", tel_num);
         var dt = sessionStorage.getItem("mobile");
-        console.log(dt);
+        //console.log(dt);
         //添加key-value 数据到 sessionStorage
         sessionStorage.setItem("session_key", data.login_info.session_key);
         //通过key来获取value
         var dt = sessionStorage.getItem("session_key");
-        console.log(dt);
+        //console.log(dt);
         //清空所有的key-value数据。
         //localStorage.clear();
         window.setTimeout(function(){
@@ -226,12 +226,12 @@ $(function($) {
         $("#register_warning_msg").text("申请成功！马上开始体验，请稍侯片刻...");
         sessionStorage.setItem("mobile", tel_num);
         var dt = sessionStorage.getItem("mobile");
-        console.log(dt);
+        //console.log(dt);
         //添加key-value 数据到 sessionStorage
         sessionStorage.setItem("session_key", data.register_info.session_key);
         //通过key来获取value
         var dt = sessionStorage.getItem("session_key");
-        console.log(dt);      
+        //console.log(dt);      
         //清空所有的key-value数据。
         //localStorage.clear();
         setTimeout(function () {
