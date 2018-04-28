@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="https://resource.wanbaolife.com/static/css/reset.css">
+    <link rel="stylesheet" href="https://resource.wanbaolife.com/static/css/index.css">
+    <link rel="shortcut icon" type="images/x-icon" href="https://resource.wanbaolife.com/static/images/favicon.png">
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="nav clearfix">
+        <div class="container clearfix">
+            <a href="index.html" class="logo fl">
+                <img src="https://resource.wanbaolife.com/static/images/logo.png" alt="logo">
+            </a>
+
+        </div>
+    </div>
+    <div class="content container clearfix bg">
+        <form class="form register">
+            <div id="register">
+                <p class="re_title">新用户注册</p>
+                <div class="dl_div">
+                    <dl class="clearfix">
+                        <dt>手机号：</dt>
+                        <dd>
+                            <label for="" class="label">
+                                <input type="number" placeholder="手机号" class="input" id="mobile" value=""
+                                       class="required">
+                                <span class="nickx" href="javascript:void(0)"><img src="https://resource.wanbaolife.com/static/images/close.png" alt=""></span>
+                            </label>
+                        </dd>
+                    </dl>
+                    <dl class="clearfix">
+                        <dt>短信验证码：</dt>
+                        <dd>
+                            <input type="number" placeholder="输入短信验证码" class="input_code" id="code">
+                            <a class="getCode" id="enableSendBtn">获取验证码</a>
+                        </dd>
+                    </dl>
+                    <p class="info clearfix">点击注册，表示同意<a href="javascipt:;" class="sever">服务条款</a>
+                    </p>
+                    <div class="msg_box">
+                        <span class="msg"></span>
+                    </div>
+                    <a href="#" class="register_btn" id="send">注册</a>
+                    <p class="info">已有账号？去<a href="login.html">登录</a></p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="pop" style="height: 740px;width: 708px;margin-top: -200px;margin-left: -354px;z-index: 1001">
+    <p class="pop_title">服务条款
+        <span class="closeBtn"><img src="https://resource.wanbaolife.com/static/images/close.png" alt=""></span>
+    </p>
+    <div class="pop_conent" style="height: 705px;padding: 0 3px;">
+        <iframe src="terms_of_service.html" frameborder="0" style="width:700px;height: 705px "></iframe>
+    </div>
+</div>
+<div class="foot">
+    <div class="footer_text">
+        <p>©2017 广州市问么信息科技有限责任公司 | 联系方式：service@wanbaolife.com</p>
+        <p>粤ICP备16116416号-2</p>
+    </div>
+</div>
+<div class="success">
+    <img src="https://resource.wanbaolife.com/static/images/suc.png" alt="">
+    <span>注册成功</span>
+</div>
+<script src="https://resource.wanbaolife.com/static/js/jquery-2.1.0.min.js"></script>
+<script src="https://resource.wanbaolife.com/static/js/config.js"></script>
+<script src="https://resource.wanbaolife.com/static/js/layer/layer.js"></script>
+<script>
+    $(function () {
+        $('.input').focus(function () {
+            $('.nickx').show();
+            $('.getCode').addClass('code_a');
+        });
+        $('.nickx').click(function () {
+            $(".input").val("").focus();
+        });
+        $('.sever').click(function () {
+            $('.pop').show();
+        });
+        $('.conceal').click(function () {
+            $('.pop_y').show();
+        });
+        $('.closeBtn').click(function () {
+            $('.pop').hide();
+            $('.pop_y').hide();
+        });
+
+       var flag = false;
+
+        $('#code').focus(function () {
+            $('.register_btn').addClass('focus_active');
+        });
+        $('#mobile').change(function () {
+           var tel = $('#mobile').val();
+           var url = URL + '/users/verify_tel';
+            if ($.trim(tel) == "" || $.trim(tel).length < 11) {
+                $('.msg').addClass('onError').removeClass('onSuccess').text('请输入11位手机号码！');
+            } else if (!(tel.length === 11 && /^1\d{10}$/.test(tel))) {
+                $('.msg').addClass('onError').removeClass('onSuccess').text('请输入正确的手机号码！');
+            } else {
+
+                $.post(url,
+                    {
+                        tel: tel
+                    },
+                    function (data, status) {
+                        console.log(data);
+                        if (data.ret.tel_available == 1) {
+                            $('.msg').addClass('onSuccess').removeClass('onError').text('输入正确');
+                            flag = true;
+                        }else{
+                            $('.msg').addClass('onSuccess').removeClass('onError').text('手机账号已存在,请更换手机号');
+                        }
+
+                    });
+            }
+
+        });
+        $('#code').blur(function () {
+           var code = $('#code').val();
+            if ($.trim(code) == "") {
+                $('.msg').addClass('onError').removeClass('onSuccess').text('请输入验证码');
+            } else {
+                $('.msg').addClass('onSuccess').removeClass('onError').text('输入正确');
+            }
+            if(code != ''){
+                $('.register_btn').removeClass('focus_active');
+            }
+        });
+
+        //点击重置按钮时，触发文本框的失去焦点事件
+        $("#send").click(function () {
+
+           var tel = $('#mobile').val();
+           var code = $('#code').val();
+           var url = URL + '/users/wbzx_register';
+            console.log(url);
+            $.post(url,
+                {
+                    tel: tel,
+                    code: code
+                },
+                function (data, status) {
+                    console.log(data);
+                    //添加key-value 数据到 sessionStorage
+//                    localStorage.setItem("session_key", data.login_info.session_key);
+                    //通过key来获取value
+//                        var dt = localStorage.getItem("session_key");
+//                        alert(dt);
+                    //清空所有的key-value数据。
+                    //localStorage.clear();
+                    if (data.err_code == 0) {
+                        $('#register').hide();
+                        $('.success').show();
+                        setTimeout(function () {
+                            window.location = 'login.html';
+                        }, 2000);
+                    }else{
+                        layer.msg('手机账号已存在');
+                    }
+
+                });
+        });
+
+
+       var countDown = 0;
+
+        $('.getCode').click(function () {
+
+            if (flag) {
+
+                countDown = 60;
+               var phone = $("#mobile").val();
+                if (phone == '') {
+//                    layer.msg('请填写手机号');
+                    $('#wrong').show();
+                    return false;
+                }
+                if (!(phone.length === 11 && /^1\d{10}$/.test(phone))) {
+//                    layer.msg('请填写有效手机号');
+                    $('#wrong').show();
+                    return false;
+                } else {
+                    $('#wrong').hide();
+                }
+                flag = false;
+               var url = URL + '/users/wbzx_sms_code';
+                $.post(url, {tel: phone, sms_code_type: 0}, function (data, status) {
+                    if (data.err_code == 0) {
+                        countDownFunc();
+                    } else {
+//                        layer.msg(data.msg);
+                        flag = false;
+                    }
+                });
+
+            }
+
+        });
+
+        function countDownFunc() {
+            countDown--;
+            if (countDown <= 0) {
+                $('#enableSendBtn').removeAttr('disabled').text('获取验证码');
+                flag = true;
+                return;
+            } else {
+                $('#enableSendBtn').attr('disabled', true).text(countDown + '秒后重发');
+            }
+            setTimeout(function () {
+                countDownFunc();
+            }, 1000);
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>用户反馈</title>
+    <link rel="stylesheet" href="https://resource.wanbaolife.com/static/css/reset.css">
+    <link rel="stylesheet" href="https://resource.wanbaolife.com/static/css/index.css">
+    <link rel="shortcut icon" type="images/x-icon" href="https://resource.wanbaolife.com/static/images/favicon.png">
+</head>
+<body>
+<div class="wrap">
+        <div class="nav clearfix">
+            <div class="container clearfix">
+                <a href="index.html" class="logo fl">
+                    <img src="https://resource.wanbaolife.com/static/images/logo.png" alt="logo">
+                </a>
+                <ul class="navList">
+                    <li>
+                        <a href="goods.html" >寻找产品</a>
+                    </li>
+                    <li>
+                        <a href="subscribe.html" class="active">用户中心</a>
+                    </li>
+                    <li>
+                        <a href="info.html">说明书</a>
+                    </li>
+                </ul>
+                <ul class="navListRight">
+                    <li>
+                        <a href="javascript:;" class="login logout">退出</a>
+                    </li>
+                    <li id="user">
+                    </li>
+
+                    <!--<li>-->
+                        <!--<input type="text" placeholder="搜索产品" class="search">-->
+                        <!--<div class="searchPic" style="height: 20px;top:10px;"></div>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content container clearfix">
+        <div class="left_nav fl">
+            <ul>
+                <li>
+                    <a href="subscribe.html">订阅</a>
+                </li>
+                <li>
+                    <a href="collect.html">收藏产品</a>
+                </li>
+                <li class="active">
+                    <a href="feedback.html" >用户反馈</a>
+                </li>
+                <li>
+                    <a href="compensable.html">有偿征集</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right_con fl">
+            <p class="feed">用户反馈</p>
+            <form action="" class="form">
+                <dl>
+                    <dt>主题：</dt>
+                    <dd>
+                        <input type="text" placeholder="必填，最多输入40个字符" class="input" id="feedback_title">
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>回邮地址：</dt>
+                    <dd>
+                        <input type="text" placeholder="请填写您的邮箱地址，以便我们与您联系"  class="input" id="contact">
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>问题：</dt>
+                    <dd>
+                        <textarea placeholder="必填，最多输入1000个字符" class="text" id="feedback_content"></textarea>
+                    </dd>
+                </dl>
+                <a href="javascript:;" class="send">发送反馈</a>
+            </form>
+        </div>
+    </div>
+<div class="foot">
+    <div class="footer_text">
+        <p>©2017 广州市问么信息科技有限责任公司 | 联系方式：service@wanbaolife.com</p>
+        <p>粤ICP备16116416号-2</p>
+    </div>
+</div>
+</div>
+<script src="https://resource.wanbaolife.com/static/js/jquery-2.1.0.min.js"></script>
+<script src="https://resource.wanbaolife.com/static/js/config.js"></script>
+<script src="https://resource.wanbaolife.com/static/js/layer/layer.js"></script>
+<script>
+    $(function(){
+        var tel = sessionStorage.getItem("mobile");
+        var user = ' <p class="user">'+tel+'&nbsp;已登录</p>'
+        $('#user').append(user);
+        $('.send').click(function(){
+           var feedback_title = $('#feedback_title').val();
+           var feedback_content = $('#feedback_content').val();
+           var contact = $('#contact').val();
+           var session_key = localStorage.getItem("session_key");
+           var url = URL + '/users/wbzx_user_feedback';
+            if(feedback_title == ''){
+                layer.msg('主题不能为空！');
+                return false;
+            }
+            if(contact == ''){
+                layer.msg('联系方式不能为空！');
+                return false;
+            }
+            if(feedback_content == ''){
+                layer.msg('问题描述不能为空！');
+                return false;
+            }
+
+            $.post(url,
+                {
+                    feedback_title: feedback_title,
+                    feedback_content: feedback_content,
+                    contact:contact,
+                    session_key:session_key
+                },
+                function (data, status) {
+                    console.log(data);
+                    if (data.err_code == 0) {
+                        layer.msg('您的反馈已发送');
+                    }
+
+                });
+        })
+    })
+</script>
+</body>
+</html>

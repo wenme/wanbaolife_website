@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>寻找产品</title>
+    <link rel="stylesheet" href="https://resource.wanbaolife.com/static/css/reset.css">
+    <link rel="stylesheet" href="https://resource.wanbaolife.com/static/css/index.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="nav clearfix">
+        <div class="container clearfix">
+            <a href="index.html" class="logo fl">
+                <img src="https://resource.wanbaolife.com/static/images/logo.png" alt="logo">
+            </a>
+            <ul class="navList" style="display: none">
+                <li>
+                    <a href="goods.html" class="active">寻找产品</a>
+                </li>
+                <li>
+                    <a href="subscribe.html">用户中心</a>
+                </li>
+                <li>
+                    <a href="info.html">说明书</a>
+                </li>
+            </ul>
+            <ul class="navListRight">
+                <li id="status">
+                    <a href="login.html" class="login">登录</a>
+                </li>
+                <li id="user">
+                    <a href="register.html" class="register">免费试用一个月</a>
+                </li>
+                <!--<li>-->
+                    <!--<input type="text" placeholder="搜索产品" class="search">-->
+                    <!--<div class="searchPic" style="height: 20px;top:30px;"></div>-->
+                <!--</li>-->
+            </ul>
+        </div>
+    </div>
+    <div class="content bg container">
+        <div class="goods_search">
+            <input type="text" placeholder="请输入产品名称" class="search">
+            <div class="searchPic goods_se"></div>
+        </div>
+        <div class="sorting">
+            <p class="sorting_title">筛选产品</p>
+            <div class="sorting-list">
+                <div class="list_item clearfix">
+                    <span class="item-title fl">保险公司：</span>
+                    <div class="product fr abbreviationHtml">
+
+                    </div>
+                </div>
+                <div class="list_item clearfix">
+                    <span class="item-title fl">产品类型：</span>
+                    <div class="product fr classHtml">
+
+                    </div>
+                </div>
+                <div class="list_item clearfix">
+                    <span class="item-title fl">产品架构：</span>
+                    <div class="product fr structure">
+                    </div>
+                </div>
+                <div class="list_item clearfix no_border">
+                    <span class="item-title fl">备案年份：</span>
+                    <div class="product fr year">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style type="text/css">
+
+
+            .next a {
+                font-size: 12px;
+                color: #282828;
+            }
+            .disable {
+                font-size: 12px;
+                color: #888 !important;
+            }
+        </style>
+        <div class="hot">
+            <p class="sorting_title">为你找到&nbsp;<span id="nums"></span>&nbsp;个相关产品</p>
+            <p class="next">
+                <label for="" class="selected down">
+                    <select name="" id="" class="select barcon">
+                    </select>
+                </label>
+
+                <a href="javascript:void(0)" class="prevs" >上页</a>
+                <a href="javascript:void(0)" class="nexts">下页</a>
+            </p>
+            <div class="hot_list">
+                <table border="1">
+                    <thead>
+                    <tr>
+                        <th>产品名称
+                            <p class="btn">
+                            </p>
+                        </th>
+                        <th>保险公司简称</th>
+                        <th>产品类型</th>
+                        <th>产品架构</th>
+                        <th>备案年份</th>
+                        <th>销售状态</th>
+                        <th>收藏</th>
+                    </tr>
+                    </thead>
+                    <tbody class="tabel_list">
+
+                    </tbody>
+                </table>
+                <p class="next bottom">
+                    <label for="" class="selected down">
+                        <select name="" class="select barcon">
+                        </select>
+                    </label>
+                    <a href="javascript:" class="prevs">上页</a>
+                    <a href="javascript:" class="nexts">下页</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <input type="hidden" name="page_num" class="page_num" value="1">
+        <input type="hidden" name="keyword" class="keyword" value="">
+        <input type="hidden" name="insurer_id" class="insurer_id" value="">
+        <input type="hidden" name="product_class" class="product_class" value="">
+        <input type="hidden" name="product_structure" class="product_structure" value="">
+        <input type="hidden" name="year" class="year" value="">
+        <div class="footer_text">
+            <p>©2017 广州市问么信息科技有限责任公司 | 联系方式：service@wanbaolife.com</p>
+            <p>粤ICP备16116416号-2</p>
+        </div>
+
+    </div>
+</div>
+<script src="https://resource.wanbaolife.com/static/js/jquery-2.1.0.min.js"></script>
+<script src="https://resource.wanbaolife.com/static/js/config.js"></script>
+<script src="https://resource.wanbaolife.com/static/js/layer/layer.js"></script>
+<script type="text/javascript">
+$(function(){function a(a){var s=window.location.search,t=RegExp("(^|&)"+a+"=([^&]*)(&|$)"),e=s.substr(1).match(t)
+return e?decodeURIComponent(e[2]):null}function s(){var a=URL+"/terms/get_search_filter"
+$.post(a,{channel:3,session_key:e},function(a,s){var t=""
+t='<span class="slide"><a href="#" class="active">全部</a></span>'
+for(var e=a.filing_year.length-1;e>=0;e--)t+=' <span class="slide"><a href="javascript:void(0)" id="'+a.filing_year[e]+'">'+a.filing_year[e]+"</a></span>"
+$(".year").append(t)
+var i=""
+i='<span class="slide"><a href="javascript:void(0)" class="active">全部</a></span>'
+for(var e=a.product_structure.length-1;e>=0;e--)i+=' <span class="slide"><a href="#" id="'+a.product_structure[e][0]+'">'+a.product_structure[e][1]+"</a></span>"
+$(".structure").append(i)
+var r=""
+r+='<span class="slide">',r+=null==n?'<a href="javascript:void(0)" class="active" >全部</a>':'<a href="javascript:void(0)">全部</a>',r+="</span>"
+for(var e=a.product_class.length-1;e>=0;e--)11>=e&&(r+=n==a.product_class[e][0]?' <span class="slide"><a href="javascript:void(0)" class="active" id="'+a.product_class[e][0]+'">'+a.product_class[e][1]+"</a></span>":' <span class="slide"><a href="javascript:void(0)" id="'+a.product_class[e][0]+'">'+a.product_class[e][1]+"</a></span>")
+r+='<div class="more">'
+for(var e=a.product_class.length-1;e>=0;e--)e>11&&(r+=n==a.product_class[e][0]?' <span class="slide"><a href="javascript:void(0)" class="active" id="'+a.product_class[e][0]+'">'+a.product_class[e][1]+"</a></span>":' <span class="slide"><a href="javascript:void(0)" id="'+a.product_class[e][0]+'">'+a.product_class[e][1]+"</a></span>")
+r+='</div><a href="javascript:;" rel="1" class="btn-slide">更多</a>',$(".classHtml").append(r)
+var c=""
+c+='<div class="mores">',c+='<span class="slide"><a href="javascript:void(0)" class="active">全部</a></span>'
+for(var e=a.insurer_abbreviation.length-1;e>=0;e--)12>=e&&(c+=' <span class="slide"><a href="javascript:void(0)" id="'+a.insurer_abbreviation[e][0]+'">'+a.insurer_abbreviation[e][1]+"</a></span>")
+c+="</div>",c+='<div class="more">'
+for(var e=a.insurer_abbreviation.length-1;e>=0;e--)e>12&&(c+=' <span class="slide"><a href="javascript:void(0)" id="'+a.insurer_abbreviation[e][0]+'">'+a.insurer_abbreviation[e][1]+"</a></span>")
+c+='</div><a href="javascript:;" rel="1" class="btn-slide">更多</a>',$(".abbreviationHtml").append(c)})}function t(a){var s=$(".keyword").val(),t=$(".insurer_id").val(),i=$(".product_class").val(),r=$(".product_structure").val(),c=$(".year").val(),n=URL+"/terms/wbzx_product_search"
+$.post(n,{keyword:s,insurer_id:t,product_class:i,product_structure:r,filing_year:c,page_num:a,session_key:e},function(a,s){$(".tabel_list").empty()
+var t=a.product_list,e=a.total_page_count,i=a.total_product_count
+o=a.total_page_count
+var r=a.page_num
+$(".page_num").val(r)
+for(var c="",n="",l="",d=0;d<=t.length-1;d++)-1==t[d].is_followed?(n="未收藏",l="log"):0==t[d].is_followed?(n="未收藏",l="add"):(n="已收藏",l="cancel"),c='<tr><td class="collect deta"><a href="#" id="'+t[d].pid+'">'+t[d].product+"</a></td><td>"+t[d].insurer_abbreviation+"</td><td>"+t[d].product_class+"</td><td>"+t[d].product_structure+"</td><td>"+t[d].filing_year+"</td><td>"+t[d].sale_available+'</td><td class="collect collected '+l+'" id="'+t[d].pid+'">'+n+"</td></tr>",$(".tabel_list").append(c)
+var v=""
+$(".barcon").empty()
+for(var d=1;e>=d;d++)1==r&&$(".prevs").addClass("disable"),v+=r==d?'<option selected value="'+d+'">'+d+"/"+e+"</option>":'<option value="'+d+'">'+d+"/"+e+"</option>"
+$(".barcon").append(v),$("#nums").html(i)})}var e=sessionStorage.getItem("session_key"),i=sessionStorage.getItem("mobile")
+if(null!=e){$(".navList").show(),$("#user").find("a").remove()
+var r='<p class="user">'+i+"&nbsp;已登录</p>"
+$("#user").append(r),$("#status").find("a").html("退出").attr("href","index.html").addClass("logout")}$(document).on("click",".btn-slide",function(){var a=$(this).attr("rel")
+1==a?($(this).siblings(".more").slideDown(1e3),$(this).text("收起"),$(this).attr("rel",2)):($(this).siblings(".more").slideUp(1e3),$(this).text("更多"),$(this).attr("rel",1))})
+var c=a("keyword")
+""!=c&&($(".keyword").val(c),$(".search").val(c))
+var n=a("product_class")
+""!=n&&$(".product_class").val(n),$(document).on("click",".abbreviationHtml .slide a",function(){$(this).parents(".abbreviationHtml").find(".slide a").removeClass("active"),$(this).addClass("active")
+var a=$(this).attr("id")
+$(".insurer_id").val(a),t(1)}),$(document).on("click",".classHtml .slide a",function(){$(this).addClass("active").parent().siblings().children("a").removeClass("active")
+var a=$(this).attr("id")
+$(".product_class").val(a),t(1)}),$(document).on("click",".structure .slide a",function(){$(this).addClass("active").parent().siblings().children("a").removeClass("active")
+var a=$(this).attr("id")
+$(".product_structure").val(a),t(1)}),$(document).on("click",".year .slide a",function(){$(this).addClass("active").parent().siblings().children("a").removeClass("active")
+var a=$(this).attr("id")
+$(".year").val(a),t(1)}),$(document).on("click",".add",function(){var a=$(this),s=a.attr("id")
+layer.confirm("确认收藏？",{btn:["确定","取消"]},function(){var t=URL+"/users/add_followed_product"
+$.post(t,{pid:s,session_key:e},function(s,t){0==s.err_code&&(layer.msg("收藏成功",{icon:1}),a.text("已收藏"),a.addClass("cancel"),a.removeClass("add"))})})}),$(document).on("click",".log",function(){var a=$(this)
+a.attr("id")
+layer.confirm("请先登录？",{btn:["确定","取消"]},function(){window.location="login.html"})}),$(document).on("click",".deta a",function(){var a=$(this),s=a.attr("id")
+null==i?layer.confirm("请先登录？",{btn:["确定","取消"]},function(){window.location="login.html"}):$(this).attr("href","goodsDetail.html?id="+s)}),$(document).on("click",".cancel",function(){var a=$(this),s=a.attr("id")
+layer.confirm("确认取消收藏？",{btn:["确定","取消"]},function(){var t=URL+"/users/cancel_followed_product"
+$.post(t,{pid:s,session_key:e},function(s,t){0==s.err_code&&(layer.msg("取消收藏成功",{icon:1}),a.text("未收藏"),a.addClass("add"),a.removeClass("cancel"))})})}),$(document).on("click",".searchPic",function(){var a=$(this).prev(".search").val()
+$(".keyword").val(a),t(1)})
+var l=1,o=0
+$(document).on("click",".prevs",function(){return $(".prevs").hasClass("disable")?!1:($(".nexts").removeClass("disable"),l--,1>=l&&(l=1,$(".prevs").addClass("disable")),void t(l))}),$(document).on("click",".nexts",function(){return $(".nexts").hasClass("disable")?!1:($(".prevs").removeClass("disable"),l++,l>=o&&$(".nexts").addClass("disable"),void t(l))}),$(document).on("change",".barcon",function(){var a=$(this).find("option:selected").val()
+l=a,t(l)}),s(),t()})
+
+</script>
+</body>
+</html>

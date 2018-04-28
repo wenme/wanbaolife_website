@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>有偿征集</title>
+    <link rel="stylesheet" href="https://resource.wanbaolife.com/static/css/reset.css">
+    <link rel="stylesheet" href="https://resource.wanbaolife.com/static/css/index.css">
+    <link rel="shortcut icon" type="images/x-icon" href="https://resource.wanbaolife.com/static/images/favicon.png">
+</head>
+<body>
+<div class="wrap">
+    <div class="nav clearfix">
+        <div class="container clearfix">
+            <a href="index.html" class="logo fl">
+                <img src="https://resource.wanbaolife.com/static/images/logo.png" alt="logo">
+            </a>
+            <ul class="navList">
+                <li>
+                    <a href="goods.html">寻找产品</a>
+                </li>
+                <li>
+                    <a href="subscribe.html" class="active">用户中心</a>
+                </li>
+                <li>
+                    <a href="info.html">说明书</a>
+                </li>
+            </ul>
+            <ul class="navListRight">
+                <li>
+                    <a href="javascript:;" class="login logout">退出</a>
+                </li>
+                <li id="user">
+                </li>
+
+                <!--<li>-->
+                <!--<input type="text" placeholder="搜索产品" class="search">-->
+                <!--<div class="searchPic" style="height: 20px;top:10px;"></div>-->
+                <!--</li>-->
+            </ul>
+        </div>
+    </div>
+    <div class="content container clearfix">
+        <div class="left_nav fl">
+            <ul>
+                <li>
+                    <a href="subscribe.html">订阅</a>
+                </li>
+                <li>
+                    <a href="collect.html">收藏产品</a>
+                </li>
+                <li>
+                    <a href="feedback.html">用户反馈</a>
+                </li>
+                <li class="active">
+                    <a href="compensable.html" >有偿征集</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right_con fl">
+            <p class="feed">当前计划</p>
+            <form action="">
+                <div class="cur_info">
+                    <p><span>费率表：</span>
+                        <input type="file" name="file_upload" class="file" id="file_upload" onchange="fileSelected();">
+                        <em class="opa">上传费率表</em>
+                    </p>
+                    <div id="fileName"></div>
+                    <div class="progress">
+                        <div class="progressNumber" id="progressNumber">
+                        </div>
+                    </div>
+                    <span id="percent">0%</span>
+                    <p><span>现金价值表：</span>
+                        <input type="file" class="file">
+                        <em class="opa">上传现金价值表</em>
+                    </p>
+                    <a href="#" class="upload" id="upload">上传</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="footer_text">
+            <p>©2017 广州市问么信息科技有限责任公司 | 联系方式：service@wanbaolife.com</p>
+            <p>粤ICP备16116416号-2</p>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://resource.wanbaolife.com/static/js/jquery-2.1.0.min.js"></script>
+<script>
+    function fileSelected() {
+        var file = document.getElementById('file_upload').files[0];
+        if (file) {
+            document.getElementById('fileName').innerHTML = file.name;
+        }
+    }
+    var file = null;
+    $(function () {
+        var tel = sessionStorage.getItem("mobile");
+        var user = ' <p class="user">'+tel+'&nbsp;已登录</p>'
+        $('#user').append(user);
+        $("#upload").click(function () {
+            upload();
+        });
+    });
+    var input = document.getElementById("file_upload");
+
+    //文件域选择文件时, 执行readFile函数
+    input.addEventListener('change', readFile, false);
+
+    function readFile() {
+        file = this.files[0];
+    }
+    //上传文件
+    function upload() {
+        var xhr = new XMLHttpRequest();
+
+        var fd = new FormData();
+
+        fd.append("fileName", file);
+
+        //监听事件
+        xhr.upload.addEventListener("progress", uploadProgress, false);
+
+        //发送文件和表单自定义参数
+        xhr.open("POST", "../UploadServlet", true);
+
+        xhr.send(fd);
+    }
+
+    function uploadProgress(evt) {
+        if (evt.lengthComputable) {
+            //evt.loaded：文件上传的大小   evt.total：文件总的大小
+            var percentComplete = Math.round((evt.loaded) * 100 / evt.total);
+            //加载进度条，同时显示信息
+            $("#percent").html(percentComplete + '%')
+            $("#progressNumber").css("width", "" + percentComplete + "px");
+        }
+    }
+</script>
+
+</html>
