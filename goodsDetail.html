@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1"/>
+    <title>产品详情</title>
+    <link rel="stylesheet" href="https://resource.wanbaolife.com/static/css/reset.css">
+    <link rel="stylesheet" href="https://resource.wanbaolife.com/static/css/index.css">
+    <link rel="shortcut icon" type="images/x-icon" href="https://resource.wanbaolife.com/static/images/favicon.png">
+    <script src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
+    <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+    <style>
+        .layui-layer-tips{border: 1px solid #e2e2e2;}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="top">
+        <div class="list_nav">
+
+            <div class="goods_compay clearfix ">
+                <div style="padding-top: 20px"><span class="compary"></span>
+                    <h2 class="safe"></h2></div>
+
+                <div class="safe_info">
+                </div>
+                <div class="pop_list">
+                    <a href="ProductClause.html">产品条款</a>
+                    <a href="javascript:;" id="follow"></a>
+                    <a href="javascript:;" class="find">发现错误</a>
+                </div>
+            </div>
+
+            <div class="nav_wrap navFix" id="nav_wrap">
+                <div class="wrap_layer">
+                    <div class="wrap_tab"><a class="tab active" href="#aa">投保信息</a></div>
+                    <div class="wrap_tab"><a class="tab" href="#bb">保障</a></div>
+                    <div class="wrap_tab"><a class="tab" href="#investment">投资理财</a></div>
+                    <div class="wrap_tab"><a class="tab" href="#dd">重要条款</a></div>
+                    <div class="wrap_tab"><a class="tab" href="#vv">保险公司</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="conten" class="container bg">
+        <div class="safe_con clearfix" id="aa">
+            <h3 class="safe_con_title">投保信息</h3>
+            <div class="safe_con_div" id="insurance_info">
+            </div>
+            <div class="safe_con_div mr" id="extra_insurance">
+            </div>
+        </div>
+        <div class="safe_con mt clearfix" id="bb">
+            <h3 class="safe_con_title">保障</h3>
+            <div class="safe_con_div">
+                <label class="selected">
+                    <select name="" class="selecte selectType" id="select">
+                    </select>
+                </label>
+                <div class="select_div tiao">
+                    <span>给付条件</span>
+                    <div class="select-label">
+                    <label for="" class="selected">
+                        <select name="" class="select_t selectTypeChild" id="select_t">
+                        </select>
+                    </label>
+                    </div>
+                </div>
+                <div class="cause" id="payment_conditions">
+                    
+                </div>
+
+            </div>
+            <div class="safe_con_div mr">
+                <ul class="safe-ul clearfix">
+                    <li>
+                        <span>保障类别</span>
+                        <span id="benefit_type" style="margin-top: 10px"></span>
+                    </li>
+                </ul>
+                <div class="select_div tiao" style="margin-top: 3px">
+                    <span>给付方式</span>
+                </div>
+                <div class="cause" id="payment_ways">
+                
+                </div>
+            </div>
+        </div>
+        <div class="safe_con mt clearfix" id="investment">
+            <h3 class="safe_con_title tou" id="title"></h3>
+            <div class="tog" id="invest">
+                <div class="safe_con_di">
+                    <label class="selected">
+                        <select name="" class="selecte selectInvested" id="invested">
+                        </select>
+                    </label>
+                    <p>资产类别<span id="asset_class"></span></p>
+                    <p>业绩基准
+                        <!--<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span-->
+                            <!--id="benchmark_tps" style="display: none"></span> -->
+                        <span id="benchmark"></span>
+                    </p>
+                    <p>单位买卖差价<span id="bid_ask_spread"></span></p>
+                </div>
+                <div class="safe_con_di mr">
+                    <ul class="safe-ul clearfix">
+                        <li>
+                            <span>投连账户单位价格</span>
+                            <span id="sell_price"></span>
+                        </li>
+                        <li>
+                            <span>价格更新日期</span>
+                            <span id="sell_date"></span>
+                        </li>
+                    </ul>
+                    <p>3年平均收益率<span id="avg_return_3y"></span></p>
+                    <p>3年平均波动率<span id="avg_volatility_3y"></span></p>
+                    <p>资产管理费<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask" id="mask4"><span
+                            id="investment_management_fee_tps" style="display: none"></span> <span
+                            id="investment_management_fee"></span></p>
+                </div>
+                <div class="safe_con_list">
+                    <div class="safe_con_di" style="float: left">
+                        <h3 class="safe_con_title" >历年表现</h3>
+                        <div id="history_performance"></div>
+                    </div>
+                    <div class="echar mr" style="float: left">
+                        <h3 class="safe_con_title">每10000元投资价值</h3>
+                        <div id="container" style="width: 600px;height:280px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tog" id="universal">
+                <div class="safe_con_di">
+                    <p class="s" id="universalselect" style="color: #000;font-size: 20px;">
+                        万能账户
+                    </p>
+                    <p>资产类别<span id="asset_class_text"></span></p>
+                    <p>业绩基准<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask" id="mask3"><span
+                            id="benchmark_text_tps" style="display: none"></span> <span id="benchmark_text"></span></p>
+                </div>
+                <div class="safe_con_di mr">
+                    <ul class="safe-ul clearfix">
+                        <li>
+                            <span>最新结算利率</span>
+                            <span id="yearly_settled_interest_rate"></span>
+                        </li>
+                        <li>
+                            <span>结算月份</span>
+                            <span id="settlement_date"></span>
+                        </li>
+                    </ul>
+                    <p>3年平均收益率<span id="3y_avg_settled_interest_rate"></span></p>
+                    <p>最低结算利率<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask" id="mask5"><span
+                            id="min_settled_interest_rate_tps" style="display: none"></span><span
+                            id="min_settled_interest_rate"></span></p>
+                </div>
+                <div class="safe_con_list">
+                    <div class="safe_con_di" style="float: left">
+                        <h3 class="safe_con_title" id="history_interest_rate">历年平均结算利率</h3>
+                    </div>
+                    <div class="echar mr" style="float: left">
+                        <h3 class="safe_con_title">最近6个月结算利率</h3>
+                        <div id="container2" style="width: 600px;height:280px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="safe_con mt clearfix" id="dd" style="margin: 80px auto">
+            <h3 class="safe_con_title">重要条款</h3>
+            <div class="safe_con_div mt mrig clearfix" id="lipei">
+                <h3 id="benefit_claim_info">理赔</h3>
+            </div>
+            <div class="safe_con_div  clearfix mt" id="tuibao">
+                <h3 id="insurance_cancellation">退保</h3>
+                <p style="opacity: 0; filter:alpha(opacity=0); -moz-opacity:0;">as</p>
+                <p style="opacity: 0; filter:alpha(opacity=0); -moz-opacity:0;">as</p>
+            </div>
+            <div class="safe_con_div clearfix mrig mt" id="feiy">
+                <h3 id="initial_fee">保单费用</h3>
+            </div>
+            <div class="safe_con_div clearfix mt" id="daik">
+                <h3 id="loan">保单贷款</h3>
+            </div>
+            <div class="safe_con_div clearfix  mt" id="fenhong" style="margin-left:40px;">
+                <h3 id="dividend">分红</h3>
+            </div>
+        </div>
+        <div class="safe_con mt clearfix" id="vv">
+            <h3 class="safe_con_title" id="company"></h3>
+            <div class='clearfix'>
+            <div class="safe_con_div clearfix" id="info">
+            </div>
+            <div class="safe_con_div mr clearfix" id="info_text">
+            </div>
+            </div>
+            <div class="des clearfix"></div>
+            <div class="safe_con_div mt">
+                <h3 id="strategically">市场地位<span class="fr" id="year"></span></h3>
+            </div>
+            <div class="safe_con_div mr mt">
+                <h3 id="ability">偿付能力<span class="fr">2017年3季度</span></h3>
+                <p style="opacity:0; filter:alpha(opacity=0); -moz-opacity:0;">2</p>
+                <p style="opacity:0; filter:alpha(opacity=0); -moz-opacity:0;">2</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="foot">
+        <div class="footer_text">
+            <p>©2017 广州市问么信息科技有限责任公司 | 联系方式：service@wanbaolife.com</p>
+            <p>粤ICP备16116416号-2</p>
+        </div>
+    </div>
+</div>
+<!--弹窗-->
+<!--发现错误-->
+<div class="wrong">
+    <h3>发现错误 <span class="fr close"><img src="https://resource.wanbaolife.com/static/images/close.png" alt=""></span>
+    </h3>
+    <form action="">
+        <div class="checkes">
+            <label for=""><input type="checkbox" name="test" value="购买信息">购买信息</label>
+            <label for=""><input type="checkbox" name="test" value="保障">保障</label>
+            <label for=""><input type="checkbox" name="test" value="投资">投资</label>
+            <label for=""><input type="checkbox" name="test" value="重要条款">重要条款</label>
+            <label for=""><input type="checkbox" name="test" value="其他">其他</label>
+            <label for=""><input type="checkbox" name="test" value="保险公司">保险公司</label>
+        </div>
+        <textarea class="texts" placeholder="输入您想说的话" id="bug_detail"></textarea>
+        <a href="#" class="confirm">提交</a>
+    </form>
+</div>
+<script src="https://resource.wanbaolife.com/static/js/jquery-2.1.0.min.js"></script>
+<script src="https://resource.wanbaolife.com/static/js/layer/layer.js"></script>
+<script src="https://resource.wanbaolife.com/static/js/nav.js"></script>
+<script src="https://resource.wanbaolife.com/static/js/config.js"></script>
+<script src="https://resource.wanbaolife.com/static/js/goodsDetail.js"></script>
+
+<script>
+    // 全局配置，针对页面上所有图表有效
+    Highcharts.setOptions({
+        chart: {
+            backgroundColor: null,
+            plotBackgroundColor: '#fff',
+            plotShadow: true,
+        },
+        exporting: {enabled: false},//隐藏导出图片
+        credits: {enabled: false},//隐藏highcharts的站点标志
+
+    });
+</script>
+</body>
+</html>

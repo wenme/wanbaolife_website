@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>收藏产品</title>
+    <link rel="stylesheet" href="https://resource.wanbaolife.com/static/css/reset.css">
+    <link rel="stylesheet" href="https://resource.wanbaolife.com/static/css/index.css">
+    <link rel="shortcut icon" type="images/x-icon" href="https://resource.wanbaolife.com/static/images/favicon.png">
+</head>
+<body>
+<div class="wrap">
+    <div class="nav clearfix">
+        <div class="container clearfix">
+            <a href="index.html" class="logo fl">
+                <img src="https://resource.wanbaolife.com/static/images/logo.png" alt="logo">
+            </a>
+            <ul class="navList">
+                <li>
+                    <a href="goods.html">寻找产品</a>
+                </li>
+                <li>
+                    <a href="subscribe.html" class="active">用户中心</a>
+                </li>
+                <li>
+                    <a href="info.html">说明书</a>
+                </li>
+            </ul>
+            <ul class="navListRight">
+                <li>
+                    <a href="javascript:;" class="login logout">退出</a>
+                </li>
+                <li id="user">
+                </li>
+
+                <!--<li>-->
+                    <!--<input type="text" placeholder="搜索产品" class="search">-->
+                    <!--<div class="searchPic" style="height: 20px;top:10px;"></div>-->
+                <!--</li>-->
+            </ul>
+        </div>
+    </div>
+    <div class="content container clearfix">
+        <div class="left_nav fl">
+            <ul>
+                <li>
+                    <a href="subscribe.html">订阅</a>
+                </li>
+                <li class="active">
+                    <a href="collect.html" >收藏产品</a>
+                </li>
+                <li>
+                    <a href="feedback.html">用户反馈</a>
+                </li>
+                <li>
+                    <a href="compensable.html">有偿征集</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right_con fl">
+            <div class="feed">收藏产品
+                <p class="next">
+                    <label for="" class="selected down">
+                        <select name="" id="" class="select barcon">
+
+                        </select>
+                    </label>
+                    <a href="javascript:" class="prevs disable">上页</a>
+                    <a href="javascript:" class="nexts">下页</a>
+                </p>
+            </div>
+            <div class="hot_list">
+                <table border="1">
+                    <thead>
+                    <tr>
+                        <th>产品名称
+                            <p class="btn">
+                            </p>
+                        </th>
+                        <th>保险公司简称
+                            <p class="btn">
+                            </p>
+                        </th>
+                        <th>产品类型
+                            <p class="btn">
+                            </p>
+                        </th>
+                        <th>产品架构
+                            <p class="btn">
+                            </p>
+                        </th>
+                        <th>备案年份
+                            <p class="btn">
+                                <!--<span class="up"></span>-->
+                                <!--<span class="downing"></span>-->
+                            </p>
+                        </th>
+                        <th>销售状态
+                            <p class="btn">
+                                <!--<span class="up"></span>-->
+                                <!--<span class="downing"></span>-->
+                            </p>
+                        </th>
+                        <th>收藏</th>
+                    </tr>
+                    </thead>
+                    <tbody class="tabel_list">
+                    <!--<tr>-->
+                        <!--<td class="collect">友邦附加全心无忧意外住院给付医疗保险</td>-->
+                        <!--<td>友邦保险</td>-->
+                        <!--<td>产品类型</td>-->
+                        <!--<td>产品架构</td>-->
+                        <!--<td>2011年10月15日</td>-->
+                        <!--<td>销售状态</td>-->
+                        <!--<td class="collect">收藏</td>-->
+                    <!--</tr>-->
+
+                    </tbody>
+                </table>
+                <p class="next bottom">
+                    <label for="" class="selected down">
+                        <select name="" class="select barcon">
+
+                        </select>
+                    </label>
+                    <a href="javascript:" class="prevs disable">上页</a>
+                    <a href="javascript:" class="nexts">下页</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="footer_text">
+            <p>©2017 广州市问么信息科技有限责任公司 | 联系方式：service@wanbaolife.com</p>
+            <p>粤ICP备16116416号-2</p>
+        </div>
+    </div>
+    <input type="hidden" name="page_num" class="page_num" value="1">
+</div>
+<script src="https://resource.wanbaolife.com/static/js/jquery-2.1.0.min.js"></script>
+<script src="https://resource.wanbaolife.com/static/js/config.js"></script>
+<script src="https://resource.wanbaolife.com/static/js/layer/layer.js"></script>
+
+<script>
+    var session_key = sessionStorage.getItem("session_key");
+    var tel = sessionStorage.getItem("mobile");
+    var user = ' <p class="user">'+tel+'&nbsp;已登录</p>'
+    $('#user').append(user);
+   var page_num = 1;
+   var total = 0;
+
+
+    $(document).on('click', '.prevs', function () {
+        if($('.prevs').hasClass('disable')){
+            return false;
+        }
+        $('.nexts').removeClass('disable');
+        page_num--;
+        if(page_num <= 1){
+            page_num = 1;
+            $('.prevs').addClass('disable');
+        }
+        get_collect(page_num);
+    });
+
+    $(document).on('click', '.nexts', function () {
+        if($('.nexts').hasClass('disable')){
+            return false;
+        }
+        $('.prevs').removeClass('disable');
+
+        page_num++;
+        if(page_num >= total){
+            $('.nexts').addClass('disable');
+        }
+        get_collect(page_num);
+    });
+
+
+    $(document).on('change', '.barcon', function() {
+       var v = $(this).find("option:selected").val();
+        page_num = v;
+        get_collect(page_num);
+    });
+
+    $(document).on('click', '.cancel', function () {
+       var t = $(this);
+
+       var pid = t.attr('id');
+        layer.confirm('确认取消收藏？', {
+            btn: ['确定', '取消'] //按钮
+        }, function () {
+
+           var url = URL + '/users/cancel_followed_product';
+            $.post(url, {
+                pid: pid,
+                session_key: session_key
+            }, function (data, stauts) {
+                if (data.err_code == 0) {
+                    layer.msg('取消收藏成功', {icon: 1});
+                    t.parent().remove();
+                }
+
+
+            });
+
+        });
+    });
+
+
+    function get_collect(page_num) {
+       var url = URL + '/users/get_my_followed_product';
+        $.post(url,
+            {
+                page_num: page_num,
+                session_key: session_key
+            },
+            function (data, status) {
+                $('.tabel_list').empty();
+
+               var list = data.my_followed_product_list;
+                total= data.total_page_count;
+               var listHtml = '';
+               var coll = '';
+               var collClass = '';
+                for (let i = 0; i <= list.length - 1; i++) {
+                    if(list[i].is_followed == -1){
+
+                    }else if(list[i].is_followed == 0){
+                        coll = '未收藏';
+                        collClass = 'add';
+                    }else{
+                        coll = '已收藏';
+                        collClass = 'cancel';
+                    }
+                    listHtml = '<tr>' +
+                        '<td class="collect"><a href="goodsDetail.html?id=' + list[i].pid + '">' + list[i].product_name + '</a></td>' +
+                        '<td>' + list[i].insurer_abbreviation + '</td>' +
+                        '<td>' + list[i].product_structure + '</td>' +
+                        '<td>' + list[i].product_structure + '</td>' +
+                        '<td>' + list[i].filing_year + '</td>' +
+                        '<td>' + list[i].sale_available + '</td>' +
+                        '<td class="collect collected ' + collClass + '" id="' + list[i].pid + '">'+coll+'</td>' +
+                        '</tr>'
+                    $('.tabel_list').append(listHtml);
+                }
+                if(list.length == 0){
+                    listHtml = '<tr><td colspan="7" style="text-align: center">暂无收藏数据</td></tr>';
+                    $('.tabel_list').append(listHtml);
+                }
+
+               var pageHtml = '';
+                $('.barcon').empty();
+               var total_page_count = data.total_page_count;
+                for (let i = 1; i <= total_page_count; i++) {
+                    if(page_num == i){
+                        pageHtml+='<option selected value="'+i+'">'+i+'/'+total_page_count+'</option>';
+                    }else{
+                        pageHtml+='<option value="'+i+'">'+i+'/'+total_page_count+'</option>';
+                    }
+
+                }
+                $('.barcon').append(pageHtml);
+
+
+            });
+
+    }
+
+    get_collect(1);
+</script>
+</body>
+</html>

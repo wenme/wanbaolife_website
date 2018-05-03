@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>订阅</title>
+    <link rel="stylesheet" href="https://resource.wanbaolife.com/static/css/reset.css">
+    <link rel="stylesheet" href="https://resource.wanbaolife.com/static/css/index.css">
+    <link rel="shortcut icon" type="images/x-icon" href="https://resource.wanbaolife.com/static/images/favicon.png">
+</head>
+<body>
+<div class="wrap">
+    <div class="nav clearfix">
+        <div class="container clearfix">
+            <a href="index.html" class="logo fl">
+                <img src="https://resource.wanbaolife.com/static/images/logo.png" alt="logo">
+            </a>
+            <ul class="navList">
+                <li>
+                    <a href="goods.html">寻找产品</a>
+                </li>
+                <li >
+                    <a href="subscribe.html" class="active">用户中心</a>
+                </li>
+                <li>
+                    <a href="info.html">说明书</a>
+                </li>
+            </ul>
+            <ul class="navListRight">
+                <li>
+                    <a href="javascript:;" class="login logout">退出</a>
+                </li>
+                <li id="user">
+                    <!--<p class="user">15820284791&nbsp;已登录</p>-->
+                </li>
+
+                <!--<li>-->
+                <!--<input type="text" placeholder="搜索产品" class="search">-->
+                <!--<div class="searchPic" style="height: 20px;top:10px;"></div>-->
+                <!--</li>-->
+            </ul>
+        </div>
+    </div>
+    <div class="content container clearfix">
+        <div class="left_nav fl sub">
+            <ul>
+                <li class="active">
+                    <a href="subscribe.html">订阅</a>
+                </li>
+                <li>
+                    <a href="collect.html">收藏产品</a>
+                </li>
+                <li>
+                    <a href="feedback.html" >用户反馈</a>
+                </li>
+                <li>
+                    <a href="compensable.html">有偿征集</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right_con fl sub">
+            <p class="feed">当前计划</p>
+            <div class="cur_info">
+                <!--<p><span>手机号：</span>13945678988</p>-->
+                <!--<p><span>计划：</span>包年</p>-->
+                <!--<p><span>订阅有效期：</span>2017.10.7-2018.10.7</p>-->
+            </div>
+            <div>
+                <p class="feed">续费</p>
+                <div class="caseBox">
+                    <div class="case year">
+                        <div class="checked_box">
+                            <img src="https://resource.wanbaolife.com/static/images/suc.png" alt="">
+                        </div>
+                    </div>
+                    <div class="case half">
+
+                        <div class="checked_box">
+                            <img src="https://resource.wanbaolife.com/static/images/suc.png" alt="">
+                        </div>
+                    </div>
+                    <div class="case quarter">
+
+                        <div class="checked_box">
+                            <img src="https://resource.wanbaolife.com/static/images/suc.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="pay">
+                <p class="feed">支付方式</p>
+                <a href="#" class="weixin">使用微信支付</a>
+                <a href="#" class="zhifubao">使用支付宝支付</a>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="footer_text">
+            <p>©2017 广州市问么信息科技有限责任公司 | 联系方式：service@wanbaolife.com</p>
+            <p>粤ICP备16116416号-2</p>
+        </div>
+    </div>
+</div>
+<script src="https://resource.wanbaolife.com/static/js/jquery-2.1.0.min.js"></script>
+<script src="https://resource.wanbaolife.com/static/js/config.js"></script>
+<script src="https://resource.wanbaolife.com/static/js/layer/layer.js"></script>
+<script>
+    $(function(){
+        var session_key = sessionStorage.getItem("session_key");
+        $('.case').click(function(){
+            $(this).children('.checked_box').show().parent().siblings().children('.checked_box').hide();
+        });
+        var tel = sessionStorage.getItem("mobile");
+        var user = ' <p class="user">'+tel+'&nbsp;已登录</p>'
+        $('#user').append(user);
+        function get_list() {
+           var url = URL + '/goods/subscription_package_list';
+            $.post(url,{
+                session_key:session_key
+            },function (data, status) {
+                console.log(data);
+                var data = data.package_list;
+                var year = '';
+                year += '<h3>'+data[0].name+'</h3>';
+                year +=   '<p class="year_p">'+data[0].discount_price+'元</p>';
+                year +=   '<p>节省'+data[0].discount+'</p>';
+                $('.year').append(year);
+
+                var half = '';
+                half += '<h3>'+data[1].name+'</h3>';
+                half += '<p class="half_p">'+data[1].discount_price+'元</p>';
+                half += '<p>节省'+data[1].discount+'</p>';
+                $('.half').append(half);
+
+                var jidu = '';
+                jidu += '<h3>'+data[2].name+'</h3>';
+                jidu +=  '<p class="q_p">'+data[2].discount_price+'元</p>';
+                jidu += '<p>节省'+data[2].discount+'</p>';
+                $('.quarter').append(jidu);
+            })
+        }
+        function get_stauts() {
+           var url = URL + '/users/get_my_subscription_status';
+            $.post(url,{
+                session_key:session_key
+            },function (data, status) {
+                var data = data.subscription_status;
+                var info = '';
+                info += '<p><span>手机号：</span>'+ data.tel+'</p>';
+                info += '<p><span>订阅有效期：</span>'+ data.expired_date+'</p>';
+                $('.cur_info').append(info);
+            })
+        }
+        get_stauts();
+        get_list();
+    })
+</script>
+</body>
+</html>

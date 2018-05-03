@@ -226,7 +226,7 @@ $(function () {
                		product_obj_html += '</div>';
                		product_obj_html += '<div class="product-box-right">';
                		product_obj_html += '<div class="product-text">';
-               		product_obj_html += '<h2><a target="_blank" href="goodsDetail.html?id=' + product_list[i].pid + '">' + product_list[i].product + '</a></h2>';
+               		product_obj_html += '<h2><a target="_blank" href="goodsDetail.html?pid=' + product_list[i].pid + '">' + product_list[i].product + '</a></h2>';
                		product_obj_html += '</div>';
                		product_obj_html += '<div class="product-detail">';
                		product_obj_html += '<table><tbody><tr>';
