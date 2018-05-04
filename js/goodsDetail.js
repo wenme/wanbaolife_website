@@ -148,7 +148,7 @@
                 payment_conditions_html += '<p>'+selectChild[0].payment_conditions[i][0];
 
                 if(selectChild[0].payment_conditions[i][2] != ''){
-                payment_conditions_html += '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + selectChild[0].payment_conditions[i][2] + '</span>';
+                payment_conditions_html += '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + selectChild[0].payment_conditions[i][2] + '</span>';
                 }
                 payment_conditions_html += '<span>'+selectChild[0].payment_conditions[i][1]+'</span></p>';
             };
@@ -160,7 +160,7 @@
                 payment_ways_html += '<p>'+selectChild[0].payment_ways[i][0];
 
                 if(selectChild[0].payment_ways[i][2] != ''){
-                payment_ways_html += '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + selectChild[0].payment_conditions[i][2] + '</span>';
+                payment_ways_html += '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + selectChild[0].payment_conditions[i][2] + '</span>';
                 }
                 payment_ways_html += '<span>'+selectChild[0].payment_ways[i][1]+'</span></p>';
             };
@@ -181,7 +181,7 @@
                 payment_conditions_html += '<p>'+selectChild[v].payment_conditions[i][0];
 
                 if(selectChild[v].payment_conditions[i][2] != ''){
-                payment_conditions_html += '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + selectChild[v].payment_conditions[i][2] + '</span>';
+                payment_conditions_html += '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + selectChild[v].payment_conditions[i][2] + '</span>';
                 }
                 payment_conditions_html += '<span>'+selectChild[v].payment_conditions[i][1]+'</span></p>';
             };
@@ -193,7 +193,7 @@
                 payment_ways_html += '<p>'+selectChild[v].payment_ways[i][0];
 
                 if(selectChild[v].payment_ways[i][2] != ''){
-                payment_ways_html += '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + selectChild[v].payment_conditions[i][2] + '</span>';
+                payment_ways_html += '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + selectChild[v].payment_conditions[i][2] + '</span>';
                 }
                 payment_ways_html += '<span>'+selectChild[v].payment_ways[i][1]+'</span></p>';
             };
@@ -519,7 +519,7 @@
                         payment_conditions_html += '<p>'+selectChild[0].payment_conditions[i][0];
 
                         if(selectChild[0].payment_conditions[i][2] != ''){
-                        payment_conditions_html += '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + selectChild[0].payment_conditions[i][2] + '</span>';
+                        payment_conditions_html += '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + selectChild[0].payment_conditions[i][2] + '</span>';
                         }
                         payment_conditions_html += '<span>'+selectChild[0].payment_conditions[i][1]+'</span></p>';
                     };
@@ -531,7 +531,7 @@
                         payment_ways_html += '<p>'+selectChild[0].payment_ways[i][0];
 
                         if(selectChild[0].payment_ways[i][2] != ''){
-                        payment_ways_html += '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + selectChild[0].payment_conditions[i][2] + '</span>';
+                        payment_ways_html += '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + selectChild[0].payment_conditions[i][2] + '</span>';
                         }
                         payment_ways_html += '<span>'+selectChild[0].payment_ways[i][1]+'</span></p>';
                     };
@@ -561,17 +561,17 @@
                     var info_html = '';
                     info_html += '<p>' + company.capital_nationality[0] ;
                     if(company.capital_nationality[2] != ''){
-                        info_html += '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + company.capital_nationality[2] + '</span>';
+                        info_html += '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + company.capital_nationality[2] + '</span>';
                     }
                     info_html += '<span>'+company.capital_nationality[1]+'</span></p>' ;
                     info_html +=  ' <p>' + company.is_listed[0];
                     if(company.is_listed[2] != ''){
-                        info_html += '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + company.is_listed[2] + '</span>';
+                        info_html += '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + company.is_listed[2] + '</span>';
                     }
                     info_html +='<span>' + company.is_listed[1] + '</span></p>' ;
                     info_html += '<p>' + company.established_date[0] ;
                     if(company.established_date[2] != ''){
-                        info_html += '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + company.established_date[2] + '</span>';
+                        info_html += '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + company.established_date[2] + '</span>';
                     }
                     info_html +='<span>' + company.established_date[1] + '</span></p>';
 
@@ -579,17 +579,17 @@
                     var info_text = '';
                     info_text += '<p>' + company.website[0] ;
                     if(company.website[2] != ''){
-                        info_text += '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + company.website[2] + '</span>';
+                        info_text += '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + company.website[2] + '</span>';
                     }
                     info_text +='<span><a href="http://'+company.website[1]+'" target="_blank" style="color:#333">' + company.website[1] + '</a></span></p>' ;
                     info_text += ' <p>' + company.hotline[0] ;
                     if(company.hotline[2] != ''){
-                        info_text += '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + company.hotline[2] + '</span>';
+                        info_text += '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + company.hotline[2] + '</span>';
                     }
                     info_text +='<span>' + company.hotline[1] + '</span></p>' ;
                     info_text += '<p>' + company.head_quarter[0] ;
                     if(company.head_quarter[2] != ''){
-                        info_text += '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + company.head_quarter[2] + '</span>';
+                        info_text += '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + company.head_quarter[2] + '</span>';
                     }
                     info_text += '<span>' + company.head_quarter[1] + '</span></p>';
                     $('#info_text').append(info_text);
@@ -599,14 +599,14 @@
                     if(dividend.dividend_way[1] != '--'){
                         dividend_info += '<p>' + dividend.dividend_way[0] ;
                         if(dividend.dividend_way[2] != ''){
-                            dividend_info +=  '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + dividend.dividend_way[2] + '</span>';
+                            dividend_info +=  '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + dividend.dividend_way[2] + '</span>';
                         }
                         dividend_info += '<span>'+dividend.dividend_way[1]+'</span></p>';
                     }
                     if(dividend.dividend_cycle[1] != '--'){
                         dividend_info += '<p>' + dividend.dividend_cycle[0] ;
                         if(dividend.dividend_cycle[2] != ''){
-                            dividend_info +=  '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + dividend.dividend_cycle[2] + '</span>';
+                            dividend_info +=  '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + dividend.dividend_cycle[2] + '</span>';
                         }
                         dividend_info += '<span>' + dividend.dividend_cycle[1] + '</span></p>';
                     }
@@ -621,17 +621,17 @@
                     var solvency = '';
                     solvency += '<p>' + ability.core_solvency_adequacy_ratio[0];
                     if(ability.core_solvency_adequacy_ratio[2]  != ''){
-                        solvency +='<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + ability.core_solvency_adequacy_ratio[2] + '</span>';
+                        solvency +='<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + ability.core_solvency_adequacy_ratio[2] + '</span>';
                     }
                     solvency +='<span>'+ability.core_solvency_adequacy_ratio[1]+'</span></p>' ;
                     solvency += '<p>' + ability.comprehansive_solvency_adequacy_ratio[0] ;
                     if(ability.comprehansive_solvency_adequacy_ratio[2]  != ''){
-                        solvency +='<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + ability.comprehansive_solvency_adequacy_ratio[2] + '</span>';
+                        solvency +='<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + ability.comprehansive_solvency_adequacy_ratio[2] + '</span>';
                     }
                     solvency +='<span>' + ability.comprehansive_solvency_adequacy_ratio[1] + '</span></p>' ;
                     solvency += '<p>' + ability.solvency_rating[0] ;
                     if(ability.solvency_rating[2]  != ''){
-                        solvency +='<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + ability.solvency_rating[2] + '</span>';
+                        solvency +='<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + ability.solvency_rating[2] + '</span>';
                     }
                     solvency +='<span>' + ability.solvency_rating[1] + '</span></p>';
                     $('#ability').after(solvency);
@@ -641,27 +641,27 @@
                     $('#year').text(strategically.insurer_market_ranking_year);
                     market += '<p>' + strategically.original_insurance_premium_income[0] ;
                     if(strategically.original_insurance_premium_income[2] != ''){
-                        market +=  '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + strategically.original_insurance_premium_income[2] + '</span>';
+                        market +=  '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + strategically.original_insurance_premium_income[2] + '</span>';
                     }
                     market += '<span>'+strategically.original_insurance_premium_income[1]+'</span></p>' ;
                     market += '<p>' + strategically.investment_new_premium[0] ;
                     if(strategically.investment_new_premium[2] != ''){
-                        market +=  '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + strategically.investment_new_premium[2] + '</span>';
+                        market +=  '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + strategically.investment_new_premium[2] + '</span>';
                     }
                     market +='<span>' + strategically.investment_new_premium[1] + '</span></p>' ;
                     market +='<p>' + strategically.investment_link_account_new_premium[0] ;
                     if(strategically.investment_link_account_new_premium[2] != ''){
-                        market +=  '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + strategically.investment_link_account_new_premium[2] + '</span>';
+                        market +=  '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + strategically.investment_link_account_new_premium[2] + '</span>';
                     }
                     market +='<span>' + strategically.investment_link_account_new_premium[1] + '</span></p>' ;
                     market += '<p>' + strategically.original_insurance_premium_income_ranking[0] ;
                     if(strategically.original_insurance_premium_income_ranking[2] != ''){
-                        market +=  '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + strategically.original_insurance_premium_income_ranking[2] + '</span>';
+                        market +=  '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + strategically.original_insurance_premium_income_ranking[2] + '</span>';
                     }
                     market += '<span>' + strategically.original_insurance_premium_income_ranking[1] + '</span></p>' ;
                     market += '<p>' + strategically.original_insurance_premium_income_market_share[0] ;
                     if(strategically.original_insurance_premium_income_market_share[2] != ''){
-                        market +=  '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + strategically.original_insurance_premium_income_market_share[2] + '</span>';
+                        market +=  '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + strategically.original_insurance_premium_income_market_share[2] + '</span>';
                     }
                     market += '<span>' + strategically.original_insurance_premium_income_market_share[1] + '</span></p>';
                     $('#strategically').after(market);
@@ -671,21 +671,21 @@
                     if(loan.loan_period[1] != '--'){
                         loan_text += '<p>' + loan.loan_period[0] ;
                         if(loan.loan_period[2] != ''){
-                            loan_text +=  '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + loan.loan_period[2] + '</span>';
+                            loan_text +=  '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + loan.loan_period[2] + '</span>';
                         }
                         loan_text +='<span>' + loan.loan_period[1] + '</span></p>' ;
                     }
                     if(loan.loan_amount[1] != '--'){
                         loan_text +=' <p>' + loan.loan_amount[0] ;
                         if(loan.loan_amount[2] != ''){
-                            loan_text +=  '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + loan.loan_amount[2] + '</span>';
+                            loan_text +=  '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + loan.loan_amount[2] + '</span>';
                         }
                         loan_text += '<span>' + loan.loan_amount[1] + '</span></p>' ;
                     }
                     if(loan.loan_interest_rate[1] != '--'){
                         loan_text += '<p>' + loan.loan_interest_rate[0] ;
                         if(loan.loan_interest_rate[2] != ''){
-                            loan_text +=  '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + loan.loan_interest_rate[2] + '</span>';
+                            loan_text +=  '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + loan.loan_interest_rate[2] + '</span>';
                         }
                         loan_text += '<span>' + loan.loan_interest_rate[1] + '</span></p>';
                     }
@@ -701,14 +701,14 @@
                     if(initial_fee.insurance_cancellation_fee[1] != '--'){
                         initial_fee_html += '<p>' + initial_fee.insurance_cancellation_fee[0]
                         if(initial_fee.insurance_cancellation_fee[2] != ''){
-                            initial_fee_html += '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + initial_fee.insurance_cancellation_fee[2] + '</span>';
+                            initial_fee_html += '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + initial_fee.insurance_cancellation_fee[2] + '</span>';
                         }
                         initial_fee_html +='<span>'+initial_fee.insurance_cancellation_fee[1]+'</span></p>' ;
                     }
                     if(initial_fee.initial_fee[1] != '--'){
                         initial_fee_html += ' <p>' + initial_fee.initial_fee[0];
                         if(initial_fee.initial_fee[2] != ''){
-                            initial_fee_html += '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + initial_fee.initial_fee[2] + '</span>';
+                            initial_fee_html += '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + initial_fee.initial_fee[2] + '</span>';
                         }
                         initial_fee_html +='<span>' + initial_fee.initial_fee[1] + '</span></p>' ;
                     }
@@ -716,7 +716,7 @@
                     if(initial_fee.insurance_management_fee[1] != '--'){
                         initial_fee_html += '<p>' + initial_fee.insurance_management_fee[0] ;
                         if(initial_fee.insurance_management_fee[2] != ''){
-                            initial_fee_html += '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + initial_fee.insurance_management_fee[2] + '</span>';
+                            initial_fee_html += '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + initial_fee.insurance_management_fee[2] + '</span>';
                         }
                         initial_fee_html +='<span>' + initial_fee.insurance_management_fee[1] + '/月</span></p>';
                     }
@@ -731,7 +731,7 @@
                     if(benefit_claim_info.acc_notify_period[1] != '--'){
                         benefit_claim += '<p>' + benefit_claim_info.acc_notify_period[0] ;
                         if(benefit_claim_info.acc_notify_period[2] != ''){
-                            benefit_claim +='<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + benefit_claim_info.acc_notify_period[2] + '</span>';
+                            benefit_claim +='<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + benefit_claim_info.acc_notify_period[2] + '</span>';
                         }
                         benefit_claim +='<span>'+benefit_claim_info.acc_notify_period[1]+'</span></p>' ;
                     }
@@ -739,14 +739,14 @@
                     if(benefit_claim_info.benefit_approval_period[1] != '--'){
                         benefit_claim += '<p>' + benefit_claim_info.benefit_approval_period[0] ;
                         if(benefit_claim_info.benefit_approval_period[2] != ''){
-                            benefit_claim +='<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + benefit_claim_info.benefit_approval_period[2] + '</span>';
+                            benefit_claim +='<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + benefit_claim_info.benefit_approval_period[2] + '</span>';
                         }
                         benefit_claim +='<span>' + benefit_claim_info.benefit_approval_period[1] + '</span></p>';
                     }
                     if(benefit_claim_info.benefit_delivered_period[1] != '--'){
                         benefit_claim +=' <p>' + benefit_claim_info.benefit_delivered_period[0] ;
                         if(benefit_claim_info.benefit_delivered_period[2] != ''){
-                            benefit_claim +='<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + benefit_claim_info.benefit_delivered_period[2] + '</span>';
+                            benefit_claim +='<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + benefit_claim_info.benefit_delivered_period[2] + '</span>';
                         }
                         benefit_claim +='<span>' + benefit_claim_info.benefit_delivered_period[1] + '</span></p>' ;
                     }
@@ -761,14 +761,14 @@
                     if(insurance_cancellation_info.cooling_off_period[1] != '--'){
                         insurance_cancellation += '<p>' + insurance_cancellation_info.cooling_off_period[0] ;
                         if(insurance_cancellation_info.cooling_off_period[2] != ''){
-                            insurance_cancellation +='<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + insurance_cancellation_info.cooling_off_period[2] + '</span>';
+                            insurance_cancellation +='<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + insurance_cancellation_info.cooling_off_period[2] + '</span>';
                         }
                         insurance_cancellation +='<span>' + insurance_cancellation_info.cooling_off_period[1] + '</span></p>' ;
                     }
                     if(insurance_cancellation_info.insurance_cancellation_period[1] != '--'){
                         insurance_cancellation +=' <p>' + insurance_cancellation_info.insurance_cancellation_period[0] ;
                         if(insurance_cancellation_info.insurance_cancellation_period[2] != ''){
-                            insurance_cancellation +='<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + insurance_cancellation_info.insurance_cancellation_period[2] + '</span>';
+                            insurance_cancellation +='<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + insurance_cancellation_info.insurance_cancellation_period[2] + '</span>';
                         }
                         insurance_cancellation +='<span>' + insurance_cancellation_info.insurance_cancellation_period[1] + '</span></p>';
                     }
@@ -782,17 +782,17 @@
                     var insurance_info_html = '';
                     insurance_info_html += '<p>' + insurance_info.target_audience[0];
                     if(insurance_info.target_audience[2] != ''){
-                        insurance_info_html +='<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + insurance_info.target_audience[2] + '</span>';
+                        insurance_info_html +='<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + insurance_info.target_audience[2] + '</span>';
                     }
                     insurance_info_html += '<span>' + insurance_info.target_audience[1] + '</span></p>'
                     insurance_info_html +=  ' <p>' + insurance_info.policy_period[0];
                     if(insurance_info.policy_period[2] != ''){
-                        insurance_info_html +='<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + insurance_info.policy_period[2] + '</span>';
+                        insurance_info_html +='<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + insurance_info.policy_period[2] + '</span>';
                     }
                     insurance_info_html +='<span>' + insurance_info.policy_period[1] + '</span></p>' ;
                     insurance_info_html +=  '<p>' + insurance_info.extra_insurance[0] ;
                     if(insurance_info.extra_insurance[2] != ''){
-                        insurance_info_html +='<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + insurance_info.extra_insurance[2] + '</span>';
+                        insurance_info_html +='<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + insurance_info.extra_insurance[2] + '</span>';
                     }
                     insurance_info_html +='<span>' + insurance_info.extra_insurance[1] + '</span></p>';
                     $('#insurance_info').append(insurance_info_html);
@@ -800,17 +800,17 @@
                     var extra_insurance_html = '';
                     extra_insurance_html += '<p>' + insurance_info.insurance_age_coverage[0];
                     if(insurance_info.insurance_age_coverage[2] != ''){
-                        extra_insurance_html += '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + insurance_info.insurance_age_coverage[2] + '</span>';
+                        extra_insurance_html += '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + insurance_info.insurance_age_coverage[2] + '</span>';
                     }
                     extra_insurance_html += '<span>' + insurance_info.insurance_age_coverage[1] + '</span></p>' ;
                     extra_insurance_html += '<p>' + insurance_info.insurance_payment_info[0] ;
                     if(insurance_info.insurance_payment_info[2] != ''){
-                        extra_insurance_html += '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + insurance_info.insurance_payment_info[2] + '</span>';
+                        extra_insurance_html += '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + insurance_info.insurance_payment_info[2] + '</span>';
                     }
                     extra_insurance_html += '<span>' + insurance_info.insurance_payment_info[1] + '</span></p>' ;
                     extra_insurance_html += '<p>' + insurance_info.insurance_grace_period[0] ;
                     if(insurance_info.insurance_grace_period[2] != ''){
-                        extra_insurance_html += '<img src="https://resource.wanbaolife.com/static/images/info.png" class="mask"><span style="display: none">' + insurance_info.insurance_grace_period[2] + '</span>';
+                        extra_insurance_html += '<img src="http://p86qgj9gq.bkt.clouddn.com/info.png" class="mask"><span style="display: none">' + insurance_info.insurance_grace_period[2] + '</span>';
                     }
 
                     extra_insurance_html += '<span>' + insurance_info.insurance_grace_period[1] + '</span></p>';
