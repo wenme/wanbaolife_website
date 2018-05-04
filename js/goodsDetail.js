@@ -288,13 +288,13 @@
 
         function getList() {
            var url = URL + '/terms/wbzx_get_product_detail_info';
-            $.post(url, {
+           var post_data = {
                 pid: pid,
-                session_key: session_key
-            }, function (data, stauts) {
-                console.log(data);
-
-
+                session_key: session_key,
+                timestamp: Date.parse(new Date()) / 1000
+           };
+           post_data['sign'] = complete_digest(post_data);
+            $.post(url, post_data, function (data, stauts) {
                 if (data.err_msg == 'INVALID_SESSION_KEY') {
                     layer.confirm('请先登录？', {
                         btn: ['确定', '取消'] //按钮
@@ -303,6 +303,8 @@
                         window.location = 'login.html';
 
                     });
+                } else if (data.err_msg == 'TOO_MANY_REQUESTS') {
+                    alert('请求过于密集，请稍后再试');
                 } else {
                     collect = data.product_info_json.is_followed;//关注
 

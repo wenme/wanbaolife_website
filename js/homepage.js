@@ -249,6 +249,7 @@ $(function($) {
   {
     $(hide_id).css({display:"none"});
     $(show_id).css({display:"block"});
+    $(show_id).text(--count_down_timer + "秒后再次发送");
     var new_timer = window.setInterval(function()
     {
       if (count_down_timer > 0)

@@ -189,9 +189,9 @@ $(function () {
 		var target_audience = $("#target_audience").val();
 		var benefit_type = $("#benefit_type").val();
 		var renshenzhuangtai = $("#renshenzhuangtai").val();
-		
-		$.post(url,
-		{
+		var timestamp = Date.parse(new Date()) / 1000;
+
+		var post_data = {
 			keyword: keyword,
 			insurer_id: insurer_id,
 			product_class: product_class,
@@ -203,8 +203,11 @@ $(function () {
 			benefit_type: benefit_type,
 			renshenzhuangtai: renshenzhuangtai,
 			session_key: SESSION_KEY,
-			page_num: page_num
-		}, function(data, status)
+			page_num: page_num,
+			timestamp: timestamp
+		};
+		post_data['sign'] = complete_digest(post_data);
+		$.post(url, post_data, function(data, status)
 		{
 			if (data.total_product_count >= 0)
 			{
