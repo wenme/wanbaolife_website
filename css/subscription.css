@@ -45,6 +45,7 @@
 .sidebar-on {
 	background-color: #0063B1;
 	color: #fff;
+	font-weight: bold;
 }
 
 .sidebar-off {

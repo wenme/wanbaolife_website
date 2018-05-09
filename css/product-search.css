@@ -166,7 +166,6 @@
 .result {
 	position: absolute;
 	top: 48px;
-	left: 467.5px;
 	width: 696px;
 	height: auto;
 }
@@ -199,6 +198,7 @@
 .product {
 	width: 100%;
 	height: auto;
+	margin-bottom: 16px;
 	background-color: #F2F2F2;
 }
 
@@ -270,6 +270,7 @@
 	width: 96px;
 	height: 40px;
 	cursor: pointer;
+	color: #999;
 }
 
 .add-compare {
