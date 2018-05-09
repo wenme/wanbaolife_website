@@ -1,0 +1,248 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Microsoft YaHei"；
+  }
+
+.main {
+	width: 1366px;
+	height: auto;
+	margin: 108px auto 0 auto;
+	padding: 0 24px;
+}
+
+.sidebar h1,
+.current-plan h1,
+.subscribe-plan h1,
+.plan-box-text h1 {
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0;
+}
+
+/*sidebar 开始*/
+.sidebar {
+	position: fixed;
+	top: 108px;
+	width: 264px;
+}
+
+.sidebar-box {
+	margin-top: 28px;
+}
+
+.sidebar-box div {
+	width: 264px;
+	height: 36px;
+	margin-bottom: 16px;
+	line-height: 36px;
+	text-indent: 20px;
+}
+
+.sidebar-on {
+	background-color: #0063B1;
+	color: #fff;
+}
+
+.sidebar-off {
+	background-color: #F2F2F2;
+}
+
+/*content 开始*/
+.content {
+	position: relative;
+	top: 0;
+	left: 264px;
+	margin-left: 72px;
+	width: 982px;
+}
+
+.current-plan p {
+	width: 100%;
+	height: 36px;
+	line-height: 36px;
+	font-size: 14px;
+	margin-top: 28px;
+	color: #999;
+}
+
+.current-plan p span {
+	font-size: 14px;
+	font-weight: bold;
+	color: #000;
+}
+
+.subscribe-plan {
+	margin-top: 54px;
+	width: 100%;
+}
+
+.plan-text {
+	margin-top: 24px;
+	padding-left: 0;
+}
+
+.plan-text li {
+	font-size: 14px;
+	color: #999;
+	line-height: 18px;
+	list-style-type: none;
+}
+
+.subscribe-box {
+	width: 100%;
+	margin: 40px 0;
+}
+
+.plan-box {
+	float: left;
+	width: 300px;
+	height: 200px;
+	border: 4px solid #999;
+	text-align: center;
+}
+
+.plan-box-on {
+	border-color: #0c0;
+}
+
+.half-year {
+	margin-left: 41px;
+	margin-right: 41px;
+}
+
+.big-sale,
+.popular,
+.false-box {
+	position: relative;
+	top: 2px;
+	left: 2px;
+	width: 68px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+}
+
+.big-sale {
+	background-color: #0099BC;
+}
+
+.popular {
+	background-color: #F7630C;
+}
+
+.plan-box-text {
+	position: relative;
+	top: 20px;
+	left: 0;
+}
+
+.price {
+	font-size: 14px;
+	color: #999;
+	margin: 20px 0;
+}
+
+.price-on {
+	color: #0C0;
+}
+
+.price-num {
+	font-size: 36px;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.saving {
+	color: #999;
+}
+
+.checkout-list {
+	width: 100%;
+}
+
+.order-info,
+.payment-way {
+	width: 430px;
+	height: 300px;
+}
+
+.order-info {
+	float: left;
+}
+
+.payment-way {
+	float: right;
+}
+
+.checkout-list p {
+	font-size: 18px;
+	border-bottom: 1px solid #F2F2F2;
+	height: 36px;
+	line-height: 36px;
+	margin-bottom: 12px;
+}
+
+.checkout-list table {
+	table-layout: fixed;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.order-info-box th,
+.order-info-box td {
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.order-info-box th {
+	text-align: left;
+}
+
+.order-info-box tbody th {
+	font-weight: normal;
+}
+
+.order-info-box td {
+	text-align: right;
+}
+
+.order-info-box tfoot td {
+	font-weight: bold;
+}
+
+.order-info-box tfoot tr,
+.payment-way-box tfoot tr{
+	border-top: 1px solid #F2F2F2;
+	height: 56px;
+}
+
+.plan-name {
+	font-weight: bold;
+	color: #0063B1;
+}
+
+.payment-way-box img {
+	vertical-align: middle;
+	padding-left: 20px;
+}
+
+.payment-way-box tbody tr {
+	height: 85px;
+}
+
+.subscribe-btn {
+	width: 200px;
+	height: 48px;
+	line-height: 48px;
+	margin: 20px auto 130px;
+	background-color: #F7630C;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+}

@@ -19,105 +19,54 @@
 	display: table;
 } /*清除浮动*/
 
-/* 导航栏开始 */
-.nav {
+/*固定定位模块*/
+.sidebar,
+.result-nav,
+.pro-compare {
 	position: fixed;
-	top: 0;
-	/*margin: 0 auto;*/
-	width: 100%;
-	height: 48px;
-	background-color: #0063B1;
-	z-index: 10000;
 }
 
-.nav-content {
-	width: 1366px;
-	height: 48px;
-	line-height: 48px;
-	margin: 0 auto;
+.sidebar {
+	top: 48px;
 }
 
-.nav-left,
-.nav-center,
-.nav-center-text,
-.nav-right,
-.nav-list {
-	float: left;
-    line-height: 48px;
+.result-nav {
+	top: 48px;
 }
 
-.nav-left {
-	margin-left: 24px;
-	margin-right: 516px;
-    color: #fff;
-	font-size: 20px;
+.pro-compare {
+	top: 48px;
 }
-
-.nav-center {
-    margin-top: 6px;
-    margin-bottom: 6px;
-    margin-right: 8px;
-}
-
-.nav-center-text {
-	margin-right: 364px;
-    color: #fff;
-    font-size: 20px;
-}
-
-.nav-right {
-    height: 48px;
-
-}
-
-.nav-list {
-	width: 48px;
-	height: 48px;
-	margin: 0 6px;
-}
-
-.nav-list img {
-	margin: 12px;
-}
-
-.nav-list:hover,
-.nav-list:link,
-.nav-list:visited {
-	background-color: #0099BC;
-}
-/* 导航栏结束 */
 
 /*搜索工具开始*/
 .main {
 	width: 1366px;
-	height: 100%;
-	margin-top: 100px;
-	margin-left: auto;
-	margin-right: auto;
+	height: auto;
+	margin: 48px auto 0 auto;
 	padding: 0 24px;
 }
 
-/*sidebar 开始*/
-.sidebar {
-	float: left;
-	width: 264px;
+.sidebar,
+.result-nav,
+.pro-compare {
+	padding-top: 60px;
+	background-color: #fff;
 }
 
-.sidebar h1 {
+/*sidebar 开始*/
+.sidebar h1,
+.result-nav h1,
+.pro-compare h1 {
 	margin: 0;
 	padding: 0;
-	font-size: 34px;
-	font-weight: normal;
-	font-family: "微软雅黑"
+	font-size: 20px;
+	font-weight: bold;
 	color: #333;
 }
 
-.sidebar h2 {
-	margin-top: 48px;
-	margin-bottom: 0;
-	font-weight: normal;
-	font-size: 20px;
-	color: #333;	
+.sidebar h1,
+.pro-compare h1 {
+	margin-bottom: 44px;
 }
 
 .search {
@@ -128,15 +77,15 @@
 	float: left;
 	width: 264px;
 	height: 36px;
-	margin-top: 12px;
-	padding: 0 28px 0 0;
+	padding: 0 28px 0 2px;
 	border: 1px solid #aeaeae;
+	font-size: 15px;
 	/*background: url(../images/sidebar-search.png) no-repeat right center;*/
 }
 
 .search img {
 	position: absolute;
-	top: 18px;
+	top: 6px;
 	right: 2px;
 	display: inline-block;
 }
@@ -151,7 +100,7 @@
 	height: 40px;
 	line-height: 40px;
 	background-color: #0c0;
-	margin-top: 74px;
+	margin-top: 32px;
 }
 
 .resetbtn a {
@@ -165,20 +114,20 @@
 
 /*select-box 筛选盒子*/
 .select {
-	margin-top: 24px;
+	margin-top: 32px;
 }
 
 .select-box {
 	height: auto;
-	margin-top: 38px;
 }
 
 .select-title span {
-	font-size: 20px;
+	font-size: 18px;
 	color: #333;
+	vertical-align: middle;
 }
 .select-title img {
-	margin-left: 19px;
+	vertical-align: middle;
 }
 
 .table {
@@ -195,68 +144,67 @@
 
 .tr label {
 	display: inline-block;
-	width: 65px;
+	width: 68px;
 	text-align: left;
-	font-size: 15px;
+	font-size: 16px;
 	font-weight: bold;
 }
 
 .tr select {
 	display: inline-block;
-    margin-left: 14px;
+    margin-left: 10px;
 }
 
 .tr select,
 .tr option {
 	width: 175px;
 	height: 36px;
-	font-size: 15px;
+	font-size: 14px;
 }
 
 /*搜索结果*/
 .result {
-	float: left;
-	width: 768px;
+	position: absolute;
+	top: 48px;
+	left: 467.5px;
+	width: 696px;
 	height: auto;
-	padding-left: 72px;
 }
 
 .result-nav {
 	width: 696px;
-	height: 39px;
+	padding-bottom: 44px;
+	z-index: 9999;
 }
 
 .result-nav h1 {
 	float: left;
-	margin: 0;
-	padding: 0;
-	font-size: 34px;
-	font-weight: normal;
-	font-family: "微软雅黑"
-	color: #333;
 }
 
 .result-nav p {
 	float: right;
-	margin-top: 18px;
+	margin-top: 5px;
 	margin-bottom: 0;
 }
 
 .result-nav span {
 	font-weight: bold;
-	color: #0c0;
+	color: #F7630C;
+}
+
+.result-list {
+	margin-top: 127px;
 }
 
 .product {
 	width: 100%;
-	height: 162px;
-	border-bottom: 1px solid #ccc;
+	height: auto;
+	background-color: #F2F2F2;
 }
 
 .product-box {
-	margin-top: 54px;
-	width: 100%;
-	height: 88px;
+	margin-top: 16px;
+	margin-left: 16px;
 }
 
 .product-box-right,
@@ -264,25 +212,19 @@
 	float: left;
 }
 
-.insurer-img {
-	height: 88px;
-	border: 8px solid #0099BC;
+.insurer-img img {
+	border: 6px solid #0099BC;
 }
 
 .product-box-right {
 	width: 568px;
-	margin-left: 40px;
-}
-
-.product-text {
-	height: 31px;
+	margin-left: 20px;
 }
 
 .product-text h2 a{
 	text-decoration: none;
-	margin: 10px 0;
 	padding: 0;
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: normal;
 	color: #333;
 }
@@ -291,20 +233,59 @@
 	text-decoration: underline;
 }
 
+.product-detail {
+	overflow: auto;
+	margin-top: 16px;
+}
+
 .product-detail table {
 	float: left;
 	border-collapse: collapse;
-	margin-top: 20px;
-	width: 450px;
+	width: 500px;
+	font-size: 16px;
 }
 
-.tdyear {
+.tdsale {
 	text-align: right;
 }
 
+.product-function {
+	width: 664px;
+	margin-left: 16px;
+	margin-top: 14px;
+	border-top: 1px solid #fff;
+}
+
+.function-box {
+	height: 40px;
+	line-height: 40px;
+	margin-left: 96px;
+}
+
+.select-compare,
 .favorite {
-	float: right;
-	margin-top: 16px;
+	float: left;
+	margin-right: 24px;
+	padding-left: 26px;
+	width: 96px;
+	height: 40px;
+	cursor: pointer;
+}
+
+.add-compare {
+	background: url(https://resource.wanbaolife.com/static/images/add-compare.png) no-repeat 0 12px;
+}
+
+.remove-compare {
+	background: url(https://resource.wanbaolife.com/static/images/remove-compare.png) no-repeat 0 12px;
+}
+
+.heart {
+	background: url(https://resource.wanbaolife.com/static/images/heart.png) no-repeat 0 10px;
+}
+
+.heart-solid {
+	background: url(https://resource.wanbaolife.com/static/images/heart-solid.png) no-repeat 0 10px;
 }
 
 /*页码*/
@@ -344,4 +325,57 @@
 .page-num-extra {
 	background-color: #ffffff;
 	cursor: default;
+}
+
+/*产品对比*/
+.pro-compare {
+	width: 214px;
+	height: 324px;
+}
+
+.add-product {
+	width: 214px;
+	margin-top: 16px;
+	border: 0px;
+	color: #ccc;
+}
+
+.cancel-item {
+	display: block;
+	border-bottom: 1px solid #ccc;
+	text-align: right;
+	margin-top: 10px;
+	padding-bottom: 8px;
+	width: 214px;
+}
+
+.add-product,
+.cancel-item span,
+.cancel-all span {
+	font-size: 14px;
+}
+
+.cancel-item span,
+.cancel-all span {
+	color: #0063B1;
+}
+
+.compare-btn {
+	position: relative;
+	top: 36px;
+	width: 128px;
+	height: 36px;
+	line-height: 36px;
+	background-color: #ccc;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+}
+
+.cancel-all {
+	display: block;
+	position: relative;
+	top: 18px;
+	left: 158px;
+	width: 60px;
 }

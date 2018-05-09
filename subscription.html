@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <!-- IE Setter -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Response setter -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>订阅</title>
+  <!--icon img-->
+  <link rel="shortcut icon" type="images/x-icon" href="https://resource.wanbaolife.com/static/images/favicon.png">
+  <!-- css -->
+  <!-- https://resource.wanbaolife.com/static/css/ -->
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/navigation.css">
+  <link rel="stylesheet" type="text/css" href="css/subscription.css">
+</head>
+
+<body>
+  <!-- navigation bar -->
+  <div class="nav clearfix">
+    <div class="nav-content">
+      <div class="nav-left">用户中心</div> <!-- nav-left结束 -->
+
+      <div class="nav-center"><img src="https://resource.wanbaolife.com/static/images/nav-icon.png" width="36" height="36"></div> <!-- nav-center结束 -->
+      <div class="nav-center-text">万保资讯</div> <!-- nav-center-text结束 -->  
+
+      <div class="nav-right">
+        <div class="nav-list"><a href="product-search.html" target="" title="搜索"><img src="https://resource.wanbaolife.com/static/images/nav-search.png" width="24" height="24" alt="搜索"></a></div>
+<!--         <div class="nav-list"><a href="info.html" target="_blank" title="帮助"><img src="https://resource.wanbaolife.com/static/images/nav-help.png" width="24" height="24" alt="帮助"></a></div> -->
+        <div class="nav-list"><a href="subscribe.html" target="_blank" title="我的账户"><img src="https://resource.wanbaolife.com/static/images/nav-account.png" width="24" height="24" alt="我的账户"></a></div>
+        <div class="nav-list"><a href="javascript:wbzx_log_out();" target="" title="退出"><img src="https://resource.wanbaolife.com/static/images/nav-exit.png" width="24" height="24" alt="退出"></a></div>
+      </div> <!-- nav-right结束 -->
+    </div><!-- nav-content结束 -->
+  </div> <!-- nav结束 -->
+
+  <div class="main">
+    <!-- sidebar 开始 -->
+    <div class="sidebar">
+      <h1>18620034842，已登录</h1>
+      <div class="sidebar-box">
+        <div class="sidebar-on">订阅</div>
+        <div class="sidebar-off">收藏产品</div>
+      </div>
+    </div> <!-- sidebar 结束 -->
+
+    <!-- content 开始 -->
+    <div class="content">
+
+      <!-- 当前计划开始 -->
+      <div class="current-plan">
+        <h1>当前计划</h1>
+        <p>您订阅了 <span>免费体验</span> 计划，有效期至 <span>2018年5月24日</span>，还有 <span>24天</span> 到期。</p>
+      </div>
+
+      <!-- 当订阅计划开始 -->
+      <div class="subscribe-plan">
+        <h1>订阅计划</h1>
+        <ul class="plan-text">
+          <li><span>•</span>&nbsp;成功订阅后，相应费用不予退还。</li>
+          <li><span>•</span>&nbsp;订阅费用可开立发票，邮费到付，具体手续请联系客服。</li>
+          <li><span>•</span>&nbsp;订阅的计划只能用于本账户，不支持转让。</li>
+        </ul>
+
+        <div class="subscribe-box clearfix">
+          <!-- 年度计划开始 -->
+          <div class="plan-box yearly plan-box-on">
+            <div class="big-sale">超值</div>
+            <div class="plan-box-text">
+              <h1>年度计划</h1>
+              <p class="price price-on">￥ <i class="price-num">7.3元</i> /月</p>
+              <p class="saving">为你节省 51% ！</p>
+            </div>
+          </div> <!-- 年度计划结束 -->  
+
+          <!-- 半年计划开始 -->
+          <div class="plan-box half-year">
+            <div class="popular">爆款</div>
+            <div class="plan-box-text">
+              <h1>半年计划</h1>
+              <p class="price">￥ <i class="price-num">11.3元</i> /月</p>
+              <p class="saving">为你节省 24% ！</p>
+            </div>
+          </div> <!-- 半年计划结束 -->  
+
+          <!-- 季度计划开始 -->
+          <div class="plan-box quarterly">
+            <div class="false-box"></div>
+            <div class="plan-box-text">
+              <h1>季度计划</h1>
+              <p class="price">￥ <i class="price-num">15元</i> /月</p>
+              <p class="saving">没有为你节省任何费用</p>
+            </div>
+          </div> <!-- 季度计划结束 -->
+        </div>
+
+        <!-- 订单列表 -->
+        <div class="checkout-list clearfix">
+          <div class="order-info">
+            <p>订单详情</p>
+            <table class="order-info-box">
+              <tbody>
+                <tr>
+                  <th>订阅计划：</th>
+                  <td class="plan-name">半年计划</td>
+                </tr>
+                <tr>
+                  <th>每月价格：</th>
+                  <td>￥11.3元</td>
+                </tr>
+                <tr>
+                  <th>计划开始日：</th>
+                  <td>2018年5月25日</td>
+                </tr>
+                <tr>
+                  <th>计划到期日：</th>
+                  <td>2018年10月25日</td>
+                </tr>
+                <tr>
+                  <th>计划有效天数：</th>
+                  <td>180天</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>订单总额：</th>
+                  <td>￥68元</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div> <!-- order-info 结束 -->
+
+          <div class="payment-way">
+            <p>支付方式</p>
+            <table class="payment-way-box">
+              <tbody>
+                <tr>
+                  <td><input type="radio" name="alipay"><img src="images/alipay.png"></td>
+                </tr>
+                <tr>
+                  <td><input type="radio" name="wechat-pay"><img src="images/wechat-pay.png"></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th></th>
+                  <td></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div> <!-- payment-way 结束 -->
+        </div> <!-- 订单列表结束 -->
+
+        <div class="subscribe-btn">马上订阅&nbsp;&gt;</div>
+
+      </div> <!-- 当订阅计划结束 -->
+    </div> <!-- content结束 -->
+  </div> <!-- main结束 -->
+
+  <!-- js -->
+  <!-- https://resource.wanbaolife.com/static/js/ -->
+  <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script src="https://resource.wanbaolife.com/static/js/layer/layer.js"></script>
+  <script type="text/javascript">
+    $(function () {
+
+      // 固定定位自适应
+      var edge = ($(window).width() - 1318) / 2;
+      $('.sidebar').css({left:'edge'});
+
+      // 选择订阅计划
+      
+      $('.plan-box').on('click', function () {
+        if ($(this).hasClass('plan-box-on') == false) {
+          var currentBox = $('.subscribe-box').find('.plan-box-on');
+          currentBox.removeClass('plan-box-on');
+          $(this).addClass('plan-box-on');
+
+          var currentPrice = $('.subscribe-box').find('.price-on');
+          currentPrice.removeClass('price-on');
+          $(this).find('.price').addClass('price-on')
+        }
+      });
+    })
+  </script>
+</body>
