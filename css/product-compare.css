@@ -1,0 +1,198 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Microsoft YaHei"；
+}
+
+.menu {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	width: 24px;
+	z-index: 1000;
+}
+
+.menu ul{
+	margin: 0;
+	padding: 0;	
+}
+
+.menu li {
+	list-style-type: none;
+}
+
+.menu ul li a {
+	display: block;
+	padding: 22px 6px;
+	width: 24px;
+	height: 100px;
+	text-decoration: none;
+	color: #000;
+	font-size: 12px;
+	text-align: center;
+	line-height: 15px;
+	background-color: #fff;
+}
+
+ul li a.current {
+	background-color: #0063B1;
+	font-weight: bold;
+	color: #fff;
+}
+
+.main {
+	position: relative;
+	width: 1366px;
+	height: auto;
+	margin: 48px auto 0 auto;
+}
+
+.big-box {
+	position: absolute;
+	top: 0;
+	left: 192px;
+	width: 982px;
+}
+
+/*盒子头部*/
+.box-head {
+	position: fixed;
+	top: 48px;
+	padding: 26px 0;
+	width: 100%;
+	height: 112px;
+	z-index: 999;
+	background-color: #fff;
+}
+
+.box-head-inside {
+	height: 60px;
+}
+
+.box-left,
+.box-center,
+.box-right {
+	float: left;
+	position: relative;
+}
+
+/*盒子左侧、右侧宽度*/
+.box-left,
+.box-right {
+	width: 312px;
+}
+/*盒子中间宽度*/
+.box-center {
+	width: 358px;
+}
+
+.box-left h1,
+.box-right h1 {
+	margin: 0;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.box-left h1 {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	text-align: right;
+}
+
+.box-right h1 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: left;
+}
+
+.box-img-left,
+.box-img-right {
+	border: 6px solid #0099BC;
+}
+
+.box-img-left {
+	position: absolute;
+	left: 18px;
+}
+.box-img-right {
+	position: absolute;
+	right: 18px;
+}
+
+/*盒子内容*/
+.box-body {
+	position: absolute;
+	top: 112px;
+	width: 100%;
+	height: auto;
+}
+
+.small-box {
+	margin-bottom: 36px;
+}
+
+.title {
+	position: sticky;
+	top: 159px;
+	z-index: 998;
+}
+
+.title,
+.sub-title,
+.normal {
+	height: 36px;
+	line-height: 36px;
+}
+
+.title,
+.sub-title,
+.normal-center {
+	font-weight: bold;
+	text-align: center;
+}
+
+.title {
+	font-size: 18px;
+	color: #0099BC;
+	background-color: #F2F2F2;
+}
+
+.sub-title {
+	font-size: 16px;
+	color: #F7630C;
+	border-top: 2px solid #F2F2F2;
+}
+
+.normal-left,
+.normal-center,
+.normal-right {
+	font-size: 14px;
+	color: #333;
+}
+
+.normal-left {
+	text-align: right;
+}
+
+.normal-right {
+	text-align: left;
+}
+
+.normal-img-left,
+.normal-img-right {
+	position: absolute;
+	top: 6px;
+}
+
+.normal-img-left {
+	left: 10px;
+}
+
+.normal-img-right {
+	right: 10px;
+}
