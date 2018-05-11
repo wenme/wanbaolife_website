@@ -291,7 +291,7 @@ function wbzx_log_out()
         {
             sessionStorage.removeItem('session_key');
             sessionStorage.removeItem('mobile');
-            window.location = 'index.html';
         }
+        window.location = 'index.html';
     });
 }

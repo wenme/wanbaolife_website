@@ -274,19 +274,19 @@
 }
 
 .add-compare {
-	background: url(https://resource.wanbaolife.com/static/images/add-compare.png) no-repeat 0 12px;
+	background: url(https://resource.wanbaolife.com/static/images/add-compare.png?v=1) no-repeat 0 12px;
 }
 
 .remove-compare {
-	background: url(https://resource.wanbaolife.com/static/images/remove-compare.png) no-repeat 0 12px;
+	background: url(https://resource.wanbaolife.com/static/images/remove-compare.png?v=1) no-repeat 0 12px;
 }
 
 .heart {
-	background: url(https://resource.wanbaolife.com/static/images/heart.png) no-repeat 0 10px;
+	background: url(https://resource.wanbaolife.com/static/images/heart.png?v=1) no-repeat 0 10px;
 }
 
 .heart-solid {
-	background: url(https://resource.wanbaolife.com/static/images/heart-solid.png) no-repeat 0 10px;
+	background: url(https://resource.wanbaolife.com/static/images/heart-solid.png?v=1) no-repeat 0 10px;
 }
 
 /*页码*/
