@@ -152,11 +152,11 @@
 
       </div> <!-- select结束 -->
 
-    </div> <!-- sidebar结束 -->
+    </div> <!-- sidebar结束 --> 
 
     <!-- result 搜索结果-->
     <div class="result clearfix">
-
+      
       <div class="result-nav clearfix">
         <h1>搜索结果</h1>
         <p>我们总共为您找到&nbsp;&nbsp;<span id="total_product_count">0</span>&nbsp;&nbsp;个相关产品</p>
@@ -174,7 +174,7 @@
 
             <div  class="product-box-right">
               <div class="product-text">
-                <h2><a target="_blank" href="">平安附加无忧豁免保险费重大疾病保险（C，加强版）</a></h2>
+                <h2><a target="_blank" href="">平安附加无忧豁免保险费重大疾病保险（C，加强版）平安附加无忧豁免保险费重大疾病保险（C，加强版）</a></h2>
               </div>        
 
               <div class="product-detail">
@@ -586,14 +586,23 @@
 
   <script type="text/javascript">
     $(function () {
-
       // 固定定位自适应
+      $(window).scroll(function() {
+        var top = $(document).scrollTop();
+        var topEdge = top + 48;
+        $('.sidebar').css({top: topEdge});
+        $('.result-nav').css({top: top});
+        $('.pro-compare').css({top: topEdge});
+      });
+
+
       var edge = ($(window).width() - 1318) / 2;
       $('.sidebar').css({left: edge});
 
       var edge2 = edge + $('.sidebar').outerWidth() + 72;
-      $('.result-nav').css({left: edge2});
+      $('.result-nav').css({left: 0});
       $('.result').css({left: edge2});
+      // document.getElementsByClassName('result')[0].style.left = '200px';
 
       var edge3 = edge2 + $('.result-nav').outerWidth() + 72;
       $('.pro-compare').css({left: edge3});

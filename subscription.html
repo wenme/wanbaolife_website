@@ -50,10 +50,47 @@
       <!-- 当前计划开始 -->
       <div class="current-plan">
         <h1>当前计划</h1>
-        <p>您订阅了 <span>免费体验</span> 计划，有效期至 <span>2018年5月24日</span>，还有 <span>24天</span> 到期。</p>
+        <p>您正在使用 <span>免费体验</span> 计划，有效期至 <span>2018年5月24日</span>，还有 <span>24天</span> 到期。</p>
       </div>
 
-      <!-- 当订阅计划开始 -->
+      <!-- 成功订阅的计划开始 -->
+      <div class="succeed-plan">
+        <h1>成功订阅的计划</h1>
+        <div class="succeed-plan-box">
+          <div class="row-succeed-plan clearfix">
+            <span class="row-sb row-head">订阅计划</span>
+            <span class="row-sb row-head">订阅时间</span>
+            <span class="row-sb row-head">有效天数</span>
+            <span class="row-sb row-head">支付价格</span>
+            <span class="row-sb row-head">使用状态</span>
+          </div>
+          <div class="succeed-plan-body clearfix">
+            <div class="row-succeed-plan">
+              <span class="row-sb">免费体验</span>
+              <span class="row-sb">2017年10月4日</span>
+              <span class="row-sb">31天</span>
+              <span class="row-sb">0元</span>
+              <span class="row-sb">已使用</span>
+            </div>
+            <div class="row-body">
+              <span class="row-sb">特邀用户</span>
+              <span class="row-sb">2018年3月4日</span>
+              <span class="row-sb">1095天</span>
+              <span class="row-sb">0元</span>
+              <span class="row-sb">正在使用</span>
+            </div>
+            <div class="row-body">
+              <span class="row-sb">半年计划</span>
+              <span class="row-sb">2018年5月12日</span>
+              <span class="row-sb">180天</span>
+              <span class="row-sb">68元</span>
+              <span class="row-sb">未使用</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 订阅计划开始 -->
       <div class="subscribe-plan">
         <h1>订阅计划</h1>
         <ul class="plan-text">
@@ -68,7 +105,7 @@
             <div class="big-sale">超值</div>
             <div class="plan-box-text">
               <h1>年度计划</h1>
-              <p class="price price-on">￥ <i class="price-num">7.3元</i> /月</p>
+              <p class="price price-on">￥ <i class="price-num">7.3元</i>&nbsp; /月</p>
               <p class="saving">为你节省 51% ！</p>
             </div>
           </div> <!-- 年度计划结束 -->  
@@ -78,7 +115,7 @@
             <div class="popular">爆款</div>
             <div class="plan-box-text">
               <h1>半年计划</h1>
-              <p class="price">￥ <i class="price-num">11.3元</i> /月</p>
+              <p class="price">￥ <i class="price-num">11.3元</i>&nbsp; /月</p>
               <p class="saving">为你节省 24% ！</p>
             </div>
           </div> <!-- 半年计划结束 -->  
@@ -88,7 +125,7 @@
             <div class="false-box"></div>
             <div class="plan-box-text">
               <h1>季度计划</h1>
-              <p class="price">￥ <i class="price-num">15元</i> /月</p>
+              <p class="price">￥ <i class="price-num">15元</i>&nbsp; /月</p>
               <p class="saving">没有为你节省任何费用</p>
             </div>
           </div> <!-- 季度计划结束 -->
@@ -109,15 +146,7 @@
                   <td>￥11.3元</td>
                 </tr>
                 <tr>
-                  <th>计划开始日：</th>
-                  <td>2018年5月25日</td>
-                </tr>
-                <tr>
-                  <th>计划到期日：</th>
-                  <td>2018年10月25日</td>
-                </tr>
-                <tr>
-                  <th>计划有效天数：</th>
+                  <th>有效天数：</th>
                   <td>180天</td>
                 </tr>
               </tbody>
@@ -135,10 +164,8 @@
             <table class="payment-way-box">
               <tbody>
                 <tr>
-                  <td><input type="radio" name="alipay"><img src="images/alipay.png"></td>
-                </tr>
-                <tr>
-                  <td><input type="radio" name="wechat-pay"><img src="images/wechat-pay.png"></td>
+                  <td class="alipay"><input type="radio" name="alipay"><img src="images/alipay.png"></td>
+                  <td class="wechat-pay"><input type="radio" name="wechat-pay"><img src="images/wechat-pay.png"></td>
                 </tr>
               </tbody>
               <tfoot>

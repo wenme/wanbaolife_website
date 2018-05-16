@@ -1,0 +1,127 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "微软雅黑";
+   }
+
+.main {
+    position: relative;
+	width: 1366px;
+	height: auto;
+	margin: 48px auto 0;
+	padding: 0 24px;
+}
+
+.sidebar {
+    position: absolute;
+    width: 264px;
+    top: 60px;
+    left: 24px;
+}
+
+.sidebar h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.order-box {
+    width: 100%;
+    margin-top: 28px;
+}
+
+.order-box-row,
+.order-box-td,
+.pay-text,
+.other-choice {
+    height: 48px;
+    line-height: 48px;
+}
+
+.order-box-td {
+    float: left;
+    width: 132px;
+    text-align: left;
+}
+
+.order-box-th {
+    font-weight: bold;
+}
+
+.order-box-tf {
+    line-height: 24px;
+    word-break: break-all;
+}
+
+.order-box-num,
+.order-box-currency {
+    display: block;
+    float: left;
+    height: 48px;
+}
+
+.order-box-num {
+    width: 84px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #F7630C;
+}
+
+.order-box-currency {
+    width: 48px;
+    line-height: 48px;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 360px;
+}
+
+.wechat-pay-logo,
+.qrcode,
+.pay-text,
+.other-choice,
+.description {
+    position: absolute;
+}
+
+.wechat-pay-logo {
+    top: 38px;
+    left: 0;
+}
+
+.qrcode {
+    top: 155px;
+}
+
+.pay-text {
+    top: 460px;
+    width: 305px;
+    text-align: center;
+    background-color: #00B700;
+    color: #fff;
+    font-weight: bold;
+}
+
+.other-choice {
+    top: 536px;
+    width: 305px;
+}
+
+.other-choice a {
+    text-decoration: none;
+    color: #0063B1;
+}
+
+.other-choice a:hover {
+    text-decoration: underline;
+}
+
+.description {
+    top: 125px;
+    left: 431px;
+}
