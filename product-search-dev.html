@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <!-- IE Setter -->
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+  <meta http-equiv="X-UA-Compatible" content="IE=7;IE=8;IE=9;">
+  <!-- Response setter -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>产品搜索</title>
+  <!--icon img-->
+  <link rel="shortcut icon" type="images/x-icon" href="http://p86qgj9gq.bkt.clouddn.com/favicon.png?v=1">
+  <!-- css -->
+  <!-- https://resource.wanbaolife.com/static/css/ -->
+  <link rel="stylesheet" type="text/css" href="https://resource.wanbaolife.com/static/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="https://resource.wanbaolife.com/static/css/navigation.css">
+  <link rel="stylesheet" type="text/css" href="https://resource.wanbaolife.com/static/css/product-search-dev.css">
+</head>
+
+<body>
+  <!-- customer service -->
+  <script type="text/javascript" src="https://qiyukf.com/script/9d97c72bd6b4d86ef94fe5ffdec41d55.js"></script>
+  
+  <!-- navigation bar -->
+  <div class="nav clearfix">
+    <div class="nav-content">
+      <div class="nav-left">产品搜索</div> <!-- nav-left结束 -->
+
+      <div class="nav-center"><img src="http://p86qgj9gq.bkt.clouddn.com/nav-icon.png?v=1" width="36" height="36"></div> <!-- nav-center结束 -->
+      <div class="nav-center-text">万保资讯</div> <!-- nav-center-text结束 -->  
+
+      <div class="nav-right">
+        <div class="nav-list"><a href="product-search.html" target="" title="搜索"><img src="http://p86qgj9gq.bkt.clouddn.com/nav-search.png?v=1" width="24" height="24" alt="搜索"></a></div>
+<!--         <div class="nav-list"><a href="info.html" target="_blank" title="帮助"><img src="http://p86qgj9gq.bkt.clouddn.com/nav-help.png?v=1" width="24" height="24" alt="帮助"></a></div> -->
+        <div class="nav-list"><a href="subscribe.html" target="_blank" title="我的账户"><img src="http://p86qgj9gq.bkt.clouddn.com/nav-account.png?v=1" width="24" height="24" alt="我的账户"></a></div>
+        <div class="nav-list"><a href="javascript:wbzx_log_out();" target="" title="退出"><img src="http://p86qgj9gq.bkt.clouddn.com/nav-exit.png?v=1" width="24" height="24" alt="退出"></a></div>
+      </div> <!-- nav-right结束 -->
+    </div><!-- nav-content结束 -->
+  </div> <!-- nav结束 -->
+
+  <!-- main content -->
+  <div class="main clearfix">
+
+    <!-- sidebar -->
+    <div class="sidebar clearfix">
+      <h1>搜索工具</h1>
+      <div class="search clearfix">
+        <input type="text" name="search" id="keyword" placeholder="产品名称搜索">
+        <img src="http://p86qgj9gq.bkt.clouddn.com/sidebar-search.png?v=1" id="search_img" alt="" width="24" height="24">
+      </div> <!-- search结束 -->
+      <div class="resetbtn"><a href="javascript:reset_all_filter()" title="reset" >重置所有条件&nbsp;&gt;</a></div> <!-- resetbtn结束 -->
+
+      <!-- select-box 筛选 -->
+      <div class="select">
+
+        <!-- 第一个筛选盒 -->
+        <div class="select-box">
+          <div class="select-title">
+            <span>按基础信息筛选</span>
+            <a id="arrow_a" href="javascript:show_and_hide('table_a')"><img id="arrow_a_img" src="http://p86qgj9gq.bkt.clouddn.com/right-arrow.png?v=1"></a>
+          </div> <!-- select-title结束 -->
+
+          <!-- 弹出筛选内容 -->
+          <div class="table" id="table_a">
+            <div class="tr">
+              <label for="insurer_abbreviation">保险公司</label>
+              <select id="insurer_abbreviation" class="search_filter">
+                <option>全部</option>
+              </select>
+            </div>
+
+            <div class="tr">
+              <label for="product_class">产品类型</label>
+              <select id="product_class" class="search_filter">
+                <option>全部</option>
+              </select>
+            </div>
+
+            <div class="tr">
+              <label for="product_structure">产品架构</label>
+              <select id="product_structure" class="search_filter">
+                <option>全部</option>
+              </select>
+            </div>
+
+            <div class="tr">
+              <label for="filing_year">备案年份</label>
+              <select id="filing_year" class="search_filter">
+                <option>全部</option>
+              </select>
+            </div>
+
+          </div> <!-- 弹出筛选结束 -->
+        </div> <!-- 第一个筛选盒结束 -->
+
+        <!-- 第二个筛选盒 -->
+        <div class="select-box">
+            <div class="select-title">
+            <span>按购买信息筛选</span>
+            <a id="arrow_b" href="javascript:show_and_hide('table_b')"><img id="arrow_b_img" src="http://p86qgj9gq.bkt.clouddn.com/right-arrow.png?v=1"></a>
+          </div> <!-- select-title结束 -->
+
+          <!-- 弹出筛选内容 -->
+          <div class="table" id="table_b">
+            <div class="tr">
+              <label for="insurance_age_coverage">投保年龄</label>
+              <select id="insurance_age_coverage" class="search_filter">
+                <option>全部</option>
+              </select>
+            </div>
+
+            <div class="tr">
+              <label for="insurance_duration">保险期间</label>
+              <select id="insurance_duration" class="search_filter">
+                <option>全部</option>
+              </select>
+            </div>
+
+            <div class="tr">
+              <label for="target_audience">销售对象</label>
+              <select id="target_audience" class="search_filter">
+                <option>全部</option>
+              </select>
+            </div>
+          </div> <!-- 弹出筛选结束 -->  
+        </div> <!-- 第二个筛选盒结束 -->
+
+        <!-- 第三个筛选盒 -->
+        <div class="select-box">
+            <div class="select-title">
+            <span>按保障信息筛选</span>
+            <a id="arrow_c" href="javascript:show_and_hide('table_c')"><img id="arrow_c_img" src="http://p86qgj9gq.bkt.clouddn.com/right-arrow.png?v=1"></a>
+          </div> <!-- select-title结束 -->
+
+          <!-- 弹出筛选内容 -->
+          <div class="table" id="table_c">
+            <div class="tr">
+              <label for="benefit_type">保障类别</label>
+              <select id="benefit_type" class="search_filter">
+                <option>全部</option>
+              </select>
+            </div>
+
+            <div class="tr">
+              <label for="renshenzhuangtai">人身状态</label>
+              <select id="renshenzhuangtai" class="search_filter">
+                <option>全部</option>
+              </select>
+            </div>
+          </div> <!-- 弹出筛选结束 --> 
+        </div> <!-- 第三个筛选盒结束 -->
+
+      </div> <!-- select结束 -->
+
+    </div> <!-- sidebar结束 -->
+
+    <!-- result 搜索结果-->
+    <div class="result clearfix">
+
+      <div class="result-nav clearfix">
+        <h1>搜索结果</h1>
+        <p>我们总共为您找到&nbsp;&nbsp;<span id="total_product_count">0</span>&nbsp;&nbsp;个相关产品</p>
+      </div>
+
+      <!-- 产品列表开始 -->
+      <div class="result-list" id="result_list">
+        <!-- 注释开始 -->
+<!--         <div class="product clearfix">
+          <div class="product-box clearfix">        
+
+            <div class="product-box-left">
+              <div class="insurer-img"><img src="http://p86qgj9gq.bkt.clouddn.com/insurer.png?v=1" width="72" height="72"></div>
+            </div>         
+
+            <div  class="product-box-right">
+              <div class="product-text">
+                <h2><a target="_blank" href="">平安附加无忧豁免保险费重大疾病保险（C，加强版）</a></h2>
+              </div>        
+
+              <div class="product-detail">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>工银安盛人寿</td>
+                      <td>意外伤害保险</td>
+                      <td>投资连结型</td>
+                      <td>2016年</td>
+                      <td class="tdsale">在售</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>  
+            </div>
+          </div>
+
+          <div class="product-function">
+            <div class="function-box clearfix">
+              <div class="select-compare add-compare">加入对比</div>
+              <div class="favorite heart">收藏</div>
+            </div>
+          </div>
+            
+        </div> -->
+        <!-- 注释结束 -->   
+      </div> 
+      <!-- 产品列表结束 -->
+
+      
+      <!-- page-box 页码 -->
+      <div class="page-box clearfix" id="page-box">
+        <div class="page-clickable" id="go-to-first-page"><img src="http://p86qgj9gq.bkt.clouddn.com/page-first-disabled.png?v=1"></div>
+        <div class="page-clickable" id="go-to-prev-page"><img src="http://p86qgj9gq.bkt.clouddn.com/page-left-disabled.png?v=1"></div>
+
+        <div class="page-num">第 <span id="page-num">-</span> 页 / 共 <span id="total-page-count">-</span> 页</div>
+
+        <div class="page-clickable" id="go-to-next-page"><img src="http://p86qgj9gq.bkt.clouddn.com/page-right-disabled.png?v=1"></div>
+        <div class="page-clickable" id="go-to-last-page"><img src="http://p86qgj9gq.bkt.clouddn.com/page-last-disabled.png?v=1"></div>
+      </div><!-- page-box结束 -->
+    </div> <!-- result 搜索结果结束-->
+
+    <!-- 产品对比框 -->
+    <div class="pro-compare clearfix">
+      <h1>产品对比</h1>
+      <div class="add-product">加入要对比的产品</div>
+      <div class="cancel-item">
+        <a href="javascript:;"><span>取消对比</span></a>
+      </div>
+      <div class="add-product">加入要对比的产品</div>
+      <div class="cancel-item">
+        <a href="javascript:;"><span>取消对比</span></a>
+      </div>
+      <div class="compare-btn">智能对比&nbsp;&nbsp;&gt;</div>
+      <a class="cancel-all" href="javascript:;"><span>全部清除</span></a>
+    </div>
+
+  </div> <!-- main content结束 -->
+
+  <!-- js -->
+  <!-- https://resource.wanbaolife.com/static/js/ -->
+  <script type="text/javascript" src="https://resource.wanbaolife.com/static/js/jquery-2.1.0.min.js"></script>
+  <script type="text/javascript" src="https://resource.wanbaolife.com/static/js/product-search-dev.js"></script>
+  <script type="text/javascript" src="https://resource.wanbaolife.com/static/js/common.js"></script>
+  <script src="https://resource.wanbaolife.com/static/js/layer/layer.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+
+      // 固定定位自适应
+      var edge = ($(window).width() - 1318) / 2;
+      $('.sidebar').css({left: edge});
+
+      var edge2 = edge + $('.sidebar').outerWidth() + 72;
+      $('.result-nav').css({left: edge2});
+      $('.result').css({left: edge2});
+
+      var edge3 = edge2 + $('.result-nav').outerWidth() + 72;
+      $('.pro-compare').css({left: edge3});
+
+      // 加入对比与取消对比、收藏与取消收藏
+      $('.select-compare').on('click', function () {
+        if ($(this).hasClass('add-compare')) {
+          $(this).removeClass('add-compare');
+          $(this).addClass('remove-compare');
+          $(this).text('取消对比');
+        } else {
+          $(this).addClass('add-compare');
+          $(this).removeClass('remove-compare');
+          $(this).text('加入对比');
+        }        
+      });
+
+    })
+  </script>
+
+</body>
+</html>

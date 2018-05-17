@@ -1,0 +1,383 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Microsoft YaHei"；
+   }
+
+/*body {
+	margin: 0 auto;
+	width: 1366px;
+}*/
+
+.clearfix::before,
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+} /*清除浮动*/
+
+/*固定定位模块*/
+.sidebar,
+.result-nav,
+.pro-compare {
+	position: fixed;
+}
+
+.sidebar {
+	top: 48px;
+}
+
+.result-nav {
+	top: 48px;
+}
+
+.pro-compare {
+	top: 48px;
+}
+
+/*搜索工具开始*/
+.main {
+	width: 1366px;
+	height: auto;
+	margin: 48px auto 0 auto;
+	padding: 0 24px;
+}
+
+.sidebar,
+.result-nav,
+.pro-compare {
+	padding-top: 60px;
+	background-color: #fff;
+}
+
+/*sidebar 开始*/
+.sidebar h1,
+.result-nav h1,
+.pro-compare h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	font-weight: bold;
+	color: #333;
+}
+
+.sidebar h1,
+.pro-compare h1 {
+	margin-bottom: 44px;
+}
+
+.search {
+	position: relative;
+}
+
+.search input {
+	float: left;
+	width: 264px;
+	height: 36px;
+	padding: 0 28px 0 2px;
+	border: 1px solid #aeaeae;
+	font-size: 15px;
+	/*background: url(../images/sidebar-search.png) no-repeat right center;*/
+}
+
+.search img {
+	position: absolute;
+	top: 6px;
+	right: 2px;
+	display: inline-block;
+}
+
+.search img:hover {
+	cursor: pointer;
+}
+
+.resetbtn {
+	text-align: center;
+	width: 176px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #0c0;
+	margin-top: 32px;
+}
+
+.resetbtn a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.resetbtn a:hover {
+	text-decoration: underline;
+}
+
+/*select-box 筛选盒子*/
+.select {
+	margin-top: 32px;
+}
+
+.select-box {
+	height: auto;
+	margin-bottom: 12px;
+}
+
+.select-title span {
+	font-size: 18px;
+	color: #333;
+	vertical-align: middle;
+}
+.select-title img {
+	vertical-align: middle;
+}
+
+.table {
+	display: none;
+	width: 264px;
+	margin-top: 17px;
+}
+
+.tr {
+	height: 36px;
+	line-height: 36px;
+    margin-bottom: 12px;
+}
+
+.tr label {
+	display: inline-block;
+	width: 68px;
+	text-align: left;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.tr select {
+	display: inline-block;
+    margin-left: 10px;
+}
+
+.tr select,
+.tr option {
+	width: 175px;
+	height: 36px;
+	font-size: 14px;
+}
+
+/*搜索结果*/
+.result {
+	position: absolute;
+	top: 48px;
+	width: 696px;
+	height: auto;
+}
+
+.result-nav {
+	width: 696px;
+	padding-bottom: 44px;
+	z-index: 9999;
+}
+
+.result-nav h1 {
+	float: left;
+}
+
+.result-nav p {
+	float: right;
+	margin-top: 5px;
+	margin-bottom: 0;
+}
+
+.result-nav span {
+	font-weight: bold;
+	color: #F7630C;
+}
+
+.result-list {
+	margin-top: 127px;
+}
+
+.product {
+	width: 100%;
+	height: auto;
+	margin-bottom: 16px;
+	background-color: #F2F2F2;
+}
+
+.product-box {
+	margin-top: 16px;
+	margin-left: 16px;
+}
+
+.product-box-right,
+.product-box-left {
+	float: left;
+}
+
+.insurer-img img {
+	border: 6px solid #0099BC;
+}
+
+.product-box-right {
+	width: 568px;
+	margin-left: 20px;
+}
+
+.product-text h2 a{
+	text-decoration: none;
+	padding: 0;
+	font-size: 20px;
+	font-weight: normal;
+	color: #333;
+}
+
+.product-text h2 a:hover {
+	text-decoration: underline;
+}
+
+.product-detail {
+	overflow: auto;
+	margin-top: 16px;
+}
+
+.product-detail table {
+	float: left;
+	border-collapse: collapse;
+	width: 500px;
+	font-size: 16px;
+}
+
+.tdsale {
+	text-align: right;
+}
+
+.product-function {
+	width: 664px;
+	margin-left: 16px;
+	margin-top: 14px;
+	border-top: 1px solid #fff;
+}
+
+.function-box {
+	height: 40px;
+	line-height: 40px;
+	margin-left: 96px;
+}
+
+.select-compare,
+.favorite {
+	float: left;
+	margin-right: 24px;
+	padding-left: 26px;
+	width: 96px;
+	height: 40px;
+	cursor: pointer;
+	color: #999;
+}
+
+.add-compare {
+	background: url(https://resource.wanbaolife.com/static/images/add-compare.png?v=1) no-repeat 0 12px;
+}
+
+.remove-compare {
+	background: url(https://resource.wanbaolife.com/static/images/remove-compare.png?v=1) no-repeat 0 12px;
+}
+
+.heart {
+	background: url(https://resource.wanbaolife.com/static/images/heart.png?v=1) no-repeat 0 10px;
+}
+
+.heart-solid {
+	background: url(https://resource.wanbaolife.com/static/images/heart-solid.png?v=1) no-repeat 0 10px;
+}
+
+/*页码*/
+.page-box {
+	width: 452px;
+	margin: 70px auto 128px;
+}
+
+.page-clickable {
+	float: left;
+	width: 48px;
+	height: 48px;
+	line-height: 48px;
+	text-align:center;
+	margin-right: 12px;
+}
+
+.page-clickable img {
+	vertical-align: middle;
+}
+
+.page-num {
+	float: left;
+	width: 200px;
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+	color: #333;
+	font-size: 15px;
+}
+
+.page-num-extra:hover {
+	background-color: #f2f2f2;
+	cursor: pointer;
+}
+
+.page-num-extra {
+	background-color: #ffffff;
+	cursor: default;
+}
+
+/*产品对比*/
+.pro-compare {
+	width: 214px;
+	height: 324px;
+}
+
+.add-product {
+	width: 214px;
+	margin-top: 16px;
+	border: 0px;
+	color: #ccc;
+}
+
+.cancel-item {
+	display: block;
+	border-bottom: 1px solid #ccc;
+	text-align: right;
+	margin-top: 10px;
+	padding-bottom: 8px;
+	width: 214px;
+}
+
+.add-product,
+.cancel-item span,
+.cancel-all span {
+	font-size: 14px;
+}
+
+.cancel-item span,
+.cancel-all span {
+	color: #0063B1;
+}
+
+.compare-btn {
+	position: relative;
+	top: 36px;
+	width: 128px;
+	height: 36px;
+	line-height: 36px;
+	background-color: #ccc;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+}
+
+.cancel-all {
+	display: block;
+	position: relative;
+	top: 18px;
+	left: 158px;
+	width: 60px;
+}
