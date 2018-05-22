@@ -4,8 +4,39 @@
     -ms-box-sizing: border-box;
     box-sizing: border-box;
     font-size: 16px;
-    font-family: "微软雅黑";
+    font-family: "Microsoft YaHei"；
    }
+
+/*body {
+	margin: 0 auto;
+	width: 1366px;
+}*/
+
+.clearfix::before,
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+} /*清除浮动*/
+
+/*固定定位模块*/
+.sidebar,
+.result-nav,
+.pro-compare {
+	position: fixed;
+}
+
+.sidebar {
+	top: 48px;
+}
+
+.result-nav {
+	top: 48px;
+}
+
+.pro-compare {
+	top: 48px;
+}
 
 /*搜索工具开始*/
 .main {
@@ -20,7 +51,6 @@
 .pro-compare {
 	padding-top: 60px;
 	background-color: #fff;
-	position: absolute;
 }
 
 /*sidebar 开始*/
@@ -192,13 +222,6 @@
 	margin-left: 20px;
 }
 
-.product-text h2{
-	width: 500px;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-
 .product-text h2 a{
 	text-decoration: none;
 	padding: 0;
@@ -238,7 +261,6 @@
 	height: 40px;
 	line-height: 40px;
 	margin-left: 96px;
-	clear: both;
 }
 
 .select-compare,
