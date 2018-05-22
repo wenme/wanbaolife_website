@@ -5,11 +5,9 @@ $(function () {
 	var tel = sessionStorage.getItem("mobile");
 	var PACKAGE_INFO_LIST = [];
     
-	var URL = "https://www.wanbaolife.com";
-
 	function get_subscription_status()
 	{
-		var url = URL + "/users/my_wbzx_subscription_status";
+		var url = "/users/my_wbzx_subscription_status";
 		var timestamp = Date.parse(new Date()) / 1000;
 		var post_data = {
 			session_key: SESSION_KEY,
@@ -59,7 +57,7 @@ $(function () {
 
 	function get_subscription_list()
 	{
-		var url = URL + "/goods/subscription_package_list";
+		var url = "/goods/subscription_package_list";
 		var timestamp = Date.parse(new Date()) / 1000;
 		var post_data = {
 			session_key: SESSION_KEY,

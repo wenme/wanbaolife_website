@@ -1,7 +1,5 @@
 /*! homepage.js */
 
-var URL = "https://www.wanbaolife.com";
-
 $(function($) {
   //弹出登录
   $(".popup_loginbox").on('click', function () {
@@ -47,7 +45,7 @@ $(function($) {
     else
     {
       // verify this phone number
-      var url = URL + "/users/verify_tel";
+      var url = "/users/verify_tel";
       $.post(url,
       {
         tel: tel_num
@@ -71,7 +69,7 @@ $(function($) {
         }
 
         // request for sms code
-        var url = URL + "/users/wbzx_sms_code";
+        var url = "/users/wbzx_sms_code";
         $.post(url,
         {
           tel: tel_num,
@@ -98,7 +96,7 @@ $(function($) {
 
   $("#loginbtn").click(function()
   {
-    var url = URL + "/users/wbzx_login";
+    var url = "/users/wbzx_login";
     var tel_num = $("#login_tel").val();
     var code = $("#login_code").val();
 
@@ -153,7 +151,7 @@ $(function($) {
     else
     {
       // verify this phone number
-      var url = URL + "/users/verify_tel";
+      var url = "/users/verify_tel";
       $.post(url,
       {
         tel: tel_num
@@ -176,7 +174,7 @@ $(function($) {
         }
 
         // requst for sms code
-        var url = URL + "/users/wbzx_sms_code";
+        var url = "/users/wbzx_sms_code";
         $.post(url,
         {
           tel: tel_num,
@@ -203,7 +201,7 @@ $(function($) {
 
   $("#registerbtn").click(function()
   {
-    var url = URL + "/users/wbzx_register";
+    var url = "/users/wbzx_register";
     var tel_num = $("#register_tel").val();
     var code = $("#register_code").val();
 

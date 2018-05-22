@@ -3,7 +3,7 @@
 $(function() {
 	var SESSION_KEY = sessionStorage.getItem("session_key");
 	var order_sn = $("#order_sn").text();
-	var url = URL + '/orders/wbzx_order_status_query';
+	var url = '/orders/wbzx_order_status_query';
     post_data = {
     	session_key: SESSION_KEY,
     	order_sn: order_sn

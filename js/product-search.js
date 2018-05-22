@@ -5,7 +5,6 @@ $(function () {
 	var tel = sessionStorage.getItem("mobile");
 	// var SESSION_KEY = "session_key";
 	// var tel = "mobile";
-	var URL = "https://www.wanbaolife.com";
 
 	show_and_hide = function(div_id) 
 	{
@@ -39,7 +38,7 @@ $(function () {
 
 	function get_search_filter() 
 	{
-	   var url = URL + '/terms/get_search_filter';
+	   var url = '/terms/get_search_filter';
 	    $.post(url,
 	    {
 	        channel: 3,
@@ -178,7 +177,7 @@ $(function () {
 
 	function update_search_result(page_num)
 	{
-		var url = URL + "/terms/wbzx_product_search";
+		var url = "/terms/wbzx_product_search";
 		var keyword = $("#keyword").val();
 		var insurer_id = $("#insurer_abbreviation").val();
 		var product_class = $("#product_class").val();
@@ -344,9 +343,9 @@ $(function () {
 		var bookmark_obj = $(this);
 		var pid = bookmark_obj.attr("pid");
 		if (bookmark_obj.hasClass('heart'))
-			var url = URL + '/users/add_followed_product';
+			var url = '/users/add_followed_product';
 		else
-			var url = URL + '/users/cancel_followed_product';
+			var url = '/users/cancel_followed_product';
 		$.post(url,
 		{
 			pid: pid,

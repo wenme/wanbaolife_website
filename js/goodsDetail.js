@@ -73,7 +73,7 @@
                     btn: ['确定', '取消'] //按钮
                 }, function () {
 
-                   var url = URL + '/users/add_followed_product';
+                   var url = '/users/add_followed_product';
                     $.post(url, {
                         pid: pid,
                         session_key: session_key
@@ -93,7 +93,7 @@
                     btn: ['确定', '取消'] //按钮
                 }, function () {
 
-                   var url = URL + '/users/cancel_followed_product';
+                   var url = '/users/cancel_followed_product';
                     $.post(url, {
                         pid: pid,
                         session_key: session_key
@@ -287,7 +287,7 @@
         });
 
         function getList() {
-           var url = URL + '/terms/wbzx_get_product_detail_info';
+           var url = '/terms/wbzx_get_product_detail_info';
            var post_data = {
                 pid: pid,
                 session_key: session_key,
@@ -829,7 +829,7 @@
 //取到对象数组后，我们来循环检测它是不是被选中
            var bug_type = '';
            var bug_detail = $('#bug_detail').val();
-           var url = URL + '/terms/wbzx_product_bug_report';
+           var url = '/terms/wbzx_product_bug_report';
             for (var i = 0; i < obj.length; i++) {
                 if (obj[i].checked)
                     bug_type += obj[i].value + '+'; //如果选中，将value添加到变量s中

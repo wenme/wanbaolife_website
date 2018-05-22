@@ -1,4 +1,5 @@
-var URL='https://www.wanbaolife.com';
+var URL = 'https://www.wanbaolife.com';
+var DEV_FLAG = true;
 
 /**
 * jQuery MD5 hash algorithm function
@@ -281,17 +282,25 @@ function wbzx_log_out()
 {
     var session_key = sessionStorage.getItem("session_key");
     sessionStorage.removeItem('userinfo');
-    var url = URL + '/users/wbzx_logout';
+    var url = '/users/wbzx_logout';
     $.post(url, 
     {
         session_key: session_key
     }, function (data, stauts) 
     {
-        if (data.err_code == 0) 
+        try
         {
-            sessionStorage.removeItem('session_key');
-            sessionStorage.removeItem('mobile');
+            if (data.err_code == 0) 
+            {
+                sessionStorage.removeItem('session_key');
+                sessionStorage.removeItem('mobile');
+            }
+            window.location = 'index.html';
+        } catch (err)
+        {
+            window.location = 'index.html';
+            console.log(err);
         }
-        window.location = 'index.html';
     });
+
 }
