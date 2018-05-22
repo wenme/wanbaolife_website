@@ -359,3 +359,9 @@
 	left: 158px;
 	width: 60px;
 }
+
+/*ie6 hack*/
+* html, * html body {
+    background-image: url(about:blank);
+    background-attachment: fixed;
+}
