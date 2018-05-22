@@ -223,11 +223,11 @@ $(function () {
             	{
                		var product_obj_html = '';
                		product_obj_html += '<div class="product clearfix">';
-               		product_obj_html += '<div class="product-box">';
+               		product_obj_html += '<div class="product-box clearfix">';
                		product_obj_html += '<div class="product-box-left">';
                		product_obj_html += '<div class="insurer-img"><img src="' + product_list[i].insurer_logo + '" width="72" height="72"></div>';
                		product_obj_html += '</div>';
-               		product_obj_html += '<div class="product-box-right">';
+               		product_obj_html += '<div  class="product-box-right">';
                		product_obj_html += '<div class="product-text">';
                		product_obj_html += '<h2><a target="_blank" href="goodsDetail.html?pid=' + product_list[i].pid + '">' + product_list[i].product + '</a></h2>';
                		product_obj_html += '</div>';
@@ -236,16 +236,23 @@ $(function () {
                		product_obj_html += '<td>' + product_list[i].insurer_abbreviation + '</td>';
                		product_obj_html += '<td>' + product_list[i].product_class + '</td>';
                		product_obj_html += '<td>' + product_list[i].product_structure + '</td>';
-               		product_obj_html += '<td class="tdyear">' + product_list[i].filing_year + '</td>';
+               		product_obj_html += '<td>' + product_list[i].filing_year + '</td>';
+               		product_obj_html += '<td class="tdsale">' + product_list[i].sale_available + '</td>'
                		product_obj_html += '</tr></tbody></table>';
                		product_obj_html += '</div>';
+               		product_obj_html += '</div>';
+               		product_obj_html += '</div>';
+
+               		product_obj_html += '<div class="product-function">';
+               		product_obj_html += '<div class="function-box clearfix">';
+               		product_obj_html += '<div class="select-compare add-compare">加入对比</div>';
                		if (product_list[i].is_followed == 1)
                		{
-               			product_obj_html += '<div class="favorite"><img class="rm-bookmark" title="取消收藏" pid="' + product_list[i].pid + '" src="http://p86qgj9gq.bkt.clouddn.com/star-solid.png?v=1" width="25" height="24"></div>';
+               			product_obj_html += '<div class="favorite heart-solid" title="取消收藏" pid="' + product_list[i].pid + '">取消收藏</div>';
                		}
                		else
                		{
-               			product_obj_html += '<div class="favorite"><img class="add-bookmark" title="添加收藏" pid="' + product_list[i].pid + '" src="http://p86qgj9gq.bkt.clouddn.com/star.png?v=1" width="25" height="24"></div>';
+               			product_obj_html += '<div class="favorite heart" title="添加收藏" pid="' + product_list[i].pid + '">添加收藏</div>';
               		}
               		product_obj_html += '</div>';
                		product_obj_html += '</div>';
@@ -332,11 +339,14 @@ $(function () {
 		update_search_result(1);
 	});
 
-	$(document).on("click", ".add-bookmark", function()
+	$(document).on("click", ".favorite", function()
 	{
 		var bookmark_obj = $(this);
 		var pid = bookmark_obj.attr("pid");
-		var url = URL + '/users/add_followed_product';
+		if (bookmark_obj.hasClass('heart'))
+			var url = URL + '/users/add_followed_product';
+		else
+			var url = URL + '/users/cancel_followed_product';
 		$.post(url,
 		{
 			pid: pid,
@@ -344,31 +354,24 @@ $(function () {
 		}, function(data, status){
 			if (data.err_code == 0) 
 			{
-				bookmark_obj.attr("src", "http://p86qgj9gq.bkt.clouddn.com/star-solid.png?v=1");
-				bookmark_obj.addClass("rm-bookmark");
-				bookmark_obj.removeClass("add-bookmark");
-                layer.msg('收藏成功', {icon: 1});
+				if (bookmark_obj.hasClass('heart'))
+				{
+			        bookmark_obj.removeClass('heart');
+			        bookmark_obj.addClass('heart-solid')
+			        bookmark_obj.text('取消收藏');
+	                layer.msg('收藏成功', {icon: 1, time: 1000});
+            	}
+            	else
+            	{
+		          	bookmark_obj.addClass('heart');
+		          	bookmark_obj.removeClass('heart-solid')
+		          	bookmark_obj.text('收藏');
+            		layer.msg('取消成功', {icon: 1, time: 1000});
+            	}
 			}
-		});
-
-	});
-
-	$(document).on("click", ".rm-bookmark", function()
-	{
-		var bookmark_obj = $(this);
-		var pid = bookmark_obj.attr("pid");
-		var url = URL + '/users/cancel_followed_product';
-		$.post(url,
-		{
-			pid: pid,
-			session_key: SESSION_KEY
-		}, function(data, status){
-			if (data.err_code == 0) 
+			else
 			{
-				bookmark_obj.attr("src", "http://p86qgj9gq.bkt.clouddn.com/star.png?v=1");
-				bookmark_obj.addClass("add-bookmark");
-				bookmark_obj.removeClass("rm-bookmark");
-                layer.msg('取消收藏成功', {icon: 1});
+				layer.msg('操作失败！', {icon: 0});
 			}
 		});
 

@@ -8,12 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>订阅</title>
   <!--icon img-->
-  <link rel="shortcut icon" type="images/x-icon" href="https://resource.wanbaolife.com/static/images/favicon.png?v=1">
+  <link rel="shortcut icon" type="images/x-icon" href="http://p86qgj9gq.bkt.clouddn.com/favicon.png?v=1">
   <!-- css -->
   <!-- https://resource.wanbaolife.com/static/css/ -->
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/navigation.css">
-  <link rel="stylesheet" type="text/css" href="css/subscription.css">
+  <link rel="stylesheet" type="text/css" href="https://resource.wanbaolife.com/static/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="https://resource.wanbaolife.com/static/css/navigation.css">
+  <link rel="stylesheet" type="text/css" href="https://resource.wanbaolife.com/static/css/subscription.css">
 </head>
 
 <body>
@@ -22,14 +22,14 @@
     <div class="nav-content">
       <div class="nav-left">用户中心</div> <!-- nav-left结束 -->
 
-      <div class="nav-center"><img src="images/nav-icon.png?v=1" width="36" height="36"></div> <!-- nav-center结束 -->
+      <div class="nav-center"><img src="http://p86qgj9gq.bkt.clouddn.com/nav-icon.png?v=1" width="36" height="36"></div> <!-- nav-center结束 -->
       <div class="nav-center-text">万保资讯</div> <!-- nav-center-text结束 -->  
 
       <div class="nav-right">
-        <div class="nav-list"><a href="product-search.html" target="" title="搜索"><img src="images/nav-search.png?v=1" width="24" height="24" alt="搜索"></a></div>
+        <div class="nav-list"><a href="product-search.html" target="" title="搜索"><img src="http://p86qgj9gq.bkt.clouddn.com/nav-search.png?v=1" width="24" height="24" alt="搜索"></a></div>
 <!--         <div class="nav-list"><a href="info.html" target="_blank" title="帮助"><img src="https://resource.wanbaolife.com/static/images/nav-help.png?v=1" width="24" height="24" alt="帮助"></a></div> -->
-        <div class="nav-list"><a href="subscribe.html" target="_blank" title="我的账户"><img src="images/nav-account.png?v=1" width="24" height="24" alt="我的账户"></a></div>
-        <div class="nav-list"><a href="javascript:wbzx_log_out();" target="" title="退出"><img src="images/nav-exit.png?v=1" width="24" height="24" alt="退出"></a></div>
+        <div class="nav-list"><a href="subscription.html" target="" title="我的账户"><img src="http://p86qgj9gq.bkt.clouddn.com/nav-account.png?v=1" width="24" height="24" alt="我的账户"></a></div>
+        <div class="nav-list"><a href="javascript:wbzx_log_out();" target="" title="退出"><img src="http://p86qgj9gq.bkt.clouddn.com/nav-exit.png?v=1" width="24" height="24" alt="退出"></a></div>
       </div> <!-- nav-right结束 -->
     </div><!-- nav-content结束 -->
   </div> <!-- nav结束 -->
@@ -37,7 +37,7 @@
   <div class="main">
     <!-- sidebar 开始 -->
     <div class="sidebar">
-      <h1>18620034842，已登录</h1>
+      <h1 id="login_info">匿名用户</h1>
       <div class="sidebar-box">
         <a href="subscription.html" target="_self" class="sidebar-btn sidebar-on">订阅</a>
         <a href="favorite.html" target="_self" class="sidebar-btn sidebar-off">收藏产品</a>
@@ -50,7 +50,7 @@
       <!-- 当前计划开始 -->
       <div class="current-plan">
         <h1>当前计划</h1>
-        <p>您正在使用 <span>免费体验</span> 计划，有效期至 <span>2018年5月24日</span>，还有 <span>24天</span> 到期。</p>
+        <p>您正在使用 <span id="current_subscription_name"></span> 计划，有效期至 <span id="current_subscription_deadline"></span>，还有 <span id="current_validity"></span> 到期。</p>
       </div>
 
       <!-- 成功订阅的计划开始 -->
@@ -64,28 +64,28 @@
             <span class="row-sb row-head">支付价格</span>
             <span class="row-sb row-head">使用状态</span>
           </div>
-          <div class="succeed-plan-body clearfix">
-            <div class="row-succeed-plan">
+          <div class="succeed-plan-body clearfix" id="succeed-plan-body">
+<!--             <div class="row-succeed-plan">
               <span class="row-sb">免费体验</span>
               <span class="row-sb">2017年10月4日</span>
               <span class="row-sb">31天</span>
               <span class="row-sb">0元</span>
               <span class="row-sb">已使用</span>
             </div>
-            <div class="row-body">
+            <div class="row-succeed-plan">
               <span class="row-sb">特邀用户</span>
               <span class="row-sb">2018年3月4日</span>
               <span class="row-sb">1095天</span>
               <span class="row-sb">0元</span>
               <span class="row-sb">正在使用</span>
             </div>
-            <div class="row-body">
+            <div class="row-succeed-plan">
               <span class="row-sb">半年计划</span>
               <span class="row-sb">2018年5月12日</span>
               <span class="row-sb">180天</span>
               <span class="row-sb">68元</span>
               <span class="row-sb">未使用</span>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -99,14 +99,14 @@
           <li><span>•</span>&nbsp;订阅的计划只能用于本账户，不支持转让。</li>
         </ul>
 
-        <div class="subscribe-box clearfix">
+        <div class="subscribe-box clearfix" id="subscribe-boxes">
           <!-- 年度计划开始 -->
           <div class="plan-box yearly plan-box-on">
             <div class="big-sale">超值</div>
             <div class="plan-box-text">
-              <h1>年度计划</h1>
-              <p class="price price-on">￥ <i class="price-num">7.3元</i>&nbsp; /月</p>
-              <p class="saving">为你节省 51% ！</p>
+              <h1>&nbsp;&nbsp;计划</h1>
+              <p class="price price-on">￥ <i class="price-num">&nbsp;&nbsp;元</i>&nbsp; /月</p>
+              <p class="saving">为你节省 &nbsp;&nbsp;% ！</p>
             </div>
           </div> <!-- 年度计划结束 -->  
 
@@ -114,9 +114,9 @@
           <div class="plan-box half-year">
             <div class="popular">爆款</div>
             <div class="plan-box-text">
-              <h1>半年计划</h1>
-              <p class="price">￥ <i class="price-num">11.3元</i>&nbsp; /月</p>
-              <p class="saving">为你节省 24% ！</p>
+              <h1>&nbsp;&nbsp;计划</h1>
+              <p class="price">￥ <i class="price-num">&nbsp;&nbsp;&nbsp;元</i>&nbsp; /月</p>
+              <p class="saving">为你节省 &nbsp;&nbsp;% ！</p>
             </div>
           </div> <!-- 半年计划结束 -->  
 
@@ -124,9 +124,9 @@
           <div class="plan-box quarterly">
             <div class="false-box"></div>
             <div class="plan-box-text">
-              <h1>季度计划</h1>
-              <p class="price">￥ <i class="price-num">15元</i>&nbsp; /月</p>
-              <p class="saving">没有为你节省任何费用</p>
+              <h1>&nbsp;&nbsp;计划</h1>
+              <p class="price">￥ <i class="price-num">&nbsp;&nbsp;元</i>&nbsp; /月</p>
+              <p class="saving"></p>
             </div>
           </div> <!-- 季度计划结束 -->
         </div>
@@ -139,21 +139,21 @@
               <tbody>
                 <tr>
                   <th>订阅计划：</th>
-                  <td class="plan-name">半年计划</td>
+                  <td class="plan-name" id="plan-name">&nbsp;&nbsp;计划</td>
                 </tr>
                 <tr>
                   <th>每月价格：</th>
-                  <td>￥11.3元</td>
+                  <td id="package_monthly_price">￥&nbsp;&nbsp;元</td>
                 </tr>
                 <tr>
                   <th>有效天数：</th>
-                  <td>180天</td>
+                  <td id="package_validity">&nbsp;&nbsp;天</td>
                 </tr>
               </tbody>
               <tfoot>
                 <tr>
                   <th>订单总额：</th>
-                  <td>￥68元</td>
+                  <td id="total_amount">￥&nbsp;&nbsp;元</td>
                 </tr>
               </tfoot>
             </table>
@@ -164,8 +164,8 @@
             <table class="payment-way-box">
               <tbody>
                 <tr>
-                  <td class="alipay"><input type="radio" name="alipay"><img src="images/alipay.png"></td>
-                  <td class="wechat-pay"><input type="radio" name="wechat-pay"><img src="images/wechat-pay.png"></td>
+                  <td class="alipay"><input type="radio" name="payment-way" value=1><img src="http://p86qgj9gq.bkt.clouddn.com/alipay.png?v=1"></td>
+                  <td class="wechat-pay"><input type="radio" name="payment-way" value=2><img src="http://p86qgj9gq.bkt.clouddn.com/wechat-pay.png?v=1"></td>
                 </tr>
               </tbody>
               <tfoot>
@@ -178,37 +178,22 @@
           </div> <!-- payment-way 结束 -->
         </div> <!-- 订单列表结束 -->
 
-        <div class="subscribe-btn">马上订阅&nbsp;&gt;</div>
-
+        <div class="subscribe-btn" id="make_an_order">马上订阅&nbsp;&gt;</div>
       </div> <!-- 当订阅计划结束 -->
     </div> <!-- content结束 -->
   </div> <!-- main结束 -->
 
   <!-- js -->
   <!-- https://resource.wanbaolife.com/static/js/ -->
-  <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
-  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="https://resource.wanbaolife.com/static/js/jquery-2.1.0.min.js"></script>
+  <script type="text/javascript" src="https://resource.wanbaolife.com/static/js/common.js"></script>
+  <script type="text/javascript" src="https://resource.wanbaolife.com/static/js/subscription.js"></script>
   <script src="https://resource.wanbaolife.com/static/js/layer/layer.js"></script>
   <script type="text/javascript">
-    $(function () {
-
+    $(window).load(function () {
       // 固定定位自适应
       var edge = ($(window).width() - 1318) / 2;
       $('.sidebar').css({left:'edge'});
-
-      // 选择订阅计划
-      
-      $('.plan-box').on('click', function () {
-        if ($(this).hasClass('plan-box-on') == false) {
-          var currentBox = $('.subscribe-box').find('.plan-box-on');
-          currentBox.removeClass('plan-box-on');
-          $(this).addClass('plan-box-on');
-
-          var currentPrice = $('.subscribe-box').find('.price-on');
-          currentPrice.removeClass('price-on');
-          $(this).find('.price').addClass('price-on')
-        }
-      });
     })
   </script>
 </body>
