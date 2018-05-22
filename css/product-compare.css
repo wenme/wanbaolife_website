@@ -59,8 +59,7 @@ ul li a.current {
 
 /*盒子头部*/
 .box-head {
-	position: fixed;
-	top: 48px;
+	position: absolute;
 	padding: 26px 0;
 	width: 100%;
 	height: 112px;
@@ -136,9 +135,9 @@ ul li a.current {
 	margin-bottom: 36px;
 }
 
-.title {
-	position: sticky;
-	top: 159px;
+.title-fixed {
+	position: fixed;
+	top: 160px;
 	z-index: 998;
 }
 
@@ -160,6 +159,7 @@ ul li a.current {
 	font-size: 18px;
 	color: #0099BC;
 	background-color: #F2F2F2;
+	width: 982px;
 }
 
 .sub-title {

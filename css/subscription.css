@@ -35,12 +35,14 @@
 	margin-top: 28px;
 }
 
-.sidebar-box div {
+a.sidebar-btn {
+	display: block;
 	width: 264px;
 	height: 36px;
 	margin-bottom: 16px;
 	line-height: 36px;
 	text-indent: 20px;
+	text-decoration: none;
 }
 
 .sidebar-on {
@@ -51,6 +53,7 @@
 
 .sidebar-off {
 	background-color: #F2F2F2;
+	color: #000;
 }
 
 /*content 开始*/
