@@ -72,4 +72,8 @@
 .nav-list:visited {
 	background-color: #0099BC;
 }
+
+.nav-list-on {
+	background-color: #0099BC;
+}
 /* 导航栏结束 */

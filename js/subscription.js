@@ -37,7 +37,12 @@ $(function () {
               		subscription_log_html += '<span class="row-sb">' + subscription_log[i][1] + '</span>';
               		subscription_log_html += '<span class="row-sb">' + subscription_log[i][2] + '天</span>';
               		subscription_log_html += '<span class="row-sb">' + subscription_log[i][3] + '元</span>';
-              		subscription_log_html += '<span class="row-sb">' + subscription_log[i][4] + '</span>';
+              		if (subscription_log[i][4].indexOf("正在使用") != -1) 
+              		{
+              			subscription_log_html += '<span class="row-sb curren-subscription">' + subscription_log[i][4] + '</span>';
+              		}else {
+              			subscription_log_html += '<span class="row-sb">' + subscription_log[i][4] + '</span>';
+              		}              		
               		subscription_log_html += '</div>';
                		inner_html += subscription_log_html;
             	}

@@ -22,6 +22,7 @@
 	font-size: 20px;
 	font-weight: bold;
 	margin: 0;
+	color: #000;
 }
 
 /*sidebar 开始*/
@@ -119,6 +120,10 @@ a.sidebar-btn {
 	text-align: left;
 }
 
+.curren-subscription {
+	color: #0c0;
+}
+
 /*订阅计划*/
 .plan-text {
 	margin-top: 24px;
@@ -138,11 +143,13 @@ a.sidebar-btn {
 }
 
 .plan-box {
+	display: block;
 	float: left;
 	width: 300px;
 	height: 200px;
 	border: 4px solid #999;
 	text-align: center;
+	text-decoration: none;
 }
 
 .plan-box-on {
@@ -290,6 +297,7 @@ a.sidebar-btn {
 }
 
 .subscribe-btn {
+	display: block;
 	clear: both;
 	width: 200px;
 	height: 48px;
@@ -299,4 +307,9 @@ a.sidebar-btn {
 	text-align: center;
 	color: #fff;
 	font-size: 18px;
+	text-decoration: none;
+}
+
+.subscribe-btn:hover {
+	text-decoration: underline;
 }
