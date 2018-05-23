@@ -79,22 +79,22 @@ $(function () {
 					var package_obj_html = '';
 					if (i == 0)
 					{
-						package_obj_html += '<div class="plan-box yearly plan-box-on" package_box_id="0" package_id="' + PACKAGE_INFO_LIST[i].package_id + '">';
+						package_obj_html += '<a href="javascript:;" class="plan-box yearly plan-box-on" package_box_id="0" package_id="' + PACKAGE_INFO_LIST[i].package_id + '">';
 						package_obj_html += '<div class="big-sale">超值</div>';
 					}
 					else if (i == 1)
 					{
-						package_obj_html += '<div class="plan-box half-year" package_box_id="1" package_id="' + PACKAGE_INFO_LIST[i].package_id + '">';
+						package_obj_html += '<a href="javascript:;" class="plan-box half-year" package_box_id="1" package_id="' + PACKAGE_INFO_LIST[i].package_id + '">';
 						package_obj_html += '<div class="popular">爆款</div>';
 					}
 					else if (i == 2)
 					{
-						package_obj_html +=  '<div class="plan-box quarterly" package_box_id="2" package_id="' + PACKAGE_INFO_LIST[i].package_id + '">';
+						package_obj_html +=  '<a href="javascript:;" class="plan-box quarterly" package_box_id="2" package_id="' + PACKAGE_INFO_LIST[i].package_id + '">';
 						package_obj_html +=  '<div class="false-box"></div>';
 					}
 					else
 					{
-						package_obj_html +=  '<div class="plan-box" package_box_id="' + i + '" package_id="' + PACKAGE_INFO_LIST[i].package_id + '">';
+						package_obj_html +=  '<a href="javascript:;" class="plan-box" package_box_id="' + i + '" package_id="' + PACKAGE_INFO_LIST[i].package_id + '">';
 						package_obj_html +=  '<div class="false-box"></div>';						
 					}
 					package_obj_html += '<div class="plan-box-text">';
@@ -104,7 +104,7 @@ $(function () {
 						package_obj_html += '<p class="saving">没有为你节省任何费用</p>';
 					else
 						package_obj_html += '<p class="saving">为你节省 ' + PACKAGE_INFO_LIST[i].discount + '！</p>';
-					package_obj_html += '</div></div>';
+					package_obj_html += '</div></a>';
 					inner_html += package_obj_html;
 				}
 				$("#subscribe-boxes").empty();
