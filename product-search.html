@@ -221,16 +221,22 @@
     <!-- 产品对比框 -->
     <div class="pro-compare clearfix">
       <h1>产品对比</h1>
-      <div class="add-product">加入要对比的产品</div>
-      <div class="cancel-item">
-        <a href="javascript:;"><span>取消对比</span></a>
+      <div id="compare_product_a">
+        <div class="add-product">加入要对比的产品</div>
+        <div class="cancel-item">
+          <span>取消对比</span>
+        </div>
       </div>
-      <div class="add-product">加入要对比的产品</div>
-      <div class="cancel-item">
-        <a href="javascript:;"><span>取消对比</span></a>
+
+      <div id="compare_product_b">
+        <div class="add-product">加入要对比的产品</div>
+        <div class="cancel-item">
+          <span>取消对比</span>
+        </div>
       </div>
-      <div class="compare-btn">智能对比&nbsp;&nbsp;&gt;</div>
-      <a class="cancel-all" href="javascript:;"><span>全部清除</span></a>
+
+      <a href="javascript:;" target="_blank" class="compare-btn" id="compare-btn">智能对比&nbsp;&nbsp;&gt;</a>
+      <a class="cancel-all" href="javascript:clear_all_compares();"><span>全部清除</span></a>
     </div>
 
   </div> <!-- main content结束 -->
@@ -255,19 +261,6 @@
 
       var edge3 = edge2 + $('.result-nav').outerWidth() + 72;
       $('.pro-compare').css({left: edge3});
-
-      // 加入对比与取消对比、收藏与取消收藏
-      $('.select-compare').on('click', function () {
-        if ($(this).hasClass('add-compare')) {
-          $(this).removeClass('add-compare');
-          $(this).addClass('remove-compare');
-          $(this).text('取消对比');
-        } else {
-          $(this).addClass('add-compare');
-          $(this).removeClass('remove-compare');
-          $(this).text('加入对比');
-        }        
-      });
 
     })
   </script>

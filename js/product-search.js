@@ -3,8 +3,6 @@
 $(function () {
 	var SESSION_KEY = sessionStorage.getItem("session_key");
 	var tel = sessionStorage.getItem("mobile");
-	// var SESSION_KEY = "session_key";
-	// var tel = "mobile";
 
 	show_and_hide = function(div_id) 
 	{
@@ -177,6 +175,8 @@ $(function () {
 
 	function update_search_result(page_num)
 	{
+		var compare_product_a = sessionStorage.getItem("compare_product_a");
+		var compare_product_b = sessionStorage.getItem("compare_product_b");
 		var url = "/terms/wbzx_product_search";
 		var keyword = $("#keyword").val();
 		var insurer_id = $("#insurer_abbreviation").val();
@@ -244,14 +244,28 @@ $(function () {
 
                		product_obj_html += '<div class="product-function">';
                		product_obj_html += '<div class="function-box clearfix">';
-               		product_obj_html += '<div class="select-compare add-compare">加入对比</div>';
-               		if (product_list[i].is_followed == 1)
+
+               		var pid_a = '';
+               		if ( compare_product_a != null)
+               			pid_a = compare_product_a.split('|')[0];
+               		var pid_b = '';
+               		if ( compare_product_b != null)
+               			pid_b = compare_product_b.split('|')[0];
+               		if (product_list[i].pid != pid_a && product_list[i].pid != pid_b)
                		{
-               			product_obj_html += '<div class="favorite heart-solid" title="取消收藏" pid="' + product_list[i].pid + '">取消收藏</div>';
+               			product_obj_html += '<div class="select-compare add-compare" pid="' + product_list[i].pid + '" product_name="' + product_list[i].product + '">加入对比</div>';
                		}
                		else
                		{
-               			product_obj_html += '<div class="favorite heart" title="添加收藏" pid="' + product_list[i].pid + '">添加收藏</div>';
+               			product_obj_html += '<div class="select-compare remove-compare" pid="' + product_list[i].pid + '" product_name="' + product_list[i].product + '">取消对比</div>';
+               		}
+               		if (product_list[i].is_followed == 1)
+               		{
+               			product_obj_html += '<div class="favorite heart-solid" title="取消收藏" pid="' + product_list[i].pid + '" product_name="' + product_list[i].product + '">取消收藏</div>';
+               		}
+               		else
+               		{
+               			product_obj_html += '<div class="favorite heart" title="添加收藏" pid="' + product_list[i].pid + '" product_name="' + product_list[i].product + '">添加收藏</div>';
               		}
               		product_obj_html += '</div>';
                		product_obj_html += '</div>';
@@ -326,6 +340,106 @@ $(function () {
 				$("#page-box").css({"display": "none"});
 			}
 		});
+	}
+
+	// update compare bucket
+	function update_compare_bucket()
+	{
+		var compare_product_a = sessionStorage.getItem("compare_product_a");
+		var compare_product_b = sessionStorage.getItem("compare_product_b");
+
+		if (compare_product_a != null && compare_product_b != null)
+		{
+			$("#compare-btn").addClass("compare-btn-on");
+			$("#compare-btn").attr("href", "https://www.wanbaolife.com/terms/index");
+		}
+		else
+		{
+			$("#compare-btn").removeClass("compare-btn-on");
+			$("#compare-btn").attr("href", "javascript:;");
+		}
+
+		if (compare_product_a != null)
+		{
+			var pid = compare_product_a.split('|')[0];
+			var product_name = compare_product_a.split('|')[1];
+			var inner_html = '';
+			inner_html += '<div class="add-product">' + product_name + '</div>';
+			inner_html += '<div class="cancel-item">';
+			inner_html += '<a href="javascript:clear_compare(\'compare_product_a\');"><span>取消对比</span></a>';
+			inner_html += '</div>';
+			$("#compare_product_a").empty();
+			$("#compare_product_a").html(inner_html);
+		}
+		else
+		{
+			var inner_html = '<div id="compare_product_a"><div class="add-product">加入要对比的产品</div><div class="cancel-item"><span>取消对比</span></div>';
+			$("#compare_product_a").empty();
+			$("#compare_product_a").html(inner_html);			
+		}
+
+		if (compare_product_b != null)
+		{
+			var pid = compare_product_b.split('|')[0];
+			var product_name = compare_product_b.split('|')[1];
+			var inner_html = '';
+			inner_html += '<div class="add-product">' + product_name + '</div>';
+			inner_html += '<div class="cancel-item">';
+			inner_html += '<a href="javascript:clear_compare(\'compare_product_b\');"><span>取消对比</span></a>';
+			inner_html += '</div>';
+			$("#compare_product_b").empty();
+			$("#compare_product_b").html(inner_html);
+		}
+		else
+		{
+			var inner_html = '<div id="compare_product_b"><div class="add-product">加入要对比的产品</div><div class="cancel-item"><span>取消对比</span></div>';
+			$("#compare_product_b").empty();
+			$("#compare_product_b").html(inner_html);
+		}
+	}
+
+	// clear compare bucket
+	clear_compare = function(obj)
+	{
+		var compare_product_obj = sessionStorage.getItem(obj);
+		var pid = compare_product_obj.split("|")[0]
+		sessionStorage.removeItem(obj);
+
+		var product_box_cmp = $(".select-compare[pid='"+pid+"']");
+		product_box_cmp.removeClass('remove-compare');
+		product_box_cmp.addClass('add-compare');
+		product_box_cmp.text('加入对比');
+
+		update_compare_bucket();
+	}
+
+	//clear_all_compares
+	clear_all_compares = function()
+	{
+		var compare_product_obj = sessionStorage.getItem("compare_product_a");
+		if (compare_product_obj != null)
+		{
+			var pid = compare_product_obj.split("|")[0]
+			sessionStorage.removeItem("compare_product_a");
+			var product_box_cmp = $(".select-compare[pid='"+pid+"']");
+			product_box_cmp.removeClass('remove-compare');
+			product_box_cmp.addClass('add-compare');
+			product_box_cmp.text('加入对比');
+		}
+
+		var compare_product_obj = sessionStorage.getItem("compare_product_b");
+		if (compare_product_obj != null)
+		{
+			var pid = compare_product_obj.split("|")[0]
+			sessionStorage.removeItem("compare_product_b");
+
+			var product_box_cmp = $(".select-compare[pid='"+pid+"']");
+			product_box_cmp.removeClass('remove-compare');
+			product_box_cmp.addClass('add-compare');
+			product_box_cmp.text('加入对比');
+		}
+
+		update_compare_bucket();
 	}
 
 	$(".search_filter").on("change", function()
@@ -414,6 +528,60 @@ $(function () {
 		}
 	});
 
+
+	// 加入对比与取消对比、收藏与取消收藏
+	$(document).on('click', '.select-compare', function () 
+	{
+		var compare_product_a = sessionStorage.getItem("compare_product_a");
+		var compare_product_b = sessionStorage.getItem("compare_product_b");
+		if ( compare_product_a != null && compare_product_b != null && $(this).hasClass("add-compare"))
+		{
+			layer.msg('对比栏已满!', {icon: 1, time: 1000});
+			return;
+		}
+
+		if ($(this).hasClass('add-compare')) 
+		{
+		  $(this).removeClass('add-compare');
+		  $(this).addClass('remove-compare');
+		  $(this).text('取消对比');
+
+		  // add session storage
+		  if (!compare_product_a)
+		  {
+		  	sessionStorage.setItem("compare_product_a", $(this).attr("pid") + '|' + $(this).attr("product_name"));
+		  }
+		  else if (!compare_product_b)
+		  {
+		  	sessionStorage.setItem("compare_product_b", $(this).attr("pid") + '|' + $(this).attr("product_name"));
+		  }
+		  else
+		  {
+		  	layer.msg('对比栏添加失败!', {icon: 1, time: 1000});
+		  }
+		} else 
+		{
+		  $(this).addClass('add-compare');
+		  $(this).removeClass('remove-compare');
+		  $(this).text('加入对比');
+
+          // remove session storage
+		  var pid_a = compare_product_a.split('|')[0];
+		  var pid_b = compare_product_b.split('|')[0];
+		  if (pid_a == $(this).attr("pid"))
+		  {
+		  	sessionStorage.removeItem('compare_product_a');
+		  }
+		  if (pid_b == $(this).attr("pid"))
+		  {
+		  	sessionStorage.removeItem('compare_product_b');
+		  }
+		}
+		update_compare_bucket();
+	});
+
+
 	get_search_filter();
 	update_search_result(1);
+	update_compare_bucket();
 })

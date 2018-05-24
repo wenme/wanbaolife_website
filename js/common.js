@@ -295,11 +295,11 @@ function wbzx_log_out()
                 sessionStorage.removeItem('session_key');
                 sessionStorage.removeItem('mobile');
             }
-            window.location = 'index.html';
+            window.location = 'https://www.wanbaolife.com';
         } catch (err)
         {
-            window.location = 'index.html';
-            console.log(err);
+            window.location = 'https://www.wanbaolife.com';
+            // console.log(err);
         }
     });
 
