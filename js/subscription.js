@@ -99,7 +99,7 @@ $(function () {
 					}
 					package_obj_html += '<div class="plan-box-text">';
 					package_obj_html += '<h1>' + PACKAGE_INFO_LIST[i].name + '</h1>';
-					package_obj_html += '<p class="price price-on">￥ <i class="price-num">' + PACKAGE_INFO_LIST[i].monthly_price + '元</i>&nbsp; /月</p>';
+					package_obj_html += '<p class="price">￥ <i class="price-num">' + PACKAGE_INFO_LIST[i].monthly_price + '元</i>&nbsp; /月</p>';
                     if (PACKAGE_INFO_LIST[i].discount == "0%")
 						package_obj_html += '<p class="saving">没有为你节省任何费用</p>';
 					else
