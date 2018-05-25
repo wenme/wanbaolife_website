@@ -278,6 +278,14 @@ function complete_digest(post_data) {
     return ret_digest;
 }
 
+function GetQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null)
+        return unescape(r[2]);
+    return null;
+}
+
 function wbzx_log_out() 
 {
     var session_key = sessionStorage.getItem("session_key");
@@ -295,11 +303,11 @@ function wbzx_log_out()
                 sessionStorage.removeItem('session_key');
                 sessionStorage.removeItem('mobile');
             }
-            window.location = 'index.html';
+            window.location = 'https://www.wanbaolife.com';
         } catch (err)
         {
-            window.location = 'index.html';
-            console.log(err);
+            window.location = 'https://www.wanbaolife.com';
+            // console.log(err);
         }
     });
 

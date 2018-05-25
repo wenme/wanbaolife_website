@@ -359,6 +359,8 @@
 }
 
 .compare-btn {
+	display: block;
+	text-decoration: none;
 	position: relative;
 	top: 36px;
 	width: 128px;
@@ -368,6 +370,14 @@
 	color: #fff;
 	font-size: 16px;
 	text-align: center;
+}
+
+.compare-btn-on {
+	background-color: #0063B1;
+}
+
+.compare-btn-on:hover {
+	text-decoration: underline;
 }
 
 .cancel-all {

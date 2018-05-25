@@ -113,17 +113,7 @@
 
         });
 
-        function GetQueryString(name) {
-            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-            var r = window.location.search.substr(1).match(reg);
-            if (r != null)return unescape(r[2]);
-            return null;
-        }
-
-
-        var session_key = sessionStorage.getItem("session_key");
-
-
+       var session_key = sessionStorage.getItem("session_key");
        var select = '';
        var selectChild = '';
         $(document).on('change', '.selectType', function () {
