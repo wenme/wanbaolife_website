@@ -351,7 +351,7 @@ $(function () {
 		if (compare_product_a != null && compare_product_b != null)
 		{
 			$("#compare-btn").addClass("compare-btn-on");
-			$("#compare-btn").attr("href", "https://www.wanbaolife.com/terms/index");
+			$("#compare-btn").attr("href", "product-compare.html?pid_a=" + compare_product_a + "&pid_b=" + compare_product_b);
 		}
 		else
 		{
