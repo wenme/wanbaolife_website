@@ -7,11 +7,12 @@ $(function(){
 	var timestamp = Date.parse(new Date()) / 1000;
 
 	var post_data = {
-		pid_a: pid_a,
-		pid_b: pid_b,
+		pid_a: pid_a.split('|')[0],
+		pid_b: pid_b.split('|')[0],
 		timestamp: timestamp,
 		session_key: SESSION_KEY
 	};
+	var url = '/terms/wbzx_product_compare';
 	post_data['sign'] = complete_digest(post_data);
 	$.post(url, post_data, function(data, status)
 	{
@@ -37,7 +38,7 @@ $(function(){
 				}
 				row_html += '<div id="' + row_info[2] + '" class="small-box">';
 				row_html += '<div class="title">' + row_info[1] + '</div>';
-				title_arr.append([row_info[2], row_info[1]]);
+				title_arr.push([row_info[2], row_info[1]]);
 			}
 			else if (row_info[0] == '1')
 			{
@@ -49,14 +50,14 @@ $(function(){
 				row_html += '<div class="box-left normal-left">' + row_info[1] + '</div>';
 				row_html += '<div class="box-center normal-center">';
 				if (row_info[2] == '1')
-				    row_html += '<img class="normal-img-left" src="images/tick.png">';
+				    row_html += '<img class="normal-img-left" src="http://p86qgj9gq.bkt.clouddn.com/tick.png?v=1">';
 				else
-					row_html += '<img class="normal-img-left" src="images/tick.png">';
+					row_html += '<img class="normal-img-left" src="http://p86qgj9gq.bkt.clouddn.com/tick.png?v=1">';
 				row_html += row_info[3];
 				if (row_info[4] == '1')
-				    row_html += '<img class="normal-img-left" src="images/tick.png">';
+				    row_html += '<img class="normal-img-right" src="http://p86qgj9gq.bkt.clouddn.com/tick.png?v=1">';
 				else
-					row_html += '<img class="normal-img-left" src="images/tick.png">';
+					row_html += '<img class="normal-img-right" src="http://p86qgj9gq.bkt.clouddn.com/tick.png?v=1">';
 				row_html += '</div>';
 				row_html += '<div class="box-right normal-right">' + row_info[5] + '</div>';
 				row_html += '</div>';
@@ -78,5 +79,5 @@ $(function(){
 		inner_html += '</ul>';
 		$("#menu").empty();
 		$("#menu").html(inner_html);
-	}
+	});
 })
