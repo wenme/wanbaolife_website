@@ -21,35 +21,36 @@
 
 /*固定定位模块*/
 .sidebar,
-.result-nav,
+.result,
 .pro-compare {
-	position: fixed;
+	position: absolute;
+	top: 0;
 }
 
 .sidebar {
-	top: 48px;
+	left: 24px;
 }
 
-.result-nav {
-	top: 48px;
+.result {
+	left: 264px;
 }
 
 .pro-compare {
-	top: 48px;
+	right: 24px;
 }
 
 /*搜索工具开始*/
 .main {
+	position: relative;
 	width: 1366px;
 	height: auto;
-	margin: 48px auto 0 auto;
+	margin: 108px auto 0 auto;
 	padding: 0 24px;
 }
 
 .sidebar,
 .result-nav,
 .pro-compare {
-	padding-top: 60px;
 	background-color: #fff;
 }
 
@@ -165,16 +166,15 @@
 
 /*搜索结果*/
 .result {
-	position: absolute;
-	top: 48px;
+	margin-left: 72px;
 	width: 696px;
 	height: auto;
 }
 
 .result-nav {
 	width: 696px;
-	padding-bottom: 44px;
 	z-index: 9999;
+	margin-bottom: 44px;
 }
 
 .result-nav h1 {
@@ -190,10 +190,6 @@
 .result-nav span {
 	font-weight: bold;
 	color: #F7630C;
-}
-
-.result-list {
-	margin-top: 127px;
 }
 
 .product {

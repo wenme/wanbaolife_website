@@ -654,7 +654,7 @@
   <script type="text/javascript" src="https://resource.wanbaolife.com/static/js/common.js"></script>
   <script src="https://resource.wanbaolife.com/static/js/layer/layer.js"></script>
   <script type="text/javascript">
-    $(function () {
+    $(document).ready(function () {
       $('.small-box').find('.sub-title:first').css('border-top', '0px');
 
       $('ul').on('click', 'a', function() {
@@ -667,50 +667,49 @@
         }               
       });
 
-      $(window).scroll(function() {
+      function activePosition() {
         var windowTop = $(document).scrollTop();
-        console.log('begin'+windowTop);
         var boxes = $('.big-box').find('.small-box');
-        var boxId = '';  
-        var titleId = '';     
+        var boxId = ''; 
+        var titleId = '';  
+        
         boxes.each(function() {
           var item = $(this);
-          if ( windowTop >= item.offset().top-240 ) {
+          if ( windowTop > item.offset().top-240 ) {
             boxId = '#' + item.attr('id');
           } else {
             return false;
           }
 
-          var currentLink = $('.menu').find('.current');
-          if (boxId && currentLink.attr('name') !== boxId) {
-            currentLink.removeClass('current');
-            $('.menu').find('[name="' + boxId+ '"]').addClass('current');
-          }
-
-          if ( windowTop > item.offset().top-190 ) {
+          if ( windowTop > item.offset().top-200 ) {
             titleId = item.attr('id');
           } else {
              return false;
           }
-
-          // console.log('windowtop:'+windowTop)
-          // console.log('boxtop:'+item.offset().top);
-          // var titleTop = windowTop - (item.offset().top - 160);
-          // console.log('relative:'+titleTop);
-          // $('.title-fixed').css({top: titleTop});
-          var currentTitle = $('.big-box').find('.title-fixed');
-          if (titleId && currentTitle.parent().attr('id') !== titleId) {
-            currentTitle.removeClass('title-fixed');
-            $('#' + titleId).find('.title').addClass('title-fixed');
-          }
         });
 
-        if(windowTop==0) {
+        var currentLink = $('.menu').find('.current');
+        if (boxId && currentLink.attr('name') !== boxId) {
+          currentLink.removeClass('current');
+          $('.menu').find('[name="' + boxId+ '"]').addClass('current');
+        }
+
+        var currentTitle = $('.big-box').find('.title-fixed');
+        if (titleId && currentTitle.parent().attr('id') !== titleId) {
+          currentTitle.removeClass('title-fixed');
+          $('#' + titleId).find('.title').addClass('title-fixed');
+        }
+
+        if(windowTop == 0) {
           $('.small-box').find('.title').removeClass('title-fixed');
         }
-        $('.box-head').css({top: windowTop});
+      };
+
+      $(window).scroll(function() {
+        activePosition();
       });
-      
+
+      activePosition();      
     })
   </script>
 
