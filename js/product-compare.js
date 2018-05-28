@@ -50,14 +50,14 @@ $(function(){
 				row_html += '<div class="box-left normal-left">' + row_info[1] + '</div>';
 				row_html += '<div class="box-center normal-center">';
 				if (row_info[2] == '1')
-				    row_html += '<img class="normal-img-left" src="http://p86qgj9gq.bkt.clouddn.com/tick.png?v=1">';
+				    row_html += '<img class="normal-img-left" src="https://pics.wanbaolife.com/tick.png?v=1">';
 				else
-					row_html += '<img class="normal-img-left" src="http://p86qgj9gq.bkt.clouddn.com/no-tick.png?v=1">';
+					row_html += '<img class="normal-img-left" src="https://pics.wanbaolife.com/no-tick.png?v=1">';
 				row_html += row_info[3];
 				if (row_info[4] == '1')
-				    row_html += '<img class="normal-img-right" src="http://p86qgj9gq.bkt.clouddn.com/tick.png?v=1">';
+				    row_html += '<img class="normal-img-right" src="https://pics.wanbaolife.com/tick.png?v=1">';
 				else
-					row_html += '<img class="normal-img-right" src="http://p86qgj9gq.bkt.clouddn.com/no-tick.png?v=1">';
+					row_html += '<img class="normal-img-right" src="https://pics.wanbaolife.com/no-tick.png?v=1">';
 				row_html += '</div>';
 				row_html += '<div class="box-right normal-right">' + row_info[5] + '</div>';
 				row_html += '</div>';

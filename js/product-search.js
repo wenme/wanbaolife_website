@@ -10,12 +10,12 @@ $(function () {
 		var href_id = div_id.replace("table", "arrow");
 		var img_id = href_id + "_img";	
 		if (show_status == "inline-block"){
-			document.getElementById(img_id).src = "http://p86qgj9gq.bkt.clouddn.com/right-arrow.png?v=1";
+			document.getElementById(img_id).src = "https://pics.wanbaolife.com/right-arrow.png?v=1";
 			document.getElementById(div_id).style.display = "none";
 		}
 		else
 		{
-			document.getElementById(img_id).src = "http://p86qgj9gq.bkt.clouddn.com/down-arrow.png?v=1";
+			document.getElementById(img_id).src = "https://pics.wanbaolife.com/down-arrow.png?v=1";
 			document.getElementById(div_id).style.display = "inline-block";
 		}
 	}
@@ -278,22 +278,22 @@ $(function () {
                 // reset page-num-box
                 if (page_num == 1)
                 {
-                	$("#go-to-first-page img").attr("src", "http://p86qgj9gq.bkt.clouddn.com/page-first-disabled.png?v=1");
+                	$("#go-to-first-page img").attr("src", "https://pics.wanbaolife.com/page-first-disabled.png?v=1");
                  	$("#go-to-first-page").removeClass("page-num-extra");
-	               	$("#go-to-prev-page img").attr("src", "http://p86qgj9gq.bkt.clouddn.com/page-left-disabled.png?v=1");
+	               	$("#go-to-prev-page img").attr("src", "https://pics.wanbaolife.com/page-left-disabled.png?v=1");
 	               	$("#go-to-prev-page").removeClass("page-num-extra");
                 }
                 else
                 {
                 	//activate first page button
-                	$("#go-to-first-page img").attr("src", "http://p86qgj9gq.bkt.clouddn.com/page-first-hover.png?v=1");
+                	$("#go-to-first-page img").attr("src", "https://pics.wanbaolife.com/page-first-hover.png?v=1");
                  	if ($("#go-to-first-page").hasClass("page-num-extra") == false)
                  	{
                  		$("#go-to-first-page").addClass("page-num-extra");
                  	}
 
                 	//activate prev page button
-                	$("#go-to-prev-page img").attr("src", "http://p86qgj9gq.bkt.clouddn.com/page-left.png?v=1");
+                	$("#go-to-prev-page img").attr("src", "https://pics.wanbaolife.com/page-left.png?v=1");
                  	if ($("#go-to-prev-page").hasClass("page-num-extra") == false)
                  	{
                  		$("#go-to-prev-page").addClass("page-num-extra");
@@ -302,20 +302,20 @@ $(function () {
 
                 if (page_num == total_page_count)
                 {
-                 	$("#go-to-next-page img").attr("src", "http://p86qgj9gq.bkt.clouddn.com/page-right-disabled.png?v=1");
+                 	$("#go-to-next-page img").attr("src", "https://pics.wanbaolife.com/page-right-disabled.png?v=1");
                  	$("#go-to-next-page").removeClass("page-num-extra");
-                	$("#go-to-last-page img").attr("src", "http://p86qgj9gq.bkt.clouddn.com/page-last-disabled.png?v=1");
+                	$("#go-to-last-page img").attr("src", "https://pics.wanbaolife.com/page-last-disabled.png?v=1");
                  	$("#go-to-last-page").removeClass("page-num-extra");
                 }
                 else
                 {
-                 	$("#go-to-next-page img").attr("src", "http://p86qgj9gq.bkt.clouddn.com/page-right.png?v=1");
+                 	$("#go-to-next-page img").attr("src", "https://pics.wanbaolife.com/page-right.png?v=1");
                  	if ($("#go-to-next-page").hasClass("page-num-extra") == false)
                  	{
                  		$("#go-to-next-page").addClass("page-num-extra");
                  	}
 
-                	$("#go-to-last-page img").attr("src", "http://p86qgj9gq.bkt.clouddn.com/page-last-hover.png?v=1");
+                	$("#go-to-last-page img").attr("src", "https://pics.wanbaolife.com/page-last-hover.png?v=1");
                  	if ($("#go-to-last-page").hasClass("page-num-extra") == false)
                  	{
                  		$("#go-to-last-page").addClass("page-num-extra");
