@@ -52,12 +52,12 @@ $(function(){
 				if (row_info[2] == '1')
 				    row_html += '<img class="normal-img-left" src="http://p86qgj9gq.bkt.clouddn.com/tick.png?v=1">';
 				else
-					row_html += '<img class="normal-img-left" src="http://p86qgj9gq.bkt.clouddn.com/tick.png?v=1">';
+					row_html += '<img class="normal-img-left" src="http://p86qgj9gq.bkt.clouddn.com/no-tick.png?v=1">';
 				row_html += row_info[3];
 				if (row_info[4] == '1')
 				    row_html += '<img class="normal-img-right" src="http://p86qgj9gq.bkt.clouddn.com/tick.png?v=1">';
 				else
-					row_html += '<img class="normal-img-right" src="http://p86qgj9gq.bkt.clouddn.com/tick.png?v=1">';
+					row_html += '<img class="normal-img-right" src="http://p86qgj9gq.bkt.clouddn.com/no-tick.png?v=1">';
 				row_html += '</div>';
 				row_html += '<div class="box-right normal-right">' + row_info[5] + '</div>';
 				row_html += '</div>';
