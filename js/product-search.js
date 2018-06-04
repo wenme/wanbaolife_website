@@ -364,7 +364,7 @@ $(function () {
 			var pid = compare_product_a.split('|')[0];
 			var product_name = compare_product_a.split('|')[1];
 			var inner_html = '';
-			inner_html += '<div class="add-product">' + product_name + '</div>';
+			inner_html += '<div class="added-product">' + product_name + '</div>';
 			inner_html += '<div class="cancel-item">';
 			inner_html += '<a href="javascript:clear_compare(\'compare_product_a\');"><span>取消对比</span></a>';
 			inner_html += '</div>';
@@ -383,7 +383,7 @@ $(function () {
 			var pid = compare_product_b.split('|')[0];
 			var product_name = compare_product_b.split('|')[1];
 			var inner_html = '';
-			inner_html += '<div class="add-product">' + product_name + '</div>';
+			inner_html += '<div class="added-product">' + product_name + '</div>';
 			inner_html += '<div class="cancel-item">';
 			inner_html += '<a href="javascript:clear_compare(\'compare_product_b\');"><span>取消对比</span></a>';
 			inner_html += '</div>';
@@ -534,11 +534,17 @@ $(function () {
 	{
 		var compare_product_a = sessionStorage.getItem("compare_product_a");
 		var compare_product_b = sessionStorage.getItem("compare_product_b");
+
 		if ( compare_product_a != null && compare_product_b != null && $(this).hasClass("add-compare"))
 		{
 			layer.msg('对比栏已满!', {icon: 1, time: 1000});
 			return;
 		}
+
+		if (compare_product_a == null)
+			compare_product_a = "";
+		if (compare_product_b == null)
+			compare_product_b = "";
 
 		if ($(this).hasClass('add-compare')) 
 		{

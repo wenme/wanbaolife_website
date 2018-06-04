@@ -338,6 +338,13 @@
 	color: #ccc;
 }
 
+.added-product {
+	width: 214px;
+	margin-top: 16px;
+	border: 0px;
+	color: #333;
+}
+
 .cancel-item {
 	display: block;
 	border-bottom: 1px solid #ccc;
