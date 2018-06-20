@@ -17,8 +17,8 @@ $(function(){
 	$.post(url, post_data, function(data, status)
 	{
 		//TODO product name & insurer logo
-		$("#product_name_a").text(data.compare_info.product_name_a);
-		$("#product_name_b").text(data.compare_info.product_name_b);
+		$("#product_name_a").html('<a target="_blank" href="goodsDetail.html?pid=' + pid_a.split('|')[0] + '">' + data.compare_info.product_name_a + '</a>');
+		$("#product_name_b").html('<a target="_blank" href="goodsDetail.html?pid=' + pid_b.split('|')[0] + '">' + data.compare_info.product_name_b + '</a>');
 		$("#insurer_logo_a").attr("src", data.compare_info.insurer_logo_a);
 		$("#insurer_logo_b").attr("src", data.compare_info.insurer_logo_b);
 

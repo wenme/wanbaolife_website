@@ -103,6 +103,17 @@ ul li a.current {
 	text-align: right;
 }
 
+.box-left a,
+.box-right a {
+	text-decoration: none;
+	color: #000;
+}
+
+.box-left a:hover,
+.box-right a:hover {
+	text-decoration: underline;
+}
+
 .box-right h1 {
 	position: absolute;
 	bottom: 0;
