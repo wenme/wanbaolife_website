@@ -47,8 +47,14 @@ $(function(){
 			else
 			{
 				row_html += '<div class="normal">';
-				row_html += '<div class="box-left normal-left">' + row_info[1] + '</div>';
-				row_html += '<div class="box-center normal-center">';
+				if (row_info[1].length < 20) 
+					{row_html += '<div class="box-left normal-left">' + row_info[1] + '</div>';} 
+				else 
+					{row_html += '<div class="box-left normal-left small-font-size">' + row_info[1] + '</div>';}
+				if (row_info[3].length < 20) 
+					{row_html += '<div class="box-center normal-center">';} 
+				else 
+					{row_html += '<div class="box-center normal-center small-font-size">';}							
 				if (row_info[2] == '1')
 				    row_html += '<img class="normal-img-left" src="https://pics.wanbaolife.com/tick.png?v=1">';
 				else
@@ -59,7 +65,11 @@ $(function(){
 				else
 					row_html += '<img class="normal-img-right" src="https://pics.wanbaolife.com/no-tick.png?v=1">';
 				row_html += '</div>';
-				row_html += '<div class="box-right normal-right">' + row_info[5] + '</div>';
+				if (row_info[5].length < 20) 
+					{row_html += '<div class="box-right normal-right">' + row_info[5] + '</div>';} 
+				else 
+					{row_html += '<div class="box-right normal-right small-font-size">' + row_info[5] + '</div>';}
+				
 				row_html += '</div>';
 			}
 			inner_html += row_html;

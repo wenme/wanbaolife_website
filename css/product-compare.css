@@ -187,6 +187,10 @@ ul li a.current {
 	color: #333;
 }
 
+.small-font-size {
+	font-size: 12px;
+}
+
 .normal-left {
 	text-align: right;
 }
