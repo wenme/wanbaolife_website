@@ -9,12 +9,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>产品对比</title>
   <!--icon img-->
-  <link rel="shortcut icon" type="images/x-icon" href="http://p86qgj9gq.bkt.clouddn.com/favicon.png">
+  <link rel="shortcut icon" type="images/x-icon" href="https://pics.wanbaolife.com/favicon.png">
   <!-- css -->
   <!-- https://resource.wanbaolife.com/static/css/ -->
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/navigation.css">
-  <link rel="stylesheet" type="text/css" href="css/product-compare.css">
+  <link rel="stylesheet" type="text/css" href="https://resource.wanbaolife.com/static/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="https://resource.wanbaolife.com/static/css/navigation.css">
+  <link rel="stylesheet" type="text/css" href="https://resource.wanbaolife.com/static/css/product-compare.css">
 </head>
 
 <body>
@@ -24,20 +24,20 @@
     <div class="nav-content">
       <div class="nav-left">产品对比</div> <!-- nav-left结束 -->
 
-      <div class="nav-center"><img src="http://p86qgj9gq.bkt.clouddn.com/nav-icon.png" width="36" height="36"></div> <!-- nav-center结束 -->
+      <div class="nav-center"><img src="https://pics.wanbaolife.com/nav-icon.png" width="36" height="36"></div> <!-- nav-center结束 -->
       <div class="nav-center-text">万保资讯</div> <!-- nav-center-text结束 -->  
 
       <div class="nav-right">
-        <div class="nav-list nav-list-on"><a href="product-search.html" target="" title="搜索"><img src="http://p86qgj9gq.bkt.clouddn.com/nav-search.png?v=1" width="24" height="24" alt="搜索"></a></div>
-<!--         <div class="nav-list"><a href="info.html" target="_blank" title="帮助"><img src="http://p86qgj9gq.bkt.clouddn.com/nav-help.png?v=1" width="24" height="24" alt="帮助"></a></div> -->
-        <div class="nav-list"><a href="subscription.html" target="_blank" title="我的账户"><img src="http://p86qgj9gq.bkt.clouddn.com/nav-account.png?v=1" width="24" height="24" alt="我的账户"></a></div>
-        <div class="nav-list"><a href="javascript:wbzx_log_out();" target="" title="退出"><img src="http://p86qgj9gq.bkt.clouddn.com/nav-exit.png?v=1" width="24" height="24" alt="退出"></a></div>
+        <div class="nav-list nav-list-on"><a href="product-search.html" target="" title="搜索"><img src="https://pics.wanbaolife.com/nav-search.png?v=1" width="24" height="24" alt="搜索"></a></div>
+<!--         <div class="nav-list"><a href="info.html" target="_blank" title="帮助"><img src="https://pics.wanbaolife.com/nav-help.png?v=1" width="24" height="24" alt="帮助"></a></div> -->
+        <div class="nav-list"><a href="subscription.html" target="_blank" title="我的账户"><img src="https://pics.wanbaolife.com/nav-account.png?v=1" width="24" height="24" alt="我的账户"></a></div>
+        <div class="nav-list"><a href="javascript:wbzx_log_out();" target="" title="退出"><img src="https://pics.wanbaolife.com/nav-exit.png?v=1" width="24" height="24" alt="退出"></a></div>
       </div> <!-- nav-right结束 -->
     </div><!-- nav-content结束 -->
   </div> <!-- nav结束 -->
 
   <!-- 右边菜单列表 -->
-  <div class="menu">
+  <div class="menu" id="menu">
     <ul>
       <li><a href="javascript:;" name="#jichuxinxi" class="current">基础信息</a></li>
       <li><a href="javascript:;" name="#toubaoxinxi">投保信息</a></li>
@@ -56,28 +56,25 @@
       <!-- box-head 开始 -->
       <div class="box-head">
         <div class="box-left box-head-inside">
-          <h1>富德生命安e盈年金保险</h1>  
+          <h1 id="product_name_a"></h1>  
         </div>
         <div class="box-center box-head-inside">
-          <img class="box-img-left" src="http://p86qgj9gq.bkt.clouddn.com/insurer.png" width="60" height="60">
-          <img class="box-img-right" src="http://p86qgj9gq.bkt.clouddn.com/insurer.png" width="60" height="60">
+          <img class="box-img-left" id="insurer_logo_a" src="https://pics.wanbaolife.com/insurer.png" width="60" height="60">
+          <img class="box-img-right" id="insurer_logo_b" src="https://pics.wanbaolife.com/insurer.png" width="60" height="60">
         </div>
         <div class="box-right box-head-inside"> 
-          <h1>招商信诺附加增值机动车相关意外伤害保险C款</h1>
+          <h1 id="product_name_b"></h1>
         </div>
       </div> <!-- box-head 结束 -->
       
       <!-- box-body 开始 -->
-      <div class="box-body">
+      <div class="box-body" id="box-body">
 
         <!-- 注释开始 -->
-        <div id="jichuxinxi" class="small-box">
-          <!-- title 表头 -->
+<!--         <div id="jichuxinxi" class="small-box">
           <div class="title">基础信息</div>
-          <!-- sub-title 子表头 -->
           <div class="sub-title">身故 或 全残</div>
 
-          <!-- 普通行开始 -->
           <div class="normal">
             <div class="box-left normal-left">工银安盛人寿</div>
             <div class="box-center normal-center">
@@ -86,563 +83,10 @@
               <img  class="normal-img-right" src="images/tick.png">
             </div>
             <div class="box-right normal-right">平安人寿</div>
-          </div> <!-- 普通行结束 -->
-          
-
-          <!-- 示例 -->
-          <div class="normal">
-            <div class="box-left normal-left">两全保险</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              产品结构
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">意外伤害保险</div>
-          </div> 
-
-          <div class="normal">
-            <div class="box-left normal-left">投资连结型</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              产品类型
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">分红型</div>
-          </div> 
-
-          <div class="normal">
-            <div class="box-left normal-left">2016年</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              备案年份
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">2018年</div>
           </div>
-
-          <div class="normal" id="tmp_anchor">
-            <div class="box-left normal-left">停售</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              销售状态
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">在售</div>
-          </div>
-
-        </div>
-
-        <div id="toubaoxinxi" class="small-box">
-          <div class="title">投保信息</div>
-
-          <div class="normal">
-            <div class="box-left normal-left">个人</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              销售对象
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">团体</div>
-          </div> 
-
-          <div class="normal">
-            <div class="box-left normal-left">终身</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              保险期间
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">至 88周岁</div>
-          </div> 
-
-          <div class="normal">
-            <div class="box-left normal-left">主险</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              合同主次
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">附加险</div>
-          </div> 
-
-          <div class="normal">
-            <div class="box-left normal-left">0 - 70周岁</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              投保年龄
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">18 - 65周岁</div>
-          </div> 
-
-          <div class="normal">
-            <div class="box-left normal-left">趸交</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              交费方式
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">期交，趸交</div>
-          </div> 
-
-          <div class="normal">
-            <div class="box-left normal-left">60日</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              宽限期
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">--</div>
-          </div>
-
-        </div>
-
-        <div id="baozhang" class="small-box">
-          <div class="title">保障</div>
-          <div class="sub-title">身故 或 全残</div>
-
-          <div class="normal">
-            <div class="box-left normal-left">已交保费</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              等待期内
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">已交保费</div>
-          </div>
-
-          <div class="normal">
-            <div class="box-left normal-left">高者为准：已交保费 或 现金价值</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              等待期后，18周岁前
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">已交保费</div>
-          </div> 
-          
-          <div class="normal">
-            <div class="box-left normal-left">保险金额</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              等待期后，18周岁后
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">保险金额</div>
-          </div> 
-
-          <div class="sub-title">重大疾病</div>
-
-          <div class="normal">
-            <div class="box-left normal-left">不承担责任</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              等待期内，非意外
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">已交保费</div>
-          </div>
-
-          <div class="normal">
-            <div class="box-left normal-left">保险金额</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              等待期内，意外
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">保险金额</div>
-          </div>
-
-          <div class="normal">
-            <div class="box-left normal-left">保险金额</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              等待期后
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">保险金额</div>
-          </div>
-
-          <div class="sub-title">住院医疗费用</div>
-
-          <div class="normal">
-            <div class="box-left normal-left">实际费用的100%</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              社保身份，已报销，目录内
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">实际费用的90%</div>
-          </div>
-
-          <div class="normal">
-            <div class="box-left normal-left">实际费用的70%</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              社保身份，未报销，目录内
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">实际费用的60%</div>
-          </div>
-        </div>
-
-        <div id="touzilicai" class="small-box">
-          <div class="title">投资理财</div>
-          <div class="sub-title">投资</div>
-          <div class="normal">
-            <div class="box-left normal-left">--</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              投连账户
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">生命精选股票型账户</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">--</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              价格更新日期
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">2018年4月5日</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">--</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              投连账户单位价格
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">2.3034</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">--</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              资产类别
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">股票型</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">--</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              业绩基准
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">上海证券综合指数</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">--</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              单位买卖差价
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">1%</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">--</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              3年平均收益率
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">-6.86%</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">--</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              3年平均波动率
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">27.3%</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">--</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              资产管理费
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">1.5%</div>
-          </div>
-          <div class="sub-title">理财</div>
-          <div class="normal">
-            <div class="box-left normal-left">综合万能账户</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              万能账户
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">--</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">3.6%</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              最新结算利率
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">--</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">2018年3月</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              结算月份
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">--</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">理财型</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              资产类别
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">--</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">中证-第一财经银行理财产品指数（三个月内）</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              业绩基准
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">--</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">3.5%</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              3年平均结算利率
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">--</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">3%</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              最低结算利率
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">--</div>
-          </div>
-        </div>
-
-        <div id="zhongyaotiaokuan" class="small-box">
-          <div class="title">重要条款</div>
-          <div class="sub-title">理赔</div>
-          <div class="normal">
-            <div class="box-left normal-left">10日</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              事故通知期限
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">10日</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">5- 30日</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              保险金批核期限
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">30日</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">30日</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              保险金给付期限
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">30日</div>
-          </div>
-          <div class="sub-title">退保</div>
-          <div class="normal">
-            <div class="box-left normal-left">15日</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              犹豫期
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">20日</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">30日</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              退保期限
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">30日</div>
-          </div>
-          <div class="sub-title">保单费用</div>
-          <div class="normal">
-            <div class="box-left normal-left">--</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              退保费用
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">0 -5%</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">--</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              初始费用
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">15%</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">--</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              保单管理费
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">20元/月</div>
-          </div>
-          <div class="sub-title">分红</div>
-          <div class="normal">
-            <div class="box-left normal-left">累积生息,现金领取</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              分红方式
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">--</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">周年</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              分红周期
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">--</div>
-          </div>
-        </div>
-
-        <div id="baoxiangongsi" class="small-box">
-          <div class="title">保险公司</div>
-          <div class="sub-title">公司基本资料</div>
-          <div class="normal">
-            <div class="box-left normal-left">幸福人寿保险股份有限公司</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              公司名称
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">中国人寿保险股份有限公司</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">中资</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              公司资本
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">外资</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">已上市</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              是否上市
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">未上市</div>
-          </div>
-          <div class="sub-title">市场地位</div>
-          <div class="normal">
-            <div class="box-left normal-left">2016年度</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              财政年度
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">2016年度</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">35.9亿</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              原保险保费收入
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">4306.1亿</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">第40位</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              原保险保费收入排名
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">第7位</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">0.68%</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              原保险保费收入市场占有率
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">21.49%</div>
-          </div>
-          <div class="sub-title">偿付能力</div>
-          <div class="normal">
-            <div class="box-left normal-left">2018年1季度</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              偿付能力评估季度
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">2018年1季度</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">230.5%</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              核心偿付能力充足率
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">134.1%</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">210.1%</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              综合偿付能力充足率
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">129.7%</div>
-          </div>
-          <div class="normal">
-            <div class="box-left normal-left">A</div>
-            <div class="box-center normal-center">
-              <img class="normal-img-left" src="images/tick.png">
-              风险综合评级
-              <img  class="normal-img-right" src="images/tick.png">
-            </div>
-            <div class="box-right normal-right">C</div>
-          </div>
-
-        </div>
+        </div> -->
 
         <!-- 注释结束 -->
-
 
       </div> <!-- box-body 结束 -->
     </div> <!-- big-box 结束 -->
@@ -652,12 +96,13 @@
   <!-- https://resource.wanbaolife.com/static/js/ -->
   <script type="text/javascript" src="https://resource.wanbaolife.com/static/js/jquery-2.1.0.min.js"></script>
   <script type="text/javascript" src="https://resource.wanbaolife.com/static/js/common.js"></script>
+  <script type="text/javascript" src="https://resource.wanbaolife.com/static/js/product-compare.js"></script>
   <script src="https://resource.wanbaolife.com/static/js/layer/layer.js"></script>
   <script type="text/javascript">
     $(document).ready(function () {
       $('.small-box').find('.sub-title:first').css('border-top', '0px');
 
-      $('ul').on('click', 'a', function() {
+      $(document).on('click', 'ul a', function() {
         var currentId = $(this).attr('name');
         var offsetTop = $(currentId).offset().top;
         if (offsetTop-160 <=0) {
