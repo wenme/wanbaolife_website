@@ -109,7 +109,7 @@ input:focus{border:1px solid #5082f0;}
 .pop_list{position: absolute;right: 40px;top:20px;}
 .pop_list a{font-size: 14px;color:#073586;margin: 0 5px;}
 .goods_compay{margin: 0 auto;width: 1000px;position: relative}
-.compary{display: inline-block;width: 80px;height: 80px;line-height: 80px;border:1px solid #68a230;color:#fff;overflow: hidden;vertical-align: middle}
+.compary{display: inline-block;width: 80px;height: 80px;line-height: 80px;border:6px solid #0099BC;color:#fff;overflow: hidden;vertical-align: middle}
 .safe{display: inline-block;margin-left: 15px;font-size: 30px;color:#222;}
 .safe_info{margin-top: 20px;}
 .safe_info ul li{float: left;width: 190px;}
@@ -160,12 +160,12 @@ input[type="checkbox"]{vertical-align: middle}
 .fixedNav{position: fixed;top:0;z-index: 1000;width: 100%;background: #fff;}
 .list_conter{margin-top: 200px;margin-bottom: 30px}
 .min_nav{font-size:18px;position: absolute;top:13px; }
-.nav_wrap{width: 100%;background: #073586;}
+.nav_wrap{width: 100%;background: #0063B1;}
 .nav_wrap .wrap_layer {
     width: 1000px;
     height: 40px;
     margin: 20px auto;
-    background:#073586;line-height: 40px
+    background:#0063B1;line-height: 40px
 }
 .nav_wrap .wrap_tab {
     width: 200px;
@@ -181,7 +181,7 @@ input[type="checkbox"]{vertical-align: middle}
     text-align: center;
     font-size: 16px;
 }
- .nav_wrap .active,.nav_wrap a:hover{background-color: #68a230;  }
+ .nav_wrap .active,.nav_wrap a:hover{background-color: #0c0;  }
  .mask{cursor: pointer;}
  .info_next{right: 40px;}
  .top{background: #fff;width: 100%;margin-top: 10px;}
@@ -251,7 +251,7 @@ input[type="number"]{-moz-appearance:textfield;}
 .slid_title{font-size: 36px;color:#1f190f;margin-bottom: 10px;}
 .slid_detail{font-size: 18px;color:#1f190f}
 .color{color:#fff;}
-.ins_logo{width: 100%;vertical-align: middle}
+.ins_logo{width: 100%;vertical-align: middle;}
 .min-height{min-height: 700px;}
 .checked_box{position: absolute;width:220px;height: 180px;top:0;left: 0;background: rgba(0,0,0,0.5);line-height: 180px;display: none}
 .text_title,.text_p{font-size: 60px;font-family: "微软雅黑",regular;color:#fff;}

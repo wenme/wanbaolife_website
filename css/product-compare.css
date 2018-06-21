@@ -103,6 +103,17 @@ ul li a.current {
 	text-align: right;
 }
 
+.box-left a,
+.box-right a {
+	text-decoration: none;
+	color: #000;
+}
+
+.box-left a:hover,
+.box-right a:hover {
+	text-decoration: underline;
+}
+
 .box-right h1 {
 	position: absolute;
 	bottom: 0;
@@ -174,6 +185,10 @@ ul li a.current {
 .normal-right {
 	font-size: 14px;
 	color: #333;
+}
+
+.small-font-size {
+	font-size: 12px;
 }
 
 .normal-left {
