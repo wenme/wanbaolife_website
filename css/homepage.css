@@ -59,6 +59,42 @@ body {
 	color: #000;
 }
 
+.nav-center {
+	position: absolute;
+	top: 0;
+	left: 576px;
+	width: 164px;
+	height: 32px;
+	font-size: 18px;
+}
+
+.nav-center > a {
+	display: inline-block;
+	float: left;
+	width: 62px;
+	margin-top: 17px;
+	text-align: center;
+	text-decoration: none;
+	color: #000;
+}
+
+.nav-center > a:hover {
+	font-size: 20px;
+}
+
+.nav-center > a:first-child {
+	margin-right: 35px; 
+}
+
+.version_choosen {
+	padding-bottom: 6px; 
+	border-bottom: 4px solid #f60;
+}
+
+a.version_choosen:hover{
+	font-size: 18px;
+}
+
 .nav-right {
 	position: absolute;
 	top: 0;

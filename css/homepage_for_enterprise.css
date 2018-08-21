@@ -95,7 +95,7 @@ a.version_choosen:hover{
 	font-size: 18px;
 }
 
-.nav-right {
+/*.nav-right {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -116,7 +116,7 @@ a.version_choosen:hover{
 
 .nav-right a:hover {
 	text-decoration: underline;
-}
+}*/
 
 /*第一个banner*/
 .masthead {
@@ -235,15 +235,15 @@ a.version_choosen:hover{
 }
 
 .banner-background-1 {
-	background-image: url(../images/banner1_enterprise.jpg);
+	background-image: url(https://pics.wanbaolife.com/banner1_enterprise.png?v=1);
 }
 
 .banner-background-2 {
-	background-image: url(../images/banner2_enterprise.jpeg);
+	background-image: url(https://pics.wanbaolife.com/banner2_enterprise.png?v=1);
 }
 
 .banner-background-3 {
-	background-image: url(../images/banner3_enterprise.jpeg);
+	background-image: url(https://pics.wanbaolife.com/banner3_enterprise.png?v=1);
 }
 
 .masthead-layer-2 {
